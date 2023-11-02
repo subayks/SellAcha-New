@@ -1,0 +1,30 @@
+PODS:
+  - Charts (4.1.0):
+    - Charts/Core (= 4.1.0)
+  - Charts/Core (4.1.0):
+    - SwiftAlgorithms (~> 1.0)
+  - CircleBar (0.8.2)
+  - Siren (6.1.0)
+  - SwiftAlgorithms (1.0.0)
+
+DEPENDENCIES:
+  - Charts
+  - CircleBar
+  - Siren
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - CircleBar
+    - Siren
+    - SwiftAlgorithms
+
+SPEC CHECKSUMS:
+  Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
+  CircleBar: 8e17d2090e6e319b518010535a3145fb8fd68c22
+  Siren: d46253bcfca19f80c98ce54b3f5f5094a6346bd4
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
+
+PODFILE CHECKSUM: 58fb3ae016336d87cd14bca3611094e450687670
+
+COCOAPODS: 1.11.3
