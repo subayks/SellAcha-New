@@ -100,6 +100,7 @@
 		598AE8C72AEAF41200E7BBD7 /* DomainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AE8C62AEAF41200E7BBD7 /* DomainVM.swift */; };
 		598AE8C92AEAF89900E7BBD7 /* SubscriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AE8C82AEAF89900E7BBD7 /* SubscriptionVC.swift */; };
 		598AE8CB2AEAF91600E7BBD7 /* SubscriptionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AE8CA2AEAF91600E7BBD7 /* SubscriptionVM.swift */; };
+		598C13D82AF3F7AF00FA757D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C13D72AF3F7AF00FA757D /* ProfileModel.swift */; };
 		5990CEE72AD82B5D00037E1E /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5990CEE62AD82B5D00037E1E /* OrderInfoCell.swift */; };
 		5990CEE92AD83CFB00037E1E /* OrderFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5990CEE82AD83CFB00037E1E /* OrderFilterView.swift */; };
 		5990CEEB2AD83D7600037E1E /* FilterPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5990CEEA2AD83D7600037E1E /* FilterPaymentCell.swift */; };
@@ -329,6 +330,7 @@
 		598AE8C62AEAF41200E7BBD7 /* DomainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainVM.swift; sourceTree = "<group>"; };
 		598AE8C82AEAF89900E7BBD7 /* SubscriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionVC.swift; sourceTree = "<group>"; };
 		598AE8CA2AEAF91600E7BBD7 /* SubscriptionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionVM.swift; sourceTree = "<group>"; };
+		598C13D72AF3F7AF00FA757D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		5990CEE62AD82B5D00037E1E /* OrderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
 		5990CEE82AD83CFB00037E1E /* OrderFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFilterView.swift; sourceTree = "<group>"; };
 		5990CEEA2AD83D7600037E1E /* FilterPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPaymentCell.swift; sourceTree = "<group>"; };
@@ -1011,6 +1013,7 @@
 			isa = PBXGroup;
 			children = (
 				599A20052AED79A20058F0A6 /* UserDetailsModel.swift */,
+				598C13D72AF3F7AF00FA757D /* ProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1827,6 +1830,7 @@
 				5988F1C82AE993A700C78E1B /* ShippingModel.swift in Sources */,
 				18DF651A2AE67793004D15D1 /* CreateCouponsVC.swift in Sources */,
 				18DF65432AE6A977004D15D1 /* InventoryVM.swift in Sources */,
+				598C13D82AF3F7AF00FA757D /* ProfileModel.swift in Sources */,
 				18DF653B2AE6A200004D15D1 /* CategoriesCellVM.swift in Sources */,
 				59A0B83C2AE187B8001B6069 /* LocationView.swift in Sources */,
 				59913CDF2ADC4CDC00EAEF7C /* ProfileView.swift in Sources */,

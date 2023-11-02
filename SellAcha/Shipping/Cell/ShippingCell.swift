@@ -31,6 +31,7 @@ class ShippingCell: UITableViewCell {
     }
 
     func setupView() {
-        
+        self.colorLabel.text = self.vm?.model?.name
+        self.statusLabel.text = self.vm?.model?.slug
     }
 }

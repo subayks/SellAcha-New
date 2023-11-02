@@ -127,11 +127,12 @@ class CategoriesVC: UIViewController {
     
     @IBAction func actionEdit(_ sender: UIButton) {
         let createCategoriesVC = self.storyboard?.instantiateViewController(withIdentifier: "CreateCategoriesVC") as! CreateCategoriesVC
+        createCategoriesVC.vm = self.vm.getCustomerVM(index: sender.tag)
         self.navigationController?.pushViewController(createCategoriesVC, animated: true)
     }
     
     @IBAction func actionDelete(_ sender: UIButton) {
-       // self.vm.deleteAttributes(index: sender.tag)
+        self.vm.deleteCategories(index: sender.tag)
     }
 }
 
@@ -139,14 +140,42 @@ extension CategoriesVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in your table view
-        return 10
+        return self.vm.model?.count == 0 ? 1: self.vm.model?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Return the appropriate UITableViewCell for your data
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath)  as! CategoriesCell
-        cell.deleteBtn.tag = indexPath.row
-        cell.editBtn.tag = indexPath.row
-        return cell
+        if self.vm.model?.count == nil {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MonthCell") as! MonthCell
+            cell.textLabel?.text = ""
+            return cell
+        }
+        if self.vm.model?.count == 0  {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MonthCell") as! MonthCell
+            cell.textLabel?.text = "No Records Found"
+            return cell
+        } else {
+            // Return the appropriate UITableViewCell for your data
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell", for: indexPath)  as! CategoriesCell
+            cell.vm = self.vm.getCategoriesCellVM(index: indexPath.row)
+           cell.deleteBtn.tag = indexPath.row
+           cell.editBtn.tag = indexPath.row
+           return cell
+        }
+    }
+}
+extension CategoriesVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange,
+                   replacementText text: String) -> Bool {
+        return true
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let keyword = searchBar.text{
+            self.vm.sorting(keyword: keyword)
+        }
+        self.searchField.endEditing(true)
     }
 }

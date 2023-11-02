@@ -21,7 +21,7 @@ class CreateBumperAdsVM: BaseViewModel {
         if Reachability.isConnectedToNetwork() {
             self.showLoadingIndicatorClosure?()
             let param = self.getParam(url: url)
-            self.apiServices?.createBumpAd(finalURL: "\(Constants.Common.finalURL)/api/ads_store", httpHeaders: [String:String](), withParameters: param, completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+            self.apiServices?.createBumpAd(finalURL: "\(Constants.Common.finalURL)/api/ads_store?url=\(url)", httpHeaders: [String:String](), withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
                 self.hideLoadingIndicatorClosure?()
                 
                 DispatchQueue.main.async {

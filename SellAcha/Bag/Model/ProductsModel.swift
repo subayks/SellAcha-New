@@ -177,12 +177,14 @@ struct Preview: Codable {
   var mediaId : Int?   = nil
   var termId  : Int?   = nil
   var media   : Media? = Media()
-
+  var content: String? = nil
+    
   enum CodingKeys: String, CodingKey {
 
     case mediaId = "media_id"
     case termId  = "term_id"
     case media   = "media"
+      case content = "content"
   }
 
   init(from decoder: Decoder) throws {
@@ -191,7 +193,7 @@ struct Preview: Codable {
     mediaId = try values.decodeIfPresent(Int.self   , forKey: .mediaId )
     termId  = try values.decodeIfPresent(Int.self   , forKey: .termId  )
     media   = try values.decodeIfPresent(Media.self , forKey: .media   )
- 
+      content = try values.decodeIfPresent(String.self , forKey: .content   )
   }
 
   init() {

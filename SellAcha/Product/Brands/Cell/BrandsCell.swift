@@ -33,7 +33,12 @@ class BrandsCell: UITableViewCell {
     
     func setupValues() {
         self.namelabel.text = self.vm?.model.name
-
+        if self.vm?.model.preview?.content != nil && self.vm?.model.preview?.content != "" {
+            let urlString =  "www.sellacha.com/" + (self.vm?.model.preview?.content ?? "")
+            
+            let url = URL(string: urlString)
+            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            imageBrand.image = UIImage(data: data ?? Data())
+        }
     }
-
 }

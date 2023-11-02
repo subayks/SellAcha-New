@@ -6,16 +6,18 @@
 //
 
 import Foundation
+import UIKit
 class CreateCategoriesVM: BaseViewModel {
     var apiServices: CategoriesServiceProtocol?
-    var model: AttributeData?
+    var model: BrandsData?
     var successModel: CreateCustomerModel?
-    
+    var selectedImage: UIImage?
+
     init(apiServices: CategoriesServiceProtocol = CategoriesService()) {
         self.apiServices = apiServices
     }
     
-    init(model: AttributeData, apiServices: CategoriesServiceProtocol = CategoriesService()) {
+    init(model: BrandsData, apiServices: CategoriesServiceProtocol = CategoriesService()) {
         self.model = model
         self.apiServices = apiServices
     }
@@ -23,8 +25,26 @@ class CreateCategoriesVM: BaseViewModel {
     func createCategories(name: String, type: String, featured: String, menuStatus: String) {
         if Reachability.isConnectedToNetwork() {
             self.showLoadingIndicatorClosure?()
-            let param = self.getCustomerParam(name: name, type: type, featured: featured, menuStatus: menuStatus)
-            self.apiServices?.createCategories(finalURL: "\(Constants.Common.finalURL)/api/create_category", httpHeaders: [String:String](), withParameters: param, completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+            let imageRequest = ImageRequestParam(paramName: "file", name: "file", image: self.selectedImage ?? UIImage())
+            var status = 0
+            if featured == "Yes" {
+                status = 1
+            } else if featured == "No" {
+                status = 0
+            } else {
+                status = 2
+            }
+            var menu = 0
+            if menuStatus == "Yes" {
+                menu = 1
+            } else if menuStatus == "No" {
+                menu = 0
+            } else {
+                status = 2
+            }
+             let otherParam = ["name": "\(name)",
+                               "type": "\(type)", "featured": "\(status)", "menu_status": "\(menu)"]
+            self.apiServices?.createCategories(finalURL: "\(Constants.Common.finalURL)/api/create_category", otherParameters: otherParam, withParameters: imageRequest, completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
                 self.hideLoadingIndicatorClosure?()
                 
                 DispatchQueue.main.async {
@@ -46,8 +66,27 @@ class CreateCategoriesVM: BaseViewModel {
     func editCategories(name: String, type: String, featured: String, menuStatus: String) {
         if Reachability.isConnectedToNetwork() {
             self.showLoadingIndicatorClosure?()
-            let param = self.getEditCustomerParam(name: name, type: type, featured: featured, menuStatus: menuStatus)
-            self.apiServices?.editCategories(finalURL: "\(Constants.Common.finalURL)/api/edit_category", httpHeaders: [String:String](), withParameters: param, completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+            let imageRequest = ImageRequestParam(paramName: "file", name: "file", image: self.selectedImage ?? UIImage())
+            var status = 0
+            if featured == "Yes" {
+                status = 1
+            } else if featured == "No" {
+                status = 0
+            } else {
+                status = 2
+            }
+            var menu = 0
+            if menuStatus == "Yes" {
+                menu = 1
+            } else if menuStatus == "No" {
+                menu = 0
+            } else {
+                status = 2
+            }
+            let otherParam =   ["name": "\(name)",
+                                              "type": "\(type)", "featured": "\(status)", "menu_status": "\(menu)", "id": "\(self.model?.id ?? 0)"
+            ]
+            self.apiServices?.editCategories(finalURL: "\(Constants.Common.finalURL)/api/edit_category", otherParameters: otherParam, withParameters: imageRequest, completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
                 self.hideLoadingIndicatorClosure?()
                 self.model = nil
                 DispatchQueue.main.async {
@@ -68,16 +107,20 @@ class CreateCategoriesVM: BaseViewModel {
     
     func getCustomerParam(name: String, type: String, featured: String, menuStatus: String) ->String {
         var status = 0
-        if featured == "Active" {
+        if featured == "Yes" {
             status = 1
-        } else {
+        } else if featured == "No" {
             status = 0
+        } else {
+            status = 2
         }
         var menu = 0
-        if menuStatus == "" {
+        if menuStatus == "Yes" {
             menu = 1
-        } else {
+        } else if menuStatus == "No" {
             menu = 0
+        } else {
+            status = 2
         }
     let jsonToReturn: NSDictionary = ["name": "\(name)",
                                       "type": "\(type)", "featured": "\(status)", "menu_status": "\(menu)"
@@ -89,14 +132,18 @@ class CreateCategoriesVM: BaseViewModel {
         var status = 0
         if featured == "Yes" {
             status = 1
-        } else {
+        } else if featured == "No" {
             status = 0
+        } else {
+            status = 2
         }
         var menu = 0
         if menuStatus == "Yes" {
             menu = 1
-        } else {
+        } else if menuStatus == "No" {
             menu = 0
+        } else {
+            status = 2
         }
     let jsonToReturn: NSDictionary = ["name": "\(name)",
                                       "type": "\(type)", "featured": "\(status)", "menu_status": "\(menu)", "id": "\(self.model?.id ?? 0)"

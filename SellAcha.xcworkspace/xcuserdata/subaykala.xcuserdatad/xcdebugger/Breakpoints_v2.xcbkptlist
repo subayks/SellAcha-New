@@ -7,190 +7,142 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CEBD4127-266E-4469-90B7-2E196909CBF1"
+            uuid = "DB78A06A-B1DD-45D8-868D-2927480719B1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Product/createProductModel/CreateProductViewModel.swift"
+            filePath = "SellAcha/Profile/ViewModel/ProfileViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "createProduct(title:price:specialprice:pricetype:specialpricestart:specialpriceend:status:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CEBD4127-266E-4469-90B7-2E196909CBF1 - 143ecfdc6a427911"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SellAcha.CreateProductViewModel.createProduct(title: Swift.String, price: Swift.String, specialprice: Swift.String, pricetype: Swift.String, specialpricestart: Swift.String, specialpriceend: Swift.String, status: Swift.String) -&gt; ()"
-                  moduleName = "SellAcha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/subaykala/Desktop/SellAcha-Git/SellAcha-Swift/SellAcha/Product/createProductModel/CreateProductViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "516">
-               </Location>
-               <Location
-                  uuid = "CEBD4127-266E-4469-90B7-2E196909CBF1 - f6460f042768f455"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in SellAcha.CreateProductViewModel.createProduct(title: Swift.String, price: Swift.String, specialprice: Swift.String, pricetype: Swift.String, specialpricestart: Swift.String, specialpriceend: Swift.String, status: Swift.String) -&gt; ()"
-                  moduleName = "SellAcha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/subaykala/Desktop/SellAcha-Git/SellAcha-Swift/SellAcha/Product/createProductModel/CreateProductViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "248">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AD8AD295-C69A-46D5-B51A-C67D53E8A83B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SellAcha/Product/createProductModel/CreateProductViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "createProduct(title:price:specialprice:pricetype:specialpricestart:specialpriceend:status:)"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "retriveProfile()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BFD90DA3-A619-414E-84FF-138F1E611FB6"
+            uuid = "0A35B08E-C66E-4591-A654-163FC59C9C30"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Product/createProductModel/CreateProductApiService.swift"
+            filePath = "SellAcha/Profile/ViewModel/ProfileViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "retriveUserDetails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EF47E9B-2FAB-41FD-B106-25A5C0E35F91"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/Product/Brands/Cell/BrandsCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "CreateProduct(finalURL:httpHeaders:withParameters:completion:)"
+            landmarkName = "setupValues()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C690E3A6-9872-4BB8-8A3A-FAE9E96F4979"
+            uuid = "72A3A310-C9C1-4FB6-A7A0-1AEE8F132529"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Product/createProductModel/CreateProductApiService.swift"
+            filePath = "SellAcha/Product/Categories/ViewModel/CategoriesVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "CreateProduct(finalURL:httpHeaders:withParameters:completion:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "deleteCategories(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A5383528-E743-412D-9D16-362F8BAD8D2F"
+            uuid = "02D10F8C-AE59-42F0-A5D9-90F3DF390407"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Product/createProductModel/CreateProductApiService.swift"
+            filePath = "SellAcha/Product/Categories/ViewModel/CategoriesVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "CreateProduct(finalURL:httpHeaders:withParameters:completion:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "deleteCategories(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6F5F6418-B3B4-42E1-8866-C75DD1BDEBC3"
+            uuid = "4D82B96C-63D2-4F65-8600-BC44E7096730"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Product/createProductModel/CreateProductApiService.swift"
+            filePath = "SellAcha/Product/Categories/ViewModel/CategoriesVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "CreateProduct(finalURL:httpHeaders:withParameters:completion:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "deleteCategories(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C18CAA32-687E-4A80-95C2-582A255E1E67"
+            uuid = "FD88C716-2A5A-4B11-B6FF-C3787C903171"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Orders/CreateBillingVC.swift"
+            filePath = "SellAcha/Shipping/ViewModel/CreateLocationVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
-            landmarkName = "makeOrderAction(_:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "editLocation(title:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "842B264A-04C0-416B-B80E-2D6780672B7E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SellAcha/Orders/ViewModel/CreateBillingVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "createOrder(customerType:deliverType:shippingMethod:paymentId:name:email:phone:address:zipCode:location:comment:)"
-            landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "842B264A-04C0-416B-B80E-2D6780672B7E - 46c88f8d68259488"
+                  uuid = "FD88C716-2A5A-4B11-B6FF-C3787C903171 - 811e4f89729df7b6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SellAcha.CreateBillingVM.createOrder(customerType: Swift.String, deliverType: Swift.String, shippingMethod: Swift.String, paymentId: Swift.String, name: Swift.String, email: Swift.String, phone: Swift.String, address: Swift.String, zipCode: Swift.String, location: Swift.String, comment: Swift.String) -&gt; ()"
+                  symbolName = "SellAcha.CreateLocationVM.editLocation(title: Swift.String) -&gt; ()"
                   moduleName = "SellAcha"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/subaykala/Desktop/SellAcha-Git/SellAcha-Swift/SellAcha/Orders/ViewModel/CreateBillingVM.swift"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Shipping/ViewModel/CreateLocationVM.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "740">
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "272">
                </Location>
                <Location
-                  uuid = "842B264A-04C0-416B-B80E-2D6780672B7E - 5332e30bbc6d11d2"
+                  uuid = "FD88C716-2A5A-4B11-B6FF-C3787C903171 - 3f1c4b6e65a3477"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in SellAcha.CreateBillingVM.createOrder(customerType: Swift.String, deliverType: Swift.String, shippingMethod: Swift.String, paymentId: Swift.String, name: Swift.String, email: Swift.String, phone: Swift.String, address: Swift.String, zipCode: Swift.String, location: Swift.String, comment: Swift.String) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in SellAcha.CreateLocationVM.editLocation(title: Swift.String) -&gt; ()"
                   moduleName = "SellAcha"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/subaykala/Desktop/SellAcha-Git/SellAcha-Swift/SellAcha/Orders/ViewModel/CreateBillingVM.swift"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Shipping/ViewModel/CreateLocationVM.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
                   offsetFromSymbolStart = "256">
                </Location>
             </Locations>
@@ -199,47 +151,124 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "014FFF01-416B-4625-A872-55488499AD44"
+            uuid = "8B46BEBE-DA20-44C6-A1C7-B311438775BC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Orders/CreateBillingVC.swift"
+            filePath = "SellAcha/Shipping/ShippingVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "makeOrderAction(_:)"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75D6EB59-6027-438D-9520-4EC8EE02F2C4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/Shipping/ShippingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "searchBarSearchButtonClicked(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F954BC16-9355-45B3-B62F-1F18E87C0B3C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/Networks/NetworkAdapter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "uploadImage(withBaseURL:withParameters:otherParameters:withHeaders:withHttpMethod:completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "014FFF01-416B-4625-A872-55488499AD44 - 6dc4bb1d0992e177"
+                  uuid = "F954BC16-9355-45B3-B62F-1F18E87C0B3C - d9a9f6af71c40169"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SellAcha.CreateBillingVC.makeOrderAction(Any) -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SellAcha.NetworkAdapter.uploadImage(withBaseURL: Swift.String, withParameters: SellAcha.ImageRequestParam, otherParameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHeaders: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHttpMethod: Swift.String, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "SellAcha"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/subaykala/Desktop/SellAcha-Git/SellAcha-Swift/SellAcha/Orders/CreateBillingVC.swift"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Networks/NetworkAdapter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "188"
-                  endingLineNumber = "188"
-                  offsetFromSymbolStart = "6648">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "228">
                </Location>
                <Location
-                  uuid = "014FFF01-416B-4625-A872-55488499AD44 - 6dc4bb1d0992e177"
+                  uuid = "F954BC16-9355-45B3-B62F-1F18E87C0B3C - d9a9f6af71c40169"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SellAcha.CreateBillingVC.makeOrderAction(Any) -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SellAcha.NetworkAdapter.uploadImage(withBaseURL: Swift.String, withParameters: SellAcha.ImageRequestParam, otherParameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHeaders: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHttpMethod: Swift.String, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "SellAcha"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/subaykala/Desktop/SellAcha-Git/SellAcha-Swift/SellAcha/Orders/CreateBillingVC.swift"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Networks/NetworkAdapter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "188"
-                  endingLineNumber = "188"
-                  offsetFromSymbolStart = "7360">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "F954BC16-9355-45B3-B62F-1F18E87C0B3C - d9a9f6af71c40169"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SellAcha.NetworkAdapter.uploadImage(withBaseURL: Swift.String, withParameters: SellAcha.ImageRequestParam, otherParameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHeaders: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHttpMethod: Swift.String, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Networks/NetworkAdapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "F954BC16-9355-45B3-B62F-1F18E87C0B3C - a51643e3b27075f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SellAcha.NetworkAdapter.uploadImage(withBaseURL: Swift.String, withParameters: SellAcha.ImageRequestParam, otherParameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHeaders: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHttpMethod: Swift.String, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Networks/NetworkAdapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "4296">
+               </Location>
+               <Location
+                  uuid = "F954BC16-9355-45B3-B62F-1F18E87C0B3C - d9a9f6af71c40108"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SellAcha.NetworkAdapter.uploadImage(withBaseURL: Swift.String, withParameters: SellAcha.ImageRequestParam, otherParameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHeaders: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHttpMethod: Swift.String, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Networks/NetworkAdapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "244">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -247,81 +276,176 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C929F642-8D20-433B-B6BF-FD4F718EC624"
+            uuid = "FC9E6227-A229-4E2B-9A65-117DA97B52DB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Orders/CreateBillingVC.swift"
+            filePath = "SellAcha/Product/Categories/ViewModel/CreateCategoriesVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "makeOrderAction(_:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "createCategories(name:type:featured:menuStatus:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FC9E6227-A229-4E2B-9A65-117DA97B52DB - 908576e58c57411b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.CreateCategoriesVM.createCategories(name: Swift.String, type: Swift.String, featured: Swift.String, menuStatus: Swift.String) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Product/Categories/ViewModel/CreateCategoriesVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "2076">
+               </Location>
+               <Location
+                  uuid = "FC9E6227-A229-4E2B-9A65-117DA97B52DB - 3411ac70be87cf2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in SellAcha.CreateCategoriesVM.createCategories(name: Swift.String, type: Swift.String, featured: Swift.String, menuStatus: Swift.String) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Product/Categories/ViewModel/CreateCategoriesVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA50B795-B924-4A19-8270-A4F28B999B59"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/Networks/NetworkAdapter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "uploadImage(withBaseURL:withParameters:otherParameters:withHeaders:withHttpMethod:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FB7D7347-3A4B-45D4-87F2-0F65BC3ABC1B"
+            uuid = "A8F0B423-94B8-4368-BF65-971037CD8068"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Bag/BagView.swift"
+            filePath = "SellAcha/Networks/NetworkAdapter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "uploadImage(withBaseURL:withParameters:otherParameters:withHeaders:withHttpMethod:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "38EA8C92-63A1-49E7-8765-58BFEB9FF4C6"
+            uuid = "97906BE7-74C2-4461-9E9E-95F4DC6EA657"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Bag/BagView.swift"
+            filePath = "SellAcha/Networks/NetworkAdapter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "uploadImage(withBaseURL:withParameters:otherParameters:withHeaders:withHttpMethod:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6AE12A68-00A9-464A-837B-08BBCF85B99C"
+            uuid = "20746A20-8DD1-4E65-9A05-4DB54C02A444"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Bag/Cell/BagTableViewCell.swift"
+            filePath = "SellAcha/Networks/NetworkAdapter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "setupValues()"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "uploadImage(withBaseURL:withParameters:otherParameters:withHeaders:withHttpMethod:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EE876E37-23DF-4A7F-AAFF-9A0AC25C574E"
+            uuid = "492A1B20-ECB3-4018-B8C8-270E91444687"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellAcha/Bag/Cell/BagTableViewCell.swift"
+            filePath = "SellAcha/Networks/NetworkAdapter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "setupValues()"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "uploadImage(withBaseURL:withParameters:otherParameters:withHeaders:withHttpMethod:completionHandler:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "492A1B20-ECB3-4018-B8C8-270E91444687 - d9a9f6af71c40108"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SellAcha.NetworkAdapter.uploadImage(withBaseURL: Swift.String, withParameters: SellAcha.ImageRequestParam, otherParameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHeaders: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHttpMethod: Swift.String, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Networks/NetworkAdapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "492A1B20-ECB3-4018-B8C8-270E91444687 - d9a9f6af71c40108"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SellAcha.NetworkAdapter.uploadImage(withBaseURL: Swift.String, withParameters: SellAcha.ImageRequestParam, otherParameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHeaders: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHttpMethod: Swift.String, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Networks/NetworkAdapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "492A1B20-ECB3-4018-B8C8-270E91444687 - d9a9f6af71c40108"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SellAcha.NetworkAdapter.uploadImage(withBaseURL: Swift.String, withParameters: SellAcha.ImageRequestParam, otherParameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHeaders: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, withHttpMethod: Swift.String, completionHandler: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Networks/NetworkAdapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -13,6 +13,8 @@ class HomeViewModel: BaseViewModel {
     var performanceData: PerformanceData?
     var visitorAnalytics: VisitorAnalytics?
     var orderStaticsData: OrderStaticsData?
+    var profileModel: ProfileModel?
+    var userDetailsModel: UserDetailsModel?
     
     var monthDropDown = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
@@ -23,6 +25,54 @@ class HomeViewModel: BaseViewModel {
     
     init(apiServices: HomeApiServicesProtocol = HomeApiService()) {
         self.apiServices = apiServices
+    }
+    
+    func getProfileImage() {
+        if Reachability.isConnectedToNetwork() {
+          //  self.showLoadingIndicatorClosure?()
+            
+            self.apiServices?.getProileImage(finalURL: "\(Constants.Common.finalURL)/api/logos", withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+                self.hideLoadingIndicatorClosure?()
+
+                DispatchQueue.main.async {
+                    if status == true {
+                        let array = result as? BaseResponse<ProfileModel>
+                        self.profileModel = array?.data
+                        self.updateProfileImage?()
+                        self.getUserDetails()
+                        UserDefaults.standard.save(customObject: self.profileModel!, inKey: "Profile")
+                    } else{
+                        self.alertClosure?(errorMessage ?? "Some Technical Problem")
+                    }
+                }
+            })
+        }
+        else {
+            self.alertClosure?("No Internet Availabe")
+        }
+    }
+    
+    func getUserDetails() {
+        if Reachability.isConnectedToNetwork() {
+        //    self.showLoadingIndicatorClosure?()
+            
+            self.apiServices?.getUserDetails(finalURL: "\(Constants.Common.finalURL)/api/me", withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+                self.hideLoadingIndicatorClosure?()
+
+                DispatchQueue.main.async {
+                    if status == true {
+                        let array = result as? BaseResponse<UserDetailsModel>
+                        self.userDetailsModel = array?.data
+                        UserDefaults.standard.save(customObject: self.userDetailsModel!, inKey: "UserDetails")
+                    } else{
+                        self.alertClosure?(errorMessage ?? "Some Technical Problem")
+                    }
+                }
+            })
+        }
+        else {
+            self.alertClosure?("No Internet Availabe")
+        }
     }
     
     func getStaticData() {

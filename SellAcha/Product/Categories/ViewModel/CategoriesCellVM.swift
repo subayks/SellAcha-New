@@ -9,9 +9,9 @@ import UIKit
 
 class CategoriesCellVM {
 
-    var model: OrdersData
+    var model: BrandsData
     
-    init(model: OrdersData) {
+    init(model: BrandsData) {
         self.model = model
     }
     

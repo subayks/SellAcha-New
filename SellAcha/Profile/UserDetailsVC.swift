@@ -8,7 +8,7 @@
 import UIKit
 
 class UserDetailsVC: UIViewController {
-
+    
     @IBOutlet weak var userScrollView: UIScrollView!
     @IBOutlet weak var oveView: UIView!
     @IBOutlet weak var buttonSave: UIButton!

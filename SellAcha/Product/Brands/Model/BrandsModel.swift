@@ -93,7 +93,7 @@ struct BrandsData: Codable {
     var name       : String?  = nil
     var slug       : String?  = nil
     var type       : String?  = nil
-    var pId        : String?  = nil
+    var pId        : Int?  = nil
     var featured   : Int?     = nil
     var menuStatus : Int?     = nil
     var isAdmin    : Int?     = nil
@@ -126,7 +126,7 @@ struct BrandsData: Codable {
         name       = try values.decodeIfPresent(String.self  , forKey: .name       )
         slug       = try values.decodeIfPresent(String.self  , forKey: .slug       )
         type       = try values.decodeIfPresent(String.self  , forKey: .type       )
-        pId        = try values.decodeIfPresent(String.self  , forKey: .pId        )
+        pId        = try values.decodeIfPresent(Int.self  , forKey: .pId        )
         featured   = try values.decodeIfPresent(Int.self     , forKey: .featured   )
         menuStatus = try values.decodeIfPresent(Int.self     , forKey: .menuStatus )
         isAdmin    = try values.decodeIfPresent(Int.self     , forKey: .isAdmin    )

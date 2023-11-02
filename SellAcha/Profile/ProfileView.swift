@@ -29,6 +29,17 @@ class ProfileView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            do {
+                let url = URL(string: self.vm.retriveProfile()?.logo ?? "")
+                let data = try? Data(contentsOf: url!)
+                self.profileImageView.image = UIImage(data: data!)
+            } catch {
+                
+            }
+        }
+        self.emailIdView.text = self.vm.retriveUserDetails()?.email
+        self.nameLabel.text = self.vm.retriveUserDetails()?.name
         
         self.vm.errorClosure = { [weak self] (error) in
             DispatchQueue.main.async {
@@ -145,6 +156,7 @@ extension ProfileView: UIImagePickerControllerDelegate, UINavigationControllerDe
         }
         
         self.profileImageView.image = selectedImageFromPicker
+        self.vm.selectedImage = selectedImageFromPicker
         dismiss(animated: true)
     }
 }

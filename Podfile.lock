@@ -4,27 +4,50 @@ PODS:
   - Charts/Core (4.1.0):
     - SwiftAlgorithms (~> 1.0)
   - CircleBar (0.8.2)
+  - libwebp (1.3.2):
+    - libwebp/demux (= 1.3.2)
+    - libwebp/mux (= 1.3.2)
+    - libwebp/sharpyuv (= 1.3.2)
+    - libwebp/webp (= 1.3.2)
+  - libwebp/demux (1.3.2):
+    - libwebp/webp
+  - libwebp/mux (1.3.2):
+    - libwebp/demux
+  - libwebp/sharpyuv (1.3.2)
+  - libwebp/webp (1.3.2):
+    - libwebp/sharpyuv
+  - SDWebImage/Core (5.17.0)
+  - SDWebImageWebPCoder (0.14.1):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.17)
   - Siren (6.1.0)
   - SwiftAlgorithms (1.0.0)
 
 DEPENDENCIES:
   - Charts
   - CircleBar
+  - SDWebImageWebPCoder
   - Siren
 
 SPEC REPOS:
   trunk:
     - Charts
     - CircleBar
+    - libwebp
+    - SDWebImage
+    - SDWebImageWebPCoder
     - Siren
     - SwiftAlgorithms
 
 SPEC CHECKSUMS:
   Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
   CircleBar: 8e17d2090e6e319b518010535a3145fb8fd68c22
+  libwebp: 1786c9f4ff8a279e4dac1e8f385004d5fc253009
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
+  SDWebImageWebPCoder: eb7970094ac1401eb4c8a1cd077f472dbc66497b
   Siren: d46253bcfca19f80c98ce54b3f5f5094a6346bd4
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
 
-PODFILE CHECKSUM: 58fb3ae016336d87cd14bca3611094e450687670
+PODFILE CHECKSUM: 58b00fde33cbd9425da26ad8629aa9de18b15e81
 
 COCOAPODS: 1.12.1

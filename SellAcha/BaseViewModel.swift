@@ -18,7 +18,8 @@ class BaseViewModel {
     var reloadTableView:(()->())?
     var reloadCollectionView:(()->())?
     var allowToPhotos:(()->())?
-
+    var updateProfileImage:(()->())?
+    
     func convertDictionaryToJsonString(dict: NSDictionary) -> String? {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject:dict, options:[])

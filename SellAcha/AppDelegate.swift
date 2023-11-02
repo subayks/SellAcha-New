@@ -7,6 +7,7 @@
 
 import UIKit
 import Siren
+import SDWebImageWebPCoder
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Siren.shared.wail()
         Siren.shared.presentationManager = PresentationManager(forceLanguageLocalization: .english)
         // Override point for customization after application launch.
+        let WebPCoder = SDImageWebPCoder.shared
+        SDImageCodersManager.shared.addCoder(WebPCoder)
         return true
     }
 

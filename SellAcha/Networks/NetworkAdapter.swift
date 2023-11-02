@@ -35,27 +35,55 @@ class NetworkAdapter {
         // And the boundary is also set here
         urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
 
-        var data = Data()
-        
-        for (key, value) in otherParameters {
-            data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-            data.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: .utf8)!)
-            data.append("\(value)\r\n".data(using: .utf8)!)
-        }
+       // var data = Data()
+//        for (key, value) in otherParameters {
+//            data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+//            data.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: .utf8)!)
+//            data.append("\(value)\r\n".data(using: .utf8)!)
+//        }
+
         // Add the image data to the raw http request data
-        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-        data.append("Content-Disposition: form-data; name=\"\(parameters.paramName)\"; filename=\"\(parameters.name + ".png")\"\r\n".data(using: .utf8)!)
-        data.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
-        data.append(parameters.image.pngData()!)
-
-        data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
-
+//        data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+//        data.append("Content-Disposition: form-data; name=\"\(parameters.paramName)\"; filename=\"\(parameters.name + ".png")\"\r\n".data(using: .utf8)!)
+//        data.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+//        data.append(parameters.image.pngData()!)
+//
+//        data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
+        
+        
+        let lineBreak = "\r\n"
+        var body = Data()
+           for (key, value) in otherParameters {
+              body.append("--\(boundary + lineBreak)")
+              body.append("Content-Disposition: form-data; name=\"\(key)\"\(lineBreak + lineBreak)")
+               body.append("\(value + lineBreak)")
+           }
+        
+              body.append("--\(boundary + lineBreak)")
+              body.append("Content-Disposition: form-data; name=\"\(parameters.name)\"; filename=\"\(parameters.paramName)\"\(lineBreak)")
+              body.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+        body.append(parameters.image.pngData() ?? Data())
+              body.append(lineBreak)
+        
+        body.append("--\(boundary)--\(lineBreak)")
+        
+        urlRequest.httpBody = body
         // Send a POST request to the URL, with the data we created earlier
-        session.uploadTask(with: urlRequest, from: data, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+        session.dataTask(with: urlRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             
             if let data1 = data, let str = String.init(data: data1, encoding: String.Encoding.utf8) {
                 print(str)
             }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data ?? Data(), options: .allowFragments) as! [String:Any]
+                   
+                } catch let error as NSError {
+                    completionHandler(nil, nil, "Service is Currently Unavailable", nil)
+                    print(error)
+                    return
+                }
+            
             guard let httpResponse = response as? HTTPURLResponse else {
                 completionHandler(nil, nil, nil, "Currently Unavailable")
 
@@ -79,13 +107,9 @@ class NetworkAdapter {
              } else {
                 print("unhandled Error")
                 completionHandler(nil, nil, "Service is Currently Unavailable", nil)
-
             }
-            
-            
             }).resume()
     }
-
     
     static func clientNetworkRequestCodable(withBaseURL baseURL: String, withParameters parameters: String, withHttpMethod httpMethod: String, withContentType contentType: String, withHeaders httpHeaders: [String: String], completionHandler: @escaping (_ responseData: Data?,_ showPopUp: Bool?,_ errorMessage: String?, String?) -> Void ) {
         var requestURL: URL?
@@ -293,6 +317,13 @@ class SessionDelegate: NSObject, URLSessionDelegate, URLSessionDataDelegate {
         completionHandler (request)
     }
 }
-
+extension Data {
+   mutating func append(_ string: String) {
+      if let data = string.data(using: .utf8) {
+         append(data)
+         print("data======>>>",data)
+      }
+   }
+}
    
 

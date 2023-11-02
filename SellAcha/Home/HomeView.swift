@@ -9,7 +9,7 @@ import UIKit
 import Charts
 
 class HomeView: UIViewController, ChartViewDelegate {
-
+    
     @IBOutlet weak var processingCountLabel: UILabel!
     @IBOutlet weak var completedCountLabel: UILabel!
     @IBOutlet weak var pendingCountLabel: UILabel!
@@ -29,15 +29,16 @@ class HomeView: UIViewController, ChartViewDelegate {
     let viewwModel = HomeViewModel()
     var entries = [ChartDataEntry]()
     let homeViewModel = HomeViewModel()
-
+    
     var dataEntries: [ChartDataEntry] = []
     var dataEntries2: [ChartDataEntry] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         self.viewwModel.getStaticData()
         self.setupView()
+        self.viewwModel.getProfileImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,6 +88,21 @@ class HomeView: UIViewController, ChartViewDelegate {
                 self.processingCountLabel.text = self.viewwModel.orderStaticsData?.totalProcessing ?? ""
             }
         }
+        
+        self.viewwModel.updateProfileImage = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                DispatchQueue.main.async {
+                    let url = URL(string: self.viewwModel.profileModel?.logo ?? "")
+                    do {
+                        let data = try? Data(contentsOf: url!)
+                        self.profileView.image = UIImage(data: data!)
+                    } catch {
+                        
+                    }
+                }
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -105,7 +121,7 @@ class HomeView: UIViewController, ChartViewDelegate {
         profileView.isUserInteractionEnabled = true
         profileView.addGestureRecognizer(tapGestureRecognizer)
         
-    //Set Delegate
+        //Set Delegate
         pieChartView.delegate = self
         self.earning1View.delegate = self
         self.earning2View.delegate = self
@@ -113,6 +129,7 @@ class HomeView: UIViewController, ChartViewDelegate {
         self.color1Button.layer.cornerRadius = self.color1Button.frame.height/2
         self.color2Button.layer.cornerRadius = self.color2Button.frame.height/2
         self.color3Button.layer.cornerRadius = self.color3Button.frame.height/2
+        self.profileView.layer.cornerRadius = self.profileView.frame.height/2
     }
     
     @IBAction func actionMonth(_ sender: Any) {
@@ -160,11 +177,11 @@ class HomeView: UIViewController, ChartViewDelegate {
     
     
     func setChart(dataPoints: [String], values: [Double]) {
-
+        
         for i in 0 ..< dataPoints.count {
             dataEntries.append(ChartDataEntry(x: Double(i), y: Double(values[i])))
         }
-
+        
         let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: "")
         lineChartDataSet.axisDependency = .left
         lineChartDataSet.setColor(UIColor(rgb: 0x0191B5))
@@ -176,12 +193,12 @@ class HomeView: UIViewController, ChartViewDelegate {
         lineChartDataSet.highlightColor = UIColor.white
         lineChartDataSet.drawCircleHoleEnabled = true
         lineChartDataSet.circleHoleRadius = 2.3
-       
-
+        
+        
         var dataSets = [LineChartDataSet]()
         dataSets.append(lineChartDataSet)
-
-
+        
+        
         let lineChartData = LineChartData(dataSets: dataSets)
         earning1View.data = lineChartData
         earning1View.rightAxis.enabled = false
@@ -193,11 +210,11 @@ class HomeView: UIViewController, ChartViewDelegate {
     
     
     func setChart2(dataPoints2: [String], values2: [Double]) {
-
+        
         for i in 0 ..< dataPoints2.count {
             dataEntries2.append(ChartDataEntry(x: Double(i), y: Double(values2[i])))
         }
-
+        
         let lineChartDataSet = LineChartDataSet(entries: dataEntries2, label: "")
         lineChartDataSet.axisDependency = .left
         lineChartDataSet.setColor(UIColor(rgb: 0x0191B5))
@@ -209,12 +226,12 @@ class HomeView: UIViewController, ChartViewDelegate {
         lineChartDataSet.highlightColor = UIColor.white
         lineChartDataSet.drawCircleHoleEnabled = true
         lineChartDataSet.circleHoleRadius = 2.3
-       
-
+        
+        
         var dataSets = [LineChartDataSet]()
         dataSets.append(lineChartDataSet)
-
-
+        
+        
         let lineChartData2 = LineChartData(dataSets: dataSets)
         earning2View.data = lineChartData2
         earning2View.rightAxis.enabled = false
@@ -225,21 +242,21 @@ class HomeView: UIViewController, ChartViewDelegate {
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
-      var colors: [UIColor] = []
-      for _ in 0..<numbersOfColor {
-        let red = Double(arc4random_uniform(256))
-        let green = Double(arc4random_uniform(256))
-        let blue = Double(arc4random_uniform(256))
-        let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-        colors.append(color)
-      }
-      return colors
+        var colors: [UIColor] = []
+        for _ in 0..<numbersOfColor {
+            let red = Double(arc4random_uniform(256))
+            let green = Double(arc4random_uniform(256))
+            let blue = Double(arc4random_uniform(256))
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+            colors.append(color)
+        }
+        return colors
     }
     
 }
 
 extension UIView {
-   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
@@ -266,11 +283,11 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension UIColor {
-
+    
     convenience init(rgb: UInt) {
         self.init(rgb: rgb, alpha: 1.0)
     }
-
+    
     convenience init(rgb: UInt, alpha: CGFloat) {
         self.init(
             red: CGFloat((rgb & 0xFF0000) >> 16) / 255.0,
@@ -282,7 +299,7 @@ extension UIColor {
 }
 
 extension UIView {
-
+    
     /// Round UIView selected corners
     ///
     /// - Parameters:

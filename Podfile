@@ -7,6 +7,8 @@ target 'SellAcha' do
   pod 'Charts'
   pod 'CircleBar'
   pod 'Siren'
+pod 'SDWebImageWebPCoder'
+
 # Pods for SellAcha
   
   target 'SellAchaTests' do

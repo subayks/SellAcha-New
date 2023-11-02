@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImageWebPCoder
 class ImageStore: NSObject {
     static let imageCache = NSCache<NSString, UIImage>()
 }
@@ -46,10 +47,10 @@ class BagTableViewCell: UITableViewCell {
     
     func setupValues() {
         self.csutomerNameLabel.text = self.vm?.model.title
-        let url = self.vm?.model.preview?.media?.url?.dropFirst(2)
-        self.productImage.loadImageUsingURL("\(String(describing: url ?? ""))")
+        //        let url = self.vm?.model.preview?.media?.url?.dropFirst(2)
+        //        self.productImage.loadImageUsingURL("\(String(describing: url ?? ""))")
         self.lastUpdate.text = self.vm?.model.formateDate
-
+        
         if self.vm?.model.isSelected  == true {
             self.checkBoxImage.image = UIImage(systemName: "checkmark.circle")
         } else {
@@ -63,6 +64,24 @@ class BagTableViewCell: UITableViewCell {
             self.fulfilmentStatus.backgroundColor = .orange
             self.fulfilmentStatus.setTitle("In-Active", for: .normal)
         }
+//        let onlineFileUrl = URL(string: String(self.vm?.model.preview?.media?.url?.dropFirst(2) ?? ""))
+//             //load from project directory
+//                let loaclFileUrl = Bundle.main.url(forResource: "2", withExtension: "webp")
+//            DispatchQueue.main.async {
+//                self.productImage.sd_setImage(with: loaclFileUrl)
+//            }
+        
+        let webPCoder = SDImageWebPCoder.shared
+        SDImageCodersManager.shared.addCoder(webPCoder)
+        if let webpURL = URL(string: (String(self.vm?.model.preview?.media?.url?.dropFirst(2) ?? "")))  {
+            DispatchQueue.main.async {
+                self.productImage.sd_setImage(with: webpURL)
+            }
+        }
+//        SDWebImageManager.shared().loadImage(with: self.vm?.model.preview?.media?.url?.dropFirst(2), options: .highPriority, progress: nil, completed: {(resultSet) in
+//            productImage.image = resultSet.0
+//
+//        })
     }
 
 }
