@@ -25,6 +25,8 @@ class ProfileViewModel: BaseViewModel {
     let title = ["User Details", "Profile Settings", "Change Password", "Logout"]
     let image = ["UserDetails", "profilesetting", "changepassword", "logout"]
     var profileData: [ProfileData]?
+    var profileModel: ProfileModel?
+    var userDetailsModel: UserDetailsModel?
     
     init(apiServices: ProfileServicesProtocol = ProfileServices()) {
         self.apiServices = apiServices
@@ -75,6 +77,54 @@ class ProfileViewModel: BaseViewModel {
         }
     }
     
+    func getProfileImage() {
+        if Reachability.isConnectedToNetwork() {
+          //  self.showLoadingIndicatorClosure?()
+            
+            self.apiServices?.getProileImage(finalURL: "\(Constants.Common.finalURL)/api/logos", withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+                self.hideLoadingIndicatorClosure?()
+
+                DispatchQueue.main.async {
+                    if status == true {
+                        let array = result as? BaseResponse<ProfileModel>
+                        self.profileModel = array?.data
+                        self.updateProfileImage?()
+                        UserDefaults.standard.save(customObject: self.profileModel!, inKey: "Profile")
+                    } else{
+                        self.alertClosure?(errorMessage ?? "Some Technical Problem")
+                    }
+                }
+            })
+        }
+        else {
+            self.alertClosure?("No Internet Availabe")
+        }
+    }
+    
+    func getUserDetails() {
+        if Reachability.isConnectedToNetwork() {
+        //    self.showLoadingIndicatorClosure?()
+            
+            self.apiServices?.getUserDetails(finalURL: "\(Constants.Common.finalURL)/api/me", withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+                self.hideLoadingIndicatorClosure?()
+
+                DispatchQueue.main.async {
+                    if status == true {
+                        let array = result as? BaseResponse<UserDetailsModel>
+                        self.userDetailsModel = array?.data
+                        UserDefaults.standard.save(customObject: self.userDetailsModel!, inKey: "UserDetails")
+                        self.updateView?()
+                    } else{
+                        self.alertClosure?(errorMessage ?? "Some Technical Problem")
+                    }
+                }
+            })
+        }
+        else {
+            self.alertClosure?("No Internet Availabe")
+        }
+    }
+    
     func setupDataStructure() ->[ProfileData] {
         var profileDataArray = [ProfileData]()
         
@@ -93,7 +143,7 @@ class ProfileViewModel: BaseViewModel {
     }
     
     func getUserDetailsVM(isFromSettings: Bool) ->UserDetailsVM {
-        UserDetailsVM(isFromSettings: isFromSettings)
+        UserDetailsVM(model: self.retriveUserDetails()!, isFromSettings: isFromSettings)
     }
     
     func retriveProfile() ->ProfileModel?{
@@ -132,4 +182,20 @@ extension UserDefaults {
         }
     }
     
+}
+extension UIImage {
+    enum JPEGQuality: CGFloat {
+        case lowest  = 0
+        case low     = 0.25
+        case medium  = 0.5
+        case high    = 0.75
+        case highest = 1
+    }
+
+    /// Returns the data for the specified image in JPEG format.
+    /// If the image object’s underlying image data has been purged, calling this function forces that data to be reloaded into memory.
+    /// - returns: A data object containing the JPEG data, or nil if there was a problem generating the data. This function may return nil if the image has no data or if the underlying CGImageRef contains data in an unsupported bitmap format.
+    func jpeg(_ jpegQuality: JPEGQuality) -> Data? {
+        return jpegData(compressionQuality: jpegQuality.rawValue)
+    }
 }

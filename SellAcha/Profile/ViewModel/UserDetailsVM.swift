@@ -16,35 +16,36 @@ class UserDetailsVM: BaseViewModel {
         self.apiServices = apiServices
     }
     
-    init(isFromSettings: Bool, apiServices: ProfileServicesProtocol = ProfileServices()) {
+    init(model: UserDetailsModel, isFromSettings: Bool = false, apiServices: ProfileServicesProtocol = ProfileServices()) {
         self.apiServices = apiServices
         self.isFromSettings = isFromSettings
+        self.model = model
     }
     
     
-    func getUserDetails() {
-        if Reachability.isConnectedToNetwork() {
-            self.showLoadingIndicatorClosure?()
-            
-            self.apiServices?.getUserDetails(finalURL: "\(Constants.Common.finalURL)/api/me", httpHeaders: [String:String](), withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
-                self.hideLoadingIndicatorClosure?()
-                
-                DispatchQueue.main.async {
-                    if status == true {
-                        let resultData = result as? BaseResponse<UserDetailsModel>
-                        self.model = resultData?.data
-                        self.updateView?()
-                    }
-                    else{
-                        self.alertClosure?(errorMessage ?? "Some Technical Problem")
-                    }
-                }
-            })
-        }
-        else {
-            self.alertClosure?("No Internet Availabe")
-        }
-    }
+//    func getUserDetails() {
+//        if Reachability.isConnectedToNetwork() {
+//            self.showLoadingIndicatorClosure?()
+//
+//            self.apiServices?.getUserDetails(finalURL: "\(Constants.Common.finalURL)/api/me", httpHeaders: [String:String](), withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+//                self.hideLoadingIndicatorClosure?()
+//
+//                DispatchQueue.main.async {
+//                    if status == true {
+//                        let resultData = result as? BaseResponse<UserDetailsModel>
+//                        self.model = resultData?.data
+//                        self.updateView?()
+//                    }
+//                    else{
+//                        self.alertClosure?(errorMessage ?? "Some Technical Problem")
+//                    }
+//                }
+//            })
+//        }
+//        else {
+//            self.alertClosure?("No Internet Availabe")
+//        }
+//    }
     
     func updateProfile(name: String, email: String, mob: String) {
         if Reachability.isConnectedToNetwork() {

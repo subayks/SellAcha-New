@@ -93,6 +93,21 @@ class ProfileView: UIViewController {
                 pickerController.allowsEditing = true
                 self.present(pickerController, animated: true)            }
         }
+        
+        self.vm.updateProfileImage = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.profileImageView.image = self.vm.selectedImage
+            }
+        }
+        
+        self.vm.updateView = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.emailIdView.text = self.vm.retriveUserDetails()?.email
+                self.nameLabel.text = self.vm.retriveUserDetails()?.name
+            }
+        }
     }
     
     @IBAction func actionEdit(_ sender: Any) {
@@ -126,24 +141,32 @@ extension ProfileView: UITableViewDelegate, UITableViewDataSource {
         } else if  indexPath.row == 1 {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "UserDetailsVC") as! UserDetailsVC
             vc.vm = self.vm.getUserDetailsVM(isFromSettings: true)
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)        } else if indexPath.row == 2 {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)        } else {
-                    let alert = UIAlertController(title: "Alert", message: "Are you sure, You want to logout?", preferredStyle: UIAlertController.Style.alert)
-                    // add the actions (buttons)
-                    alert.addAction(UIAlertAction(title: "Log Out", style: UIAlertAction.Style.default, handler: { action in
-                        UserDefaults.resetStandardUserDefaults()
-                        if let bundleID = Bundle.main.bundleIdentifier {
-                            UserDefaults.standard.removePersistentDomain(forName: bundleID)
-                        }
-                        self.vm.getLogOut()
-                    }))
-                    alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
-                    // show the alert
-                    self.present(alert, animated: true, completion: nil)
+            vc.updateProfileInfo = { [weak self] in
+                DispatchQueue.main.async {
+                    guard let self = self else {return}
+                    self.vm.getUserDetails()
                 }
+            }
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+            
+        } else if indexPath.row == 2 {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)        } else {
+                let alert = UIAlertController(title: "Alert", message: "Are you sure, You want to logout?", preferredStyle: UIAlertController.Style.alert)
+                // add the actions (buttons)
+                alert.addAction(UIAlertAction(title: "Log Out", style: UIAlertAction.Style.default, handler: { action in
+                    UserDefaults.resetStandardUserDefaults()
+                    if let bundleID = Bundle.main.bundleIdentifier {
+                        UserDefaults.standard.removePersistentDomain(forName: bundleID)
+                    }
+                    self.vm.getLogOut()
+                }))
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+            }
     }
 }
 extension ProfileView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -155,7 +178,6 @@ extension ProfileView: UIImagePickerControllerDelegate, UINavigationControllerDe
             selectedImageFromPicker = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         }
         
-        self.profileImageView.image = selectedImageFromPicker
         self.vm.selectedImage = selectedImageFromPicker
         dismiss(animated: true)
     }

@@ -15,12 +15,16 @@ class UserDetailsVC: UIViewController {
     @IBOutlet weak var mobileNumberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    
+    var updateProfileInfo:(()->())?
+
     var vm = UserDetailsVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        self.emailTextField.text = self.vm.model?.email ?? ""
+        self.nameTextField.text = self.vm.model?.name ?? ""
+        self.mobileNumberTextField.text = self.vm.model?.mob ?? ""
         
         if self.vm.isFromSettings {
             self.buttonSave.isHidden = false
@@ -33,7 +37,6 @@ class UserDetailsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.vm.getUserDetails()
         
         self.vm.errorClosure = { [weak self] (error) in
             DispatchQueue.main.async {
@@ -81,6 +84,9 @@ class UserDetailsVC: UIViewController {
         self.vm.navigationClosure = { [weak self] in
             DispatchQueue.main.async {
                 guard let self = self else {return}
+                if self.vm.isFromSettings {
+                    self.updateProfileInfo?()
+                }
                 self.dismiss(animated: true)
             }
         }

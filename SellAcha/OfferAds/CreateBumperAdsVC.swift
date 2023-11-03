@@ -84,13 +84,7 @@ class CreateBumperAdsVC: UIViewController {
     }
     
     @IBAction func actionCreate(_ sender: Any) {
-        if self.textFieldUrl.text != "" {
-            self.vm.createBumpAd(url: self.textFieldUrl.text ?? "")
-        } else {
-            let alert = UIAlertController(title: "Alert", message: "Enter Proper URL", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        self.vm.createBumpAd(url: self.textFieldUrl.text ?? "")
     }
     
     @IBAction func actionChooseImage(_ sender: Any) {

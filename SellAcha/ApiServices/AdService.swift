@@ -8,9 +8,9 @@
 import Foundation
 protocol AdServiceProtocol {
     func getBumpAd(finalURL: String, httpHeaders: [String: String], withParameters: String, completion: @escaping(_ status: Bool?, _ code: String?, _ response: AnyObject?, _ error: String?)-> Void)
-    func createBumpAd(finalURL: String, httpHeaders: [String: String], withParameters: String, completion: @escaping(_ status: Bool?, _ code: String?, _ response: AnyObject?, _ error: String?)-> Void)
+    func createBumpAd(finalURL: String, httpHeaders: [String : String], withParameters: ImageRequestParam, completion: @escaping (Bool?, String?, AnyObject?, String?) -> Void)
     func getBannerAd(finalURL: String, httpHeaders: [String: String], withParameters: String, completion: @escaping(_ status: Bool?, _ code: String?, _ response: AnyObject?, _ error: String?)-> Void)
-    func createBannerAd(finalURL: String, httpHeaders: [String: String], withParameters: String, completion: @escaping(_ status: Bool?, _ code: String?, _ response: AnyObject?, _ error: String?)-> Void)
+    func createBannerAd(finalURL: String, httpHeaders: [String : String], withParameters: ImageRequestParam, completion: @escaping (Bool?, String?, AnyObject?, String?) -> Void)
 }
 
 class AdService: AdServiceProtocol {
@@ -46,11 +46,12 @@ class AdService: AdServiceProtocol {
         )
     }
     
-    func createBumpAd(finalURL: String, httpHeaders: [String : String], withParameters: String, completion: @escaping (Bool?, String?, AnyObject?, String?) -> Void) {
+    func createBumpAd(finalURL: String, httpHeaders: [String : String], withParameters: ImageRequestParam, completion: @escaping (Bool?, String?, AnyObject?, String?) -> Void) {
         let headers = [
             "Authorization": "\(((UserDefaults.standard.string(forKey: "AuthToken") ?? "") as String))",
-            ]
-        NetworkAdapter.clientNetworkRequestCodable(withBaseURL: finalURL, withParameters: withParameters, withHttpMethod: "POST", withContentType: "Application/json", withHeaders: headers, completionHandler: { (result: Data?, showPopUp: Bool?, error: String?, errorCode: String?)  -> Void in
+        ]
+        print(finalURL)
+        NetworkAdapter.uploadImage(withBaseURL: finalURL, withParameters: withParameters, otherParameters:  [String: String](), withHeaders: headers,  withHttpMethod: "POST", completionHandler: { (result: Data?, showPopUp: Bool?, error: String?, errorCode: String?)  -> Void in
             
             if let error = error {
                 completion(false,errorCode,nil,error)
@@ -110,11 +111,12 @@ class AdService: AdServiceProtocol {
         )
     }
     
-    func createBannerAd(finalURL: String, httpHeaders: [String : String], withParameters: String, completion: @escaping (Bool?, String?, AnyObject?, String?) -> Void) {
+    func createBannerAd(finalURL: String, httpHeaders: [String : String], withParameters: ImageRequestParam, completion: @escaping (Bool?, String?, AnyObject?, String?) -> Void) {
         let headers = [
             "Authorization": "\(((UserDefaults.standard.string(forKey: "AuthToken") ?? "") as String))",
-            ]
-        NetworkAdapter.clientNetworkRequestCodable(withBaseURL: finalURL, withParameters: withParameters, withHttpMethod: "POST", withContentType: "Application/json", withHeaders: headers, completionHandler: { (result: Data?, showPopUp: Bool?, error: String?, errorCode: String?)  -> Void in
+        ]
+        print(finalURL)
+        NetworkAdapter.uploadImage(withBaseURL: finalURL, withParameters: withParameters, otherParameters:  [String: String](), withHeaders: headers,  withHttpMethod: "POST", completionHandler: { (result: Data?, showPopUp: Bool?, error: String?, errorCode: String?)  -> Void in
             
             if let error = error {
                 completion(false,errorCode,nil,error)
@@ -141,6 +143,4 @@ class AdService: AdServiceProtocol {
         }
         )
     }
-    
-    
 }

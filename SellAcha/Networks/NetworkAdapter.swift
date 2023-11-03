@@ -62,7 +62,7 @@ class NetworkAdapter {
               body.append("--\(boundary + lineBreak)")
               body.append("Content-Disposition: form-data; name=\"\(parameters.name)\"; filename=\"\(parameters.paramName)\"\(lineBreak)")
               body.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
-        body.append(parameters.image.pngData() ?? Data())
+        body.append(parameters.image.jpeg(.medium) ?? Data())
               body.append(lineBreak)
         
         body.append("--\(boundary)--\(lineBreak)")
