@@ -134,9 +134,18 @@ class NetworkAdapter {
             urlRequest = URLRequest(url:requestURL!)
             
         } else if httpMethod == "POST" || httpMethod == "DELETE" || httpMethod == "PUT" {
-            requestURL = URL(string: baseURL)
-            print("baseUrl: \(baseURL)")
-            urlRequest = URLRequest(url: requestURL!)
+            if baseURL.contains("&") {
+                let urlString = baseURL
+                print("baseUrl: \(urlString)")
+                let encodedURLString = urlString.encodeUrl()
+                requestURL = URL(string:encodedURLString)
+                urlRequest = URLRequest(url:requestURL!)
+            } else {
+                requestURL = URL(string: baseURL)
+                print("baseUrl: \(baseURL)")
+                urlRequest = URLRequest(url: requestURL!)
+            }
+           
             
             if contentType == "application/X-WWW-form-urlencoded" {
                 

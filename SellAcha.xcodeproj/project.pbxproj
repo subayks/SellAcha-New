@@ -158,6 +158,7 @@
 		59A0B83C2AE187B8001B6069 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0B83B2AE187B8001B6069 /* LocationView.swift */; };
 		59A0B83E2AE18B1C001B6069 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0B83D2AE18B1C001B6069 /* GeneralView.swift */; };
 		59A0B8412AE19B02001B6069 /* GeneralViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0B8402AE19B02001B6069 /* GeneralViewVM.swift */; };
+		59A193812AF559CA00401F7E /* ShopSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A193802AF559CA00401F7E /* ShopSettingsService.swift */; };
 		59A413C72AE6415200603DA5 /* OrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A413C62AE6415200603DA5 /* OrdersModel.swift */; };
 		59A413C92AE641EF00603DA5 /* OrdersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A413C82AE641EF00603DA5 /* OrdersService.swift */; };
 		59A413CB2AE643A900603DA5 /* OrderInfoCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A413CA2AE643A900603DA5 /* OrderInfoCellVM.swift */; };
@@ -388,6 +389,7 @@
 		59A0B83B2AE187B8001B6069 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		59A0B83D2AE18B1C001B6069 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		59A0B8402AE19B02001B6069 /* GeneralViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewVM.swift; sourceTree = "<group>"; };
+		59A193802AF559CA00401F7E /* ShopSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSettingsService.swift; sourceTree = "<group>"; };
 		59A413C62AE6415200603DA5 /* OrdersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersModel.swift; sourceTree = "<group>"; };
 		59A413C82AE641EF00603DA5 /* OrdersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersService.swift; sourceTree = "<group>"; };
 		59A413CA2AE643A900603DA5 /* OrderInfoCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoCellVM.swift; sourceTree = "<group>"; };
@@ -1179,6 +1181,7 @@
 				598AE8BF2AEAEA1100E7BBD7 /* MarketingToolsService.swift */,
 				59D2EFD72AEC38CF00E1315B /* ProfileServices.swift */,
 				1848784D2AEE9140002BCDF3 /* CreateProductApiService.swift */,
+				59A193802AF559CA00401F7E /* ShopSettingsService.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -1764,6 +1767,7 @@
 				5988F1C02AE98E8800C78E1B /* LocationCell.swift in Sources */,
 				18DF65522AE6AE6E004D15D1 /* AttributeModel.swift in Sources */,
 				59A0B83E2AE18B1C001B6069 /* GeneralView.swift in Sources */,
+				59A193812AF559CA00401F7E /* ShopSettingsService.swift in Sources */,
 				5987A4E82AE069F600A2AC41 /* GoogleAnalytics.swift in Sources */,
 				5988F1D52AE99D3B00C78E1B /* CreateBumperAdsVM.swift in Sources */,
 				5988F1DB2AE99DB300C78E1B /* BumpAdModel.swift in Sources */,

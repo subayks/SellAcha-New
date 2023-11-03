@@ -4316,13 +4316,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qfU-Pi-8Ms">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Invoice Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qfU-Pi-8Ms">
                                                 <rect key="frame" x="15" y="541" width="363" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Psy-fc-jsH"/>
                                                 </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -7406,7 +7405,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkX-9l-6vO">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="₹" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkX-9l-6vO">
                                                 <rect key="frame" x="15" y="526" width="363" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -7435,6 +7434,9 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cY-n7-c6X">
                                                 <rect key="frame" x="15" y="673" width="363" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="F9e-XG-ObB"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
@@ -7455,6 +7457,9 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr5-Cv-2YR">
                                                 <rect key="frame" x="15" y="744" width="363" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Kuw-5g-mhx"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
@@ -7734,7 +7739,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOA-ak-ENh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4524.4274809160306" y="2886.6197183098593"/>
+            <point key="canvasLocation" x="4523.913043478261" y="2886.1607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Sa-Vf-JCt">
@@ -13177,11 +13182,11 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Bag" width="35" height="35"/>
+        <image name="Bag" width="28" height="28"/>
         <image name="Edit" width="24" height="24"/>
-        <image name="Home" width="35" height="35"/>
+        <image name="Home" width="28" height="28"/>
         <image name="Login" width="1242" height="2688"/>
-        <image name="Notification" width="35" height="35"/>
+        <image name="Notification" width="28" height="28"/>
         <image name="SellAcheLogo" width="390" height="390"/>
         <image name="backIcon" width="32" height="32"/>
         <image name="bell.badge" catalog="system" width="125" height="128"/>
