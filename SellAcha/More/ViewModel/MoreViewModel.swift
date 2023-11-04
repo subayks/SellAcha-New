@@ -21,7 +21,6 @@ class MoreViewModel {
     
     func setupDataStructure(){
         var moreDataStructureArray = [MoreDataStructure]()
-        
         //Products - 0
         var moreDataStructureProduct = MoreDataStructure()
         moreDataStructureProduct.itemName = "Products"
@@ -167,13 +166,13 @@ class MoreViewModel {
         //Upgrade
         var moreDataStructureUpgrade = MoreDataStructure()
         moreDataStructureUpgrade.itemName = "Upgrade your Plan"
-        moreDataStructureUpgrade.icon = "No Icon"
+        moreDataStructureUpgrade.icon = "settings"
         moreDataStructureArray.append(moreDataStructureUpgrade)
         
         //Customer Support
         var moreDataStructureSupport = MoreDataStructure()
         moreDataStructureSupport.itemName = "Customer Support"
-        moreDataStructureSupport.icon = "No Icon"
+        moreDataStructureSupport.icon = "customer support"
         moreDataStructureArray.append(moreDataStructureSupport)
         self.dataStructure = moreDataStructureArray
         self.reloadData?()

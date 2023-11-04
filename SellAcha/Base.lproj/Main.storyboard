@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="84h-QM-78d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="84h-QM-78d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -279,7 +278,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="YIi-Vv-ypm">
-                                <rect key="frame" x="0.0" y="0.0" width="404" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acj-1S-RtP">
                                 <rect key="frame" x="15" y="52" width="40" height="40"/>
@@ -296,7 +295,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHk-XA-W7t">
-                                <rect key="frame" x="55" y="68" width="332" height="29"/>
+                                <rect key="frame" x="55" y="68" width="342" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="deN-jK-ol3"/>
                                 </constraints>
@@ -305,7 +304,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1U-Ht-clb">
-                                <rect key="frame" x="0.0" y="112" width="404" height="784"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="784"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpL-1l-Pey">
                                         <rect key="frame" x="18" y="35" width="35" height="35"/>
@@ -372,20 +371,20 @@
                                         <buttonConfiguration key="configuration" style="plain" title="4"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Rg-J1-KOo">
-                                        <rect key="frame" x="0.0" y="85" width="404" height="11"/>
+                                        <rect key="frame" x="0.0" y="85" width="414" height="11"/>
                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="11" id="hFk-ZY-57X"/>
                                         </constraints>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KyN-NY-LcN">
-                                        <rect key="frame" x="0.0" y="101" width="404" height="683"/>
+                                        <rect key="frame" x="0.0" y="101" width="414" height="683"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAg-xv-uOQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="683"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="683"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fq-sG-UfK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="1000"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpH-DK-KZz">
                                                                 <rect key="frame" x="26" y="25" width="183.5" height="30"/>
@@ -406,7 +405,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Business Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAo-qG-Wpu" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="97" width="352" height="50"/>
+                                                                <rect key="frame" x="26" y="97" width="362" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="l2n-yi-vB6"/>
                                                                 </constraints>
@@ -414,7 +413,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDA-Od-tyU">
-                                                                <rect key="frame" x="26" y="168" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="168" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="D83-Yk-emj"/>
                                                                 </constraints>
@@ -423,7 +422,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xId-4x-Acr" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="192" width="352" height="50"/>
+                                                                <rect key="frame" x="26" y="192" width="362" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="1HX-k6-qzH"/>
                                                                 </constraints>
@@ -431,7 +430,7 @@
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Shop Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yc-Kz-oCn">
-                                                                <rect key="frame" x="26" y="263" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="263" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="Zpg-Bf-fmc"/>
                                                                 </constraints>
@@ -440,7 +439,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Shop Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AI1-Le-maQ" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="287" width="352" height="50"/>
+                                                                <rect key="frame" x="26" y="287" width="362" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="VgH-JZ-99f"/>
                                                                 </constraints>
@@ -448,7 +447,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Referral Number (Optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mx-Td-fDV">
-                                                                <rect key="frame" x="26" y="358" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="358" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="ETc-2K-bsN"/>
                                                                 </constraints>
@@ -457,7 +456,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Referral Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oze-Me-xGt" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="382" width="352" height="50"/>
+                                                                <rect key="frame" x="26" y="382" width="362" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="Fkm-f6-Hme"/>
                                                                 </constraints>
@@ -465,7 +464,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83d-jx-c08">
-                                                                <rect key="frame" x="26" y="453" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="453" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="8UL-3K-Qv6"/>
                                                                 </constraints>
@@ -474,7 +473,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ca5-Iv-pZe" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="477" width="352" height="50"/>
+                                                                <rect key="frame" x="26" y="477" width="362" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="umW-lU-i3F"/>
                                                                 </constraints>
@@ -482,7 +481,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKV-57-c5q">
-                                                                <rect key="frame" x="26" y="548" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="548" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="mXX-ir-lsq"/>
                                                                 </constraints>
@@ -491,7 +490,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJJ-fx-iX6" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="572" width="352" height="50"/>
+                                                                <rect key="frame" x="26" y="572" width="362" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="kRH-G0-9Ad"/>
                                                                 </constraints>
@@ -499,7 +498,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXy-vr-ZP6">
-                                                                <rect key="frame" x="26" y="643" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="643" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="AB7-R8-i5A"/>
                                                                 </constraints>
@@ -508,7 +507,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6N-ib-MDY" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="667" width="352" height="50"/>
+                                                                <rect key="frame" x="26" y="667" width="362" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="uvc-33-BWu"/>
                                                                 </constraints>
@@ -516,7 +515,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Service Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDO-2b-YvC">
-                                                                <rect key="frame" x="26" y="738" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="738" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="XDB-jp-LGb"/>
                                                                 </constraints>
@@ -525,7 +524,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Service Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2w-3D-1Hm" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="762" width="352" height="50"/>
+                                                                <rect key="frame" x="26" y="762" width="362" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="5eR-5z-9mM"/>
                                                                 </constraints>
@@ -533,7 +532,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdE-si-prg">
-                                                                <rect key="frame" x="45" y="850" width="314" height="50"/>
+                                                                <rect key="frame" x="45" y="850" width="324" height="50"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.26274509800000001" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="fYD-1t-H7o"/>
@@ -627,10 +626,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGq-UJ-aUs">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Themes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stM-gy-J82">
-                                                <rect key="frame" x="26" y="21" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="21" width="362" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="dsF-hv-fhn"/>
                                                 </constraints>
@@ -639,13 +638,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="xSS-fX-7zt">
-                                                <rect key="frame" x="26" y="91" width="352" height="145"/>
+                                                <rect key="frame" x="26" y="91" width="362" height="145"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeF-W7-dSZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="145"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="145"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvK-vM-RVu">
-                                                                <rect key="frame" x="119" y="3" width="25" height="25"/>
+                                                                <rect key="frame" x="124" y="3" width="25" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="aZJ-Gy-eDB"/>
                                                                     <constraint firstAttribute="width" constant="25" id="igm-px-7CI"/>
@@ -657,13 +656,13 @@
                                                                 </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoImage" translatesAutoresizingMaskIntoConstraints="NO" id="7dO-AM-e96">
-                                                                <rect key="frame" x="8" y="32" width="136.5" height="60"/>
+                                                                <rect key="frame" x="8" y="32" width="141.5" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="txg-pc-Ner"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-LO-YuW">
-                                                                <rect key="frame" x="23" y="107" width="106.5" height="28"/>
+                                                                <rect key="frame" x="23" y="107" width="111.5" height="28"/>
                                                                 <color key="backgroundColor" red="0.25098039220000001" green="0.6588235294" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="INSTALL"/>
@@ -695,10 +694,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjQ-CW-YOz">
-                                                        <rect key="frame" x="199.5" y="0.0" width="152.5" height="145"/>
+                                                        <rect key="frame" x="204.5" y="0.0" width="157.5" height="145"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPl-9L-ndC">
-                                                                <rect key="frame" x="119" y="3" width="25" height="25"/>
+                                                                <rect key="frame" x="124" y="3" width="25" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="3sC-mv-QQt"/>
                                                                     <constraint firstAttribute="height" constant="25" id="Xxv-Pj-8Lt"/>
@@ -710,13 +709,13 @@
                                                                 </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoImage" translatesAutoresizingMaskIntoConstraints="NO" id="PYu-qz-Z9b">
-                                                                <rect key="frame" x="8" y="32" width="136.5" height="60"/>
+                                                                <rect key="frame" x="8" y="32" width="141.5" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="g3C-I6-jm0"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ5-qT-P9V">
-                                                                <rect key="frame" x="23" y="107" width="106.5" height="28"/>
+                                                                <rect key="frame" x="23" y="107" width="111.5" height="28"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.26274509800000001" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Active"/>
@@ -753,7 +752,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruk-r7-HhH">
-                                                <rect key="frame" x="30" y="266" width="344" height="45"/>
+                                                <rect key="frame" x="30" y="266" width="354" height="45"/>
                                                 <color key="backgroundColor" red="0.0" green="0.26274509800000001" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="lhi-ih-W6G"/>
@@ -785,10 +784,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-ir-lJG">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create/Upload Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp1-bh-fTu">
-                                                <rect key="frame" x="26" y="30" width="352" height="32"/>
+                                                <rect key="frame" x="26" y="30" width="362" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="DgY-V6-66Z"/>
                                                 </constraints>
@@ -797,7 +796,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sellbetta Logo Maker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6t-XS-pdl">
-                                                <rect key="frame" x="26" y="232" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="232" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="Ddw-kY-HYX"/>
                                                 </constraints>
@@ -806,13 +805,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoImage" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-kl-axD">
-                                                <rect key="frame" x="87" y="112" width="230" height="100"/>
+                                                <rect key="frame" x="87" y="112" width="240" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="XCw-oh-jG3"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U5-yw-VIj">
-                                                <rect key="frame" x="26" y="293" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="293" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="knQ-bd-Eut"/>
                                                 </constraints>
@@ -821,7 +820,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Brand" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-e4-UUN" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="319" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="319" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Gfy-0R-Lch"/>
@@ -830,7 +829,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRV-34-Apt">
-                                                <rect key="frame" x="26" y="384" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="384" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="Mkg-Y0-iWr"/>
                                                 </constraints>
@@ -839,7 +838,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TagLine" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubw-Kb-Z1l" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="410" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="410" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="c5F-KR-m09"/>
@@ -848,7 +847,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C81-Cv-CvG">
-                                                <rect key="frame" x="30" y="485" width="344" height="45"/>
+                                                <rect key="frame" x="30" y="485" width="354" height="45"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="8iw-Jn-JFv"/>
@@ -895,16 +894,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqB-0C-CPh">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeZ-mQ-42a">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="688"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxm-3w-6tC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="900"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Scheme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZD-ec-4GS">
-                                                                <rect key="frame" x="26" y="30" width="352" height="31"/>
+                                                                <rect key="frame" x="26" y="30" width="362" height="31"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="31" id="j0d-LX-WdR"/>
                                                                 </constraints>
@@ -913,7 +912,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUQ-R9-CQW">
-                                                                <rect key="frame" x="26" y="81" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="81" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="vnI-ex-Zv4"/>
                                                                 </constraints>
@@ -922,7 +921,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APe-Ua-CCK">
-                                                                <rect key="frame" x="26" y="172" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="172" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="uYP-3N-7t4"/>
                                                                 </constraints>
@@ -931,7 +930,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z7G-MF-LDU" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="107" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="107" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Vsk-cP-oCu"/>
@@ -954,7 +953,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aQ-ge-Z21">
-                                                                <rect key="frame" x="135" y="205" width="244" height="21"/>
+                                                                <rect key="frame" x="135" y="205" width="254" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="aXf-8c-CW7"/>
                                                                 </constraints>
@@ -963,7 +962,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1p-4N-eFb">
-                                                                <rect key="frame" x="135" y="324" width="244" height="21"/>
+                                                                <rect key="frame" x="135" y="324" width="254" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="kFc-un-c0H"/>
                                                                 </constraints>
@@ -990,7 +989,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favicon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWB-3d-X7z">
-                                                                <rect key="frame" x="26" y="285" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="285" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="LdU-kX-yiZ"/>
                                                                 </constraints>
@@ -999,13 +998,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-wg-Ze6">
-                                                                <rect key="frame" x="26" y="410" width="352" height="300"/>
+                                                                <rect key="frame" x="26" y="410" width="362" height="300"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fyi-PW-ifN">
-                                                                        <rect key="frame" x="26" y="0.0" width="300" height="40"/>
+                                                                        <rect key="frame" x="26" y="0.0" width="310" height="40"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP7-Xi-Mhh">
-                                                                                <rect key="frame" x="0.0" y="9" width="300" height="21"/>
+                                                                                <rect key="frame" x="0.0" y="9" width="310" height="21"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="21" id="RHb-VW-CaO"/>
                                                                                 </constraints>
@@ -1038,7 +1037,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOf-9a-qa0">
-                                                                        <rect key="frame" x="172" y="60" width="150" height="20.5"/>
+                                                                        <rect key="frame" x="182" y="60" width="150" height="20.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20.5" id="ZMj-dW-iYB"/>
                                                                             <constraint firstAttribute="width" constant="150" id="moM-za-nEp"/>
@@ -1048,7 +1047,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="facebook.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42J-pv-Mws" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                        <rect key="frame" x="26" y="85.5" width="300" height="45"/>
+                                                                        <rect key="frame" x="26" y="85.5" width="310" height="45"/>
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="AtO-CC-len"/>
@@ -1057,7 +1056,7 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICON CLASS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8O-NA-fFp">
-                                                                        <rect key="frame" x="26" y="150.5" width="300" height="21"/>
+                                                                        <rect key="frame" x="26" y="150.5" width="310" height="21"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="21" id="F75-aT-FeO"/>
                                                                         </constraints>
@@ -1066,7 +1065,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Du1-HJ-QJL" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                        <rect key="frame" x="26" y="176.5" width="300" height="45"/>
+                                                                        <rect key="frame" x="26" y="176.5" width="310" height="45"/>
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="6jO-YU-S2K"/>
@@ -1075,10 +1074,10 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="g4V-Ks-Qiq">
-                                                                        <rect key="frame" x="80" y="243" width="246" height="40"/>
+                                                                        <rect key="frame" x="80" y="243" width="256" height="40"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryq-bG-d1M">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="113" height="40"/>
                                                                                 <color key="backgroundColor" red="0.85882352939999995" green="0.2666666667" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" title="Remove"/>
@@ -1093,7 +1092,7 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDE-Zw-EoW">
-                                                                                <rect key="frame" x="138" y="0.0" width="108" height="40"/>
+                                                                                <rect key="frame" x="143" y="0.0" width="113" height="40"/>
                                                                                 <color key="backgroundColor" red="0.25098039220000001" green="0.6588235294" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <state key="normal" title="Button"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" title="Add New"/>
@@ -1144,7 +1143,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOZ-0C-ScY">
-                                                                <rect key="frame" x="30" y="750" width="344" height="45"/>
+                                                                <rect key="frame" x="30" y="750" width="354" height="45"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.26274509800000001" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="PpZ-WJ-bEB"/>
@@ -1222,16 +1221,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjz-Fx-mqB">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTC-ss-0xU">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="688"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkV-Sg-THf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="800"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xo0-fy-Efk">
-                                                                <rect key="frame" x="26" y="20" width="352" height="32"/>
+                                                                <rect key="frame" x="26" y="20" width="362" height="32"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="32" id="QvB-om-kFs"/>
                                                                 </constraints>
@@ -1240,7 +1239,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWz-mY-RLz">
-                                                                <rect key="frame" x="26" y="72" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="72" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="rZq-rU-deq"/>
                                                                 </constraints>
@@ -1249,7 +1248,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parent Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-fw-pVi">
-                                                                <rect key="frame" x="26" y="163" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="163" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="BlS-cZ-O7y"/>
                                                                 </constraints>
@@ -1258,7 +1257,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zD9-Hc-vBj" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="98" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="98" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="rWv-0d-Cvl"/>
@@ -1267,7 +1266,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please Select Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6C-hW-Gm2" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="189" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="189" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="qT8-wi-4G2"/>
@@ -1276,7 +1275,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bek-jp-erm">
-                                                                <rect key="frame" x="26" y="254" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="254" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="s2H-Px-VFh"/>
                                                                 </constraints>
@@ -1285,7 +1284,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Assigned To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ssM-ec-Xx2" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="371" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="371" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="CfL-KM-QOw"/>
@@ -1294,7 +1293,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assign To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVB-CI-SBO">
-                                                                <rect key="frame" x="26" y="345" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="345" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="fdS-6l-VR0"/>
                                                                 </constraints>
@@ -1303,7 +1302,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Feature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qwz-kw-NGz" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="280" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="280" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="axb-R8-jKb"/>
@@ -1312,7 +1311,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thumbnail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5k-iB-Avr">
-                                                                <rect key="frame" x="26" y="436" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="436" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="2xj-ia-pdc"/>
                                                                 </constraints>
@@ -1341,7 +1340,7 @@
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No file Choosen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sS-9W-viz">
-                                                                <rect key="frame" x="202" y="487" width="176" height="21"/>
+                                                                <rect key="frame" x="202" y="487" width="186" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="0bH-Wl-BIf"/>
                                                                 </constraints>
@@ -1350,7 +1349,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lip-HS-XDk">
-                                                                <rect key="frame" x="35" y="552" width="334" height="45"/>
+                                                                <rect key="frame" x="35" y="552" width="344" height="45"/>
                                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Von-hE-mcW"/>
@@ -1431,16 +1430,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUR-IZ-bsz">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xoq-HZ-P1h">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="688"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peU-uU-2pY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="800"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF4-5q-A6l">
-                                                                <rect key="frame" x="26" y="25" width="352" height="32"/>
+                                                                <rect key="frame" x="26" y="25" width="362" height="32"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="32" id="YLO-Tq-Lbh"/>
                                                                 </constraints>
@@ -1449,7 +1448,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KT1-cm-NOy">
-                                                                <rect key="frame" x="26" y="77" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="77" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="Y04-1W-zbb"/>
                                                                 </constraints>
@@ -1458,7 +1457,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4D3-4O-TOK" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="103" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="103" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="W0W-WA-42Q"/>
@@ -1467,7 +1466,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mn-ez-DUB">
-                                                                <rect key="frame" x="26" y="168" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="168" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="XCX-lg-7u0"/>
                                                                 </constraints>
@@ -1476,7 +1475,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-fQ-O1k" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="194" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="194" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="hOO-9y-RkV"/>
@@ -1485,7 +1484,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52B-vd-Fo3">
-                                                                <rect key="frame" x="26" y="259" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="259" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="Jiq-ix-TDW"/>
                                                                 </constraints>
@@ -1494,7 +1493,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnq-TW-NiF">
-                                                                <rect key="frame" x="26" y="300" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="300" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="SBE-H9-Ndy"/>
                                                                 </constraints>
@@ -1503,7 +1502,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Special Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88K-3b-y31" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="326" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="326" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="LGO-w5-WPu"/>
@@ -1512,7 +1511,7 @@
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Price Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIK-kQ-mZ2">
-                                                                <rect key="frame" x="26" y="391" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="391" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="i7n-ZU-euk"/>
                                                                 </constraints>
@@ -1521,7 +1520,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Special Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qF3-YJ-GlH" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="417" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="417" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Kk5-xQ-1eu"/>
@@ -1530,7 +1529,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Price Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6j-oB-3gh">
-                                                                <rect key="frame" x="26" y="482" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="482" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="fU9-FL-PMJ"/>
                                                                 </constraints>
@@ -1539,7 +1538,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dd/mm/yyyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzN-TR-RU7" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="508" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="508" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="UDc-Uf-3H7"/>
@@ -1548,7 +1547,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Price Ends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrI-ED-zOb">
-                                                                <rect key="frame" x="26" y="573" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="573" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="xOL-Uv-eAl"/>
                                                                 </constraints>
@@ -1557,7 +1556,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dd/mm/yyyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZvE-ZB-4fY" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="599" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="599" width="362" height="45"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Qp8-Iw-bRx"/>
                                                                 </constraints>
@@ -1565,7 +1564,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZQ-TC-eI6">
-                                                                <rect key="frame" x="30" y="684" width="344" height="45"/>
+                                                                <rect key="frame" x="30" y="684" width="354" height="45"/>
                                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="8pS-4D-uSP"/>
@@ -1653,13 +1652,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZh-ac-qCj">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvh-s3-RU5">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="688"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igd-Kn-Dk5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="700"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Analytics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdY-cq-h4W">
                                                                 <rect key="frame" x="26" y="30" width="190" height="32"/>
@@ -1687,7 +1686,7 @@
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GA-MEASURMENT-ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb3-JL-lkK">
-                                                                <rect key="frame" x="26" y="82" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="82" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="Uf2-9f-ulq"/>
                                                                 </constraints>
@@ -1696,7 +1695,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UA-123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xue-uZ-XEL" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="108" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="108" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Xie-gy-YrZ"/>
@@ -1705,7 +1704,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANALYTICS VIEW ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJf-nR-DOy">
-                                                                <rect key="frame" x="26" y="173" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="173" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="to8-ed-SuI"/>
                                                                 </constraints>
@@ -1714,7 +1713,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Analytics View Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IJq-Va-bzA" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="199" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="199" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="2w8-4L-dfN"/>
@@ -1723,7 +1722,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="service-account-credentials.json" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh6-0q-VmK">
-                                                                <rect key="frame" x="26" y="264" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="264" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="CgM-ty-z56"/>
                                                                 </constraints>
@@ -1753,7 +1752,7 @@
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No file choosen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkc-au-sKl">
-                                                                <rect key="frame" x="229" y="325" width="160" height="21"/>
+                                                                <rect key="frame" x="239" y="325" width="160" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="160" id="2GD-J0-3wm"/>
                                                                     <constraint firstAttribute="height" constant="21" id="mdH-2b-vhX"/>
@@ -1763,7 +1762,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKU-GY-HjM">
-                                                                <rect key="frame" x="26" y="375" width="352" height="21"/>
+                                                                <rect key="frame" x="26" y="375" width="362" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="Yx7-os-ohZ"/>
                                                                 </constraints>
@@ -1772,7 +1771,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3W-Ef-J1t" userLabel="SelectStatus" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="401" width="352" height="45"/>
+                                                                <rect key="frame" x="26" y="401" width="362" height="45"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Aw1-6Y-MSy"/>
@@ -1781,7 +1780,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdQ-ty-yn9">
-                                                                <rect key="frame" x="30" y="486" width="344" height="45"/>
+                                                                <rect key="frame" x="30" y="486" width="354" height="45"/>
                                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="l4G-oz-gzu"/>
@@ -1855,7 +1854,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6J-cq-FJs">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Tag Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJu-3t-WGw">
                                                 <rect key="frame" x="26" y="30" width="238" height="32"/>
@@ -1868,7 +1867,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCt-xE-axA">
-                                                <rect key="frame" x="285" y="27" width="75" height="35"/>
+                                                <rect key="frame" x="285" y="27" width="85" height="35"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="Ch2-kF-E8T"/>
@@ -1882,7 +1881,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Tag Manager  Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIn-Gm-I2M">
-                                                <rect key="frame" x="26" y="82" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="82" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="8N7-7V-L7I"/>
                                                 </constraints>
@@ -1891,7 +1890,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WN-7g-uMu">
-                                                <rect key="frame" x="26" y="173" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="173" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="rpv-oF-zs2"/>
                                                 </constraints>
@@ -1900,7 +1899,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="GTM-1AB123" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zss-MM-HoC" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="108" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="108" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="bV3-GH-dBZ"/>
@@ -1909,7 +1908,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPY-0O-Y4B" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="197" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="197" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="GFB-89-kWd"/>
@@ -1918,7 +1917,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h57-o5-za5">
-                                                <rect key="frame" x="40" y="282" width="324" height="45"/>
+                                                <rect key="frame" x="40" y="282" width="334" height="45"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="nhi-xl-rmx"/>
@@ -1961,7 +1960,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ros-UT-odZ">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook Pixel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlT-fR-s8a">
                                                 <rect key="frame" x="26" y="30" width="240" height="32"/>
@@ -1974,7 +1973,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz7-9l-jdV">
-                                                <rect key="frame" x="228" y="30" width="150" height="35"/>
+                                                <rect key="frame" x="238" y="30" width="150" height="35"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="KAC-7z-0l3"/>
@@ -1989,7 +1988,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Pixel Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEI-bG-87O">
-                                                <rect key="frame" x="26" y="92" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="92" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="yXK-ez-sL4"/>
                                                 </constraints>
@@ -1998,7 +1997,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-Jc-Ttz">
-                                                <rect key="frame" x="26" y="172" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="172" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="3sf-nC-5Mn"/>
                                                 </constraints>
@@ -2007,7 +2006,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6WN-hZ-DA2" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="118" width="352" height="34"/>
+                                                <rect key="frame" x="26" y="118" width="362" height="34"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="dII-Il-XBq"/>
@@ -2016,7 +2015,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztf-AD-hVa" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="198" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="198" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="ggN-MJ-7Yf"/>
@@ -2025,7 +2024,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqu-8P-tvU">
-                                                <rect key="frame" x="40" y="283" width="324" height="45"/>
+                                                <rect key="frame" x="40" y="283" width="334" height="45"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="KFB-ZU-41w"/>
@@ -2067,10 +2066,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMu-PD-btd">
-                                        <rect key="frame" x="0.0" y="96" width="404" height="688"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="688"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whatsapp API" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6s-hb-kZq">
-                                                <rect key="frame" x="26" y="30" width="352" height="32"/>
+                                                <rect key="frame" x="26" y="30" width="362" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="tQS-6D-1Kv"/>
                                                 </constraints>
@@ -2079,7 +2078,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whatsapp Number (Optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpI-pk-heU">
-                                                <rect key="frame" x="26" y="82" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="82" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="gMH-LZ-gXg"/>
                                                 </constraints>
@@ -2088,7 +2087,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretext For Product Page(Optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAb-8H-Hn2">
-                                                <rect key="frame" x="26" y="173" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="173" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="kVx-tY-Hwo"/>
                                                 </constraints>
@@ -2097,7 +2096,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Page Pretext (Optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mny-j0-wyf">
-                                                <rect key="frame" x="26" y="264" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="264" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="XVy-is-Ecp"/>
                                                 </constraints>
@@ -2106,7 +2105,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43f-n2-Fkb">
-                                                <rect key="frame" x="26" y="355" width="352" height="21"/>
+                                                <rect key="frame" x="26" y="355" width="362" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="IL3-tY-dko"/>
                                                 </constraints>
@@ -2115,7 +2114,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoJ-5C-dxR" userLabel="whatsappNumberTF" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="108" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="108" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Zwf-yT-yf1"/>
@@ -2124,7 +2123,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="I want to purchase this product" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U1n-4c-nYG" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="199" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="199" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="HHA-gK-I0W"/>
@@ -2133,7 +2132,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hello I have a query" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-tn-KcR" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="290" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="290" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="2df-8C-xoc"/>
@@ -2142,7 +2141,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Status" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-XI-eFg" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
-                                                <rect key="frame" x="26" y="381" width="352" height="45"/>
+                                                <rect key="frame" x="26" y="381" width="362" height="45"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="sad-hc-jin"/>
@@ -2151,7 +2150,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsY-ag-cDW">
-                                                <rect key="frame" x="40" y="456" width="324" height="45"/>
+                                                <rect key="frame" x="40" y="456" width="334" height="45"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="dMN-1p-Ktf"/>
@@ -2984,7 +2983,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="p8j-sM-fJs">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="753"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="787"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-Fb-L5z">
                                 <rect key="frame" x="158" y="50" width="77" height="29"/>
@@ -3185,7 +3184,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="h0y-JB-yx8">
-                                <rect key="frame" x="0.0" y="299" width="393" height="454"/>
+                                <rect key="frame" x="0.0" y="299" width="393" height="488"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="199" id="VAy-0h-Ygl">
@@ -4513,8 +4512,11 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0b-dA-Gff">
-                                                <rect key="frame" x="15" y="412.5" width="363" height="35"/>
+                                                <rect key="frame" x="15" y="412.5" width="363" height="50"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ka2-vc-voU"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
@@ -4575,7 +4577,7 @@
                                                 <rect key="frame" x="15" y="387.5" width="363" height="75"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="Nri-AM-Sqs"/>
+                                                    <constraint firstAttribute="height" constant="75" id="EP1-mD-nwV"/>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MonthCell" id="fEV-tY-k9A" customClass="MonthCell" customModule="SellAcha" customModuleProvider="target">
@@ -4592,8 +4594,8 @@
                                                     <outlet property="delegate" destination="Jnf-Km-85y" id="Kyf-ib-coq"/>
                                                 </connections>
                                             </tableView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: After you update your settings the action will work after 5 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsn-1K-5ls">
-                                                <rect key="frame" x="15" y="467.5" width="363" height="41"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Note: After you update your settings the action will work after 5 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsn-1K-5ls">
+                                                <rect key="frame" x="15" y="482.5" width="363" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4603,20 +4605,19 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="J0b-dA-Gff" secondAttribute="trailing" constant="15" id="1yt-vU-kz7"/>
                                             <constraint firstItem="goB-Om-nE0" firstAttribute="leading" secondItem="GlC-5H-CQy" secondAttribute="leading" id="2JR-Gf-4af"/>
+                                            <constraint firstItem="TGg-FD-AIX" firstAttribute="leading" secondItem="yBP-Bc-Vig" secondAttribute="leading" id="2UA-lh-XOU"/>
                                             <constraint firstItem="J0b-dA-Gff" firstAttribute="leading" secondItem="yBP-Bc-Vig" secondAttribute="leading" constant="15" id="2Z3-HW-pSH"/>
                                             <constraint firstItem="lEj-iC-EFy" firstAttribute="top" secondItem="fMB-j5-1NR" secondAttribute="bottom" constant="10" id="2ow-UM-LdY"/>
                                             <constraint firstAttribute="trailing" secondItem="WWC-AS-27n" secondAttribute="trailing" constant="15" id="2v2-dR-Jss"/>
                                             <constraint firstItem="goB-Om-nE0" firstAttribute="top" secondItem="GlC-5H-CQy" secondAttribute="bottom" constant="20" id="35w-0t-iX1"/>
                                             <constraint firstItem="NEE-DH-nGo" firstAttribute="top" secondItem="fMB-j5-1NR" secondAttribute="bottom" constant="10" id="45e-jb-HTK"/>
-                                            <constraint firstItem="Lsn-1K-5ls" firstAttribute="trailing" secondItem="TGg-FD-AIX" secondAttribute="trailing" id="5wd-KB-zgc"/>
+                                            <constraint firstAttribute="trailing" secondItem="TGg-FD-AIX" secondAttribute="trailing" constant="15" id="6jA-Pg-Dzu"/>
                                             <constraint firstItem="29Z-sE-odS" firstAttribute="leading" secondItem="yBP-Bc-Vig" secondAttribute="leading" constant="15" id="7us-S7-Auc"/>
-                                            <constraint firstItem="TGg-FD-AIX" firstAttribute="top" secondItem="lEj-iC-EFy" secondAttribute="bottom" constant="5" id="7z4-wq-0LU"/>
                                             <constraint firstItem="lEj-iC-EFy" firstAttribute="leading" secondItem="fMB-j5-1NR" secondAttribute="leading" id="86t-0J-AtF"/>
                                             <constraint firstItem="GlC-5H-CQy" firstAttribute="trailing" secondItem="12h-DO-Gfb" secondAttribute="trailing" id="9Vj-kr-Wji"/>
                                             <constraint firstItem="NEE-DH-nGo" firstAttribute="leading" secondItem="yBP-Bc-Vig" secondAttribute="leading" constant="15" id="AaO-is-iUo"/>
                                             <constraint firstItem="WWC-AS-27n" firstAttribute="leading" secondItem="yBP-Bc-Vig" secondAttribute="leading" constant="15" id="DSn-sU-RXq"/>
                                             <constraint firstItem="vdg-YO-bLt" firstAttribute="leading" secondItem="Age-hm-Y0U" secondAttribute="trailing" constant="25" id="Dbh-E7-GPI"/>
-                                            <constraint firstItem="TGg-FD-AIX" firstAttribute="leading" secondItem="NEE-DH-nGo" secondAttribute="leading" id="ERe-Gt-IbB"/>
                                             <constraint firstItem="GlC-5H-CQy" firstAttribute="leading" secondItem="12h-DO-Gfb" secondAttribute="leading" id="Ee8-YS-ohU"/>
                                             <constraint firstItem="fMB-j5-1NR" firstAttribute="leading" secondItem="Age-hm-Y0U" secondAttribute="leading" id="Enr-DQ-7YR"/>
                                             <constraint firstItem="12h-DO-Gfb" firstAttribute="top" secondItem="29Z-sE-odS" secondAttribute="bottom" constant="20" id="FFg-eC-YKM"/>
@@ -4625,7 +4626,6 @@
                                             <constraint firstItem="Age-hm-Y0U" firstAttribute="top" secondItem="bLg-Ae-5uD" secondAttribute="bottom" constant="15" id="Kz7-xU-Dku"/>
                                             <constraint firstItem="bLg-Ae-5uD" firstAttribute="trailing" secondItem="goB-Om-nE0" secondAttribute="trailing" id="OWi-Lx-Y5N"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Lsn-1K-5ls" secondAttribute="bottom" constant="15" id="Oqn-xq-KbK"/>
-                                            <constraint firstItem="Lsn-1K-5ls" firstAttribute="leading" secondItem="TGg-FD-AIX" secondAttribute="leading" id="Qzq-VC-Qpl"/>
                                             <constraint firstItem="12h-DO-Gfb" firstAttribute="leading" secondItem="29Z-sE-odS" secondAttribute="leading" id="RT1-0J-lGE"/>
                                             <constraint firstItem="GlC-5H-CQy" firstAttribute="top" secondItem="12h-DO-Gfb" secondAttribute="bottom" constant="20" id="SSE-mr-OYZ"/>
                                             <constraint firstAttribute="trailing" secondItem="vdg-YO-bLt" secondAttribute="trailing" constant="15" id="Sff-Fa-1t2"/>
@@ -4642,7 +4642,7 @@
                                             <constraint firstAttribute="trailing" secondItem="NEE-DH-nGo" secondAttribute="trailing" constant="15" id="m0i-3T-eZ4"/>
                                             <constraint firstItem="goB-Om-nE0" firstAttribute="trailing" secondItem="GlC-5H-CQy" secondAttribute="trailing" id="mWJ-1G-5QP"/>
                                             <constraint firstItem="Lsn-1K-5ls" firstAttribute="top" secondItem="J0b-dA-Gff" secondAttribute="bottom" constant="20" id="nrI-pd-f1y"/>
-                                            <constraint firstItem="TGg-FD-AIX" firstAttribute="trailing" secondItem="NEE-DH-nGo" secondAttribute="trailing" id="s1D-tr-FSx"/>
+                                            <constraint firstItem="TGg-FD-AIX" firstAttribute="top" secondItem="lEj-iC-EFy" secondAttribute="bottom" constant="5" id="pVb-gH-E6m"/>
                                             <constraint firstItem="lEj-iC-EFy" firstAttribute="trailing" secondItem="fMB-j5-1NR" secondAttribute="trailing" id="soQ-9t-c9e"/>
                                             <constraint firstItem="12h-DO-Gfb" firstAttribute="trailing" secondItem="29Z-sE-odS" secondAttribute="trailing" id="y9X-1P-2IF"/>
                                             <constraint firstItem="fMB-j5-1NR" firstAttribute="top" secondItem="Age-hm-Y0U" secondAttribute="bottom" constant="20" id="z1C-sR-DzO"/>
@@ -4742,8 +4742,11 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frk-mT-Tx8">
-                                                <rect key="frame" x="15" y="244.5" width="363" height="35"/>
+                                                <rect key="frame" x="15" y="244.5" width="363" height="50"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="lZB-ig-JRt"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
@@ -4792,8 +4795,8 @@
                                                     <outlet property="delegate" destination="BNu-l7-Dat" id="T97-i2-xDY"/>
                                                 </connections>
                                             </tableView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: After you update your settings the action will work after 5 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mm-Sy-crU">
-                                                <rect key="frame" x="15" y="299.5" width="363" height="41"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: After you update your settings the action will work after 5 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mm-Sy-crU">
+                                                <rect key="frame" x="15" y="314.5" width="363" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4936,8 +4939,11 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FW-aI-Etz">
-                                                <rect key="frame" x="15" y="396" width="363" height="35"/>
+                                                <rect key="frame" x="15" y="396" width="363" height="50"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="rBf-BB-sLn"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
@@ -4986,8 +4992,8 @@
                                                     <outlet property="delegate" destination="5PE-qS-ci7" id="kq0-77-kzh"/>
                                                 </connections>
                                             </tableView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: After you update your settings the action will work after 5 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-e0-gSC">
-                                                <rect key="frame" x="15" y="451" width="363" height="41"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: After you update your settings the action will work after 5 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-e0-gSC">
+                                                <rect key="frame" x="15" y="466" width="363" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -5145,8 +5151,11 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fh-8V-c92">
-                                                <rect key="frame" x="15" y="244.5" width="363" height="35"/>
+                                                <rect key="frame" x="15" y="244.5" width="363" height="50"/>
                                                 <color key="backgroundColor" name="PrimaryColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="PW2-FJ-YqZ"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
@@ -5195,8 +5204,8 @@
                                                     <outlet property="delegate" destination="PtS-Wk-igt" id="Caa-3r-IGV"/>
                                                 </connections>
                                             </tableView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: After you update your settings the action will work after 5 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujq-YN-xYA">
-                                                <rect key="frame" x="15" y="299.5" width="363" height="41"/>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: After you update your settings the action will work after 5 minutes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujq-YN-xYA">
+                                                <rect key="frame" x="15" y="314.5" width="363" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -6849,7 +6858,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="Vas-Lo-U7j">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="753"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="787"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUh-cy-2Mt">
                                 <rect key="frame" x="146" y="50" width="101.5" height="29"/>
@@ -7070,7 +7079,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IyH-Gt-ehB">
-                                <rect key="frame" x="0.0" y="399" width="393" height="354"/>
+                                <rect key="frame" x="0.0" y="399" width="393" height="388"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="199" id="B4V-aQ-ufr">
@@ -8300,13 +8309,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trx-PS-dwR">
-                            <rect key="frame" x="0.0" y="0.0" width="363" height="20.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="363" height="20.333333333333332"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter location name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fry-xI-sYG">
-                            <rect key="frame" x="0.0" y="27.5" width="363" height="18.5"/>
+                            <rect key="frame" x="0.0" y="27.333333333333329" width="363" height="18.666666666666671"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
