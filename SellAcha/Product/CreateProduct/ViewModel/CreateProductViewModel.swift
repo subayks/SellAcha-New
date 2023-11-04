@@ -17,7 +17,7 @@ class CreateProductViewModel: BaseViewModel {
     }
     
     func createProduct(title: String, price: String, specialprice:String, pricetype:String,specialpricestart:String,specialpriceend:String,status:String) {
-        let imageRequest = ImageRequestParam(paramName: "image", name: "image", image: self.selectedImage ?? UIImage())
+        let imageRequest = ImageRequestParam(paramName: "media", name: "media", image: self.selectedImage ?? UIImage())
         let otherParam = ["title": "\(title)",
                           "price": "\(price)",
                           "special_price": "\(specialprice)","price_type": "\(pricetype)",

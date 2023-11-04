@@ -153,7 +153,9 @@ extension ProfileView: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 2 {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVC") as! ChangePasswordVC
             vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)        } else {
+            self.present(vc, animated: true, completion: nil)
+            
+        } else {
                 let alert = UIAlertController(title: "Alert", message: "Are you sure, You want to logout?", preferredStyle: UIAlertController.Style.alert)
                 // add the actions (buttons)
                 alert.addAction(UIAlertAction(title: "Log Out", style: UIAlertAction.Style.default, handler: { action in

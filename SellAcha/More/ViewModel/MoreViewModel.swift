@@ -100,9 +100,9 @@ class MoreViewModel {
         var moreDataStructureSettings = MoreDataStructure()
         var profileDataArraySettings = [ProfileData]()
 
-        var profileDatapaymentOptions = ProfileData()
-        profileDatapaymentOptions.name = "Payment Options"
-        profileDataArraySettings.append(profileDatapaymentOptions)
+//        var profileDatapaymentOptions = ProfileData()
+//        profileDatapaymentOptions.name = "Payment Options"
+//        profileDataArraySettings.append(profileDatapaymentOptions)
         
         var profileDataSubscriptions = ProfileData()
         profileDataSubscriptions.name = "Subscriptions"
@@ -112,9 +112,9 @@ class MoreViewModel {
         profileDataDomain.name = "Domain Setting"
         profileDataArraySettings.append(profileDataDomain)
         
-        var profileDataThemes = ProfileData()
-        profileDataThemes.name = "Themes & Apk"
-        profileDataArraySettings.append(profileDataThemes)
+//        var profileDataThemes = ProfileData()
+//        profileDataThemes.name = "Themes & Apk"
+//        profileDataArraySettings.append(profileDataThemes)
         
         moreDataStructureSettings.itemName = "Settings"
         moreDataStructureSettings.icon = "setting"
@@ -164,10 +164,10 @@ class MoreViewModel {
         moreDataStructureArray.append(moreDataStructureMarketing)
         
         //Upgrade
-        var moreDataStructureUpgrade = MoreDataStructure()
-        moreDataStructureUpgrade.itemName = "Upgrade your Plan"
-        moreDataStructureUpgrade.icon = "settings"
-        moreDataStructureArray.append(moreDataStructureUpgrade)
+//        var moreDataStructureUpgrade = MoreDataStructure()
+//        moreDataStructureUpgrade.itemName = "Upgrade your Plan"
+//        moreDataStructureUpgrade.icon = "settings"
+//        moreDataStructureArray.append(moreDataStructureUpgrade)
         
         //Customer Support
         var moreDataStructureSupport = MoreDataStructure()

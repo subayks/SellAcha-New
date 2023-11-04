@@ -54,6 +54,12 @@ class MoreView: UIViewController {
             return
         }
         
+        if self.vm.getHeaderViewCellVM(section: sender.tag).moreDataItem?.itemName ==  "Customer Support"  {
+            let chatNowVC = self.storyboard?.instantiateViewController(withIdentifier: "ChatNowVC") as! ChatNowVC
+            self.navigationController?.pushViewController(chatNowVC, animated: true)
+            return
+        }
+        
         if sender.tag != self.vm.previousIndex {
             //Hide previous
             if self.vm.previousIndex != nil {

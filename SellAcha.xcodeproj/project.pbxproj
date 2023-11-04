@@ -61,6 +61,8 @@
 		18DF65732AE6B239004D15D1 /* CouponsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF65722AE6B239004D15D1 /* CouponsCell.swift */; };
 		18DF65752AE6D070004D15D1 /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF65742AE6D070004D15D1 /* InventoryCell.swift */; };
 		2C13103D4243847FBEACEC99 /* Pods_SellAcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641F33B441ED8E7AC0D7E6D3 /* Pods_SellAcha.framework */; };
+		591CFDE42AF6C7C3000739B3 /* ChatNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591CFDE32AF6C7C3000739B3 /* ChatNowVC.swift */; };
+		591CFDE72AF6C7D7000739B3 /* ChatNowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591CFDE62AF6C7D7000739B3 /* ChatNowVM.swift */; };
 		5987A4E82AE069F600A2AC41 /* GoogleAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987A4E72AE069F600A2AC41 /* GoogleAnalytics.swift */; };
 		5987A4EA2AE06A0E00A2AC41 /* GoogleTapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987A4E92AE06A0E00A2AC41 /* GoogleTapManager.swift */; };
 		5987A4EC2AE06A1D00A2AC41 /* FaceBookApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987A4EB2AE06A1D00A2AC41 /* FaceBookApi.swift */; };
@@ -292,6 +294,8 @@
 		18DF65722AE6B239004D15D1 /* CouponsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsCell.swift; sourceTree = "<group>"; };
 		18DF65742AE6D070004D15D1 /* InventoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
 		33FED84EA57A581F139BF286 /* Pods_SellAchaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SellAchaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		591CFDE32AF6C7C3000739B3 /* ChatNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNowVC.swift; sourceTree = "<group>"; };
+		591CFDE62AF6C7D7000739B3 /* ChatNowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNowVM.swift; sourceTree = "<group>"; };
 		5987A4E72AE069F600A2AC41 /* GoogleAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAnalytics.swift; sourceTree = "<group>"; };
 		5987A4E92AE06A0E00A2AC41 /* GoogleTapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTapManager.swift; sourceTree = "<group>"; };
 		5987A4EB2AE06A1D00A2AC41 /* FaceBookApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBookApi.swift; sourceTree = "<group>"; };
@@ -753,6 +757,23 @@
 				599503BD2AE834E300C503A3 /* CreateCouponsVM.swift */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		591CFDE22AF6C7A6000739B3 /* ChatNow */ = {
+			isa = PBXGroup;
+			children = (
+				591CFDE52AF6C7C7000739B3 /* ViewModel */,
+				591CFDE32AF6C7C3000739B3 /* ChatNowVC.swift */,
+			);
+			path = ChatNow;
+			sourceTree = "<group>";
+		};
+		591CFDE52AF6C7C7000739B3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				591CFDE62AF6C7D7000739B3 /* ChatNowVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5987A4E62AE069D200A2AC41 /* Marketing Tools */ = {
@@ -1242,6 +1263,7 @@
 		59AF16302AD6E88100CDD975 /* SellAcha */ = {
 			isa = PBXGroup;
 			children = (
+				591CFDE22AF6C7A6000739B3 /* ChatNow */,
 				598AE8C12AEAF2E600E7BBD7 /* Settings */,
 				189A3C2E2AEA4C02002D9DA0 /* SignUp */,
 				59DAB5B52AE445C40046F7C7 /* Review&Rating */,
@@ -1681,6 +1703,7 @@
 				59913CE22ADC4E0000EAEF7C /* ProfileTableViewCell.swift in Sources */,
 				599A20082AED8A1E0058F0A6 /* ResetPasswordVC.swift in Sources */,
 				5990CEF12AD83E7800037E1E /* OrderFilterViewModel.swift in Sources */,
+				591CFDE72AF6C7D7000739B3 /* ChatNowVM.swift in Sources */,
 				59DAB5B72AE445DD0046F7C7 /* RatingVc.swift in Sources */,
 				59AC1F3B2AE2D7B8004EAFA4 /* Extension + UIViewcontroller.swift in Sources */,
 				5988F1C42AE9927C00C78E1B /* ShippingVM.swift in Sources */,
@@ -1711,6 +1734,7 @@
 				18DF65212AE67E66004D15D1 /* ShippingVC.swift in Sources */,
 				5987A4F12AE0718D00A2AC41 /* GoogleAnalyticsVM.swift in Sources */,
 				18DF65492AE6AA1B004D15D1 /* InventoryModel.swift in Sources */,
+				591CFDE42AF6C7C3000739B3 /* ChatNowVC.swift in Sources */,
 				5990CEF72AD8535000037E1E /* BagView.swift in Sources */,
 				59AC1F432AE2DE3E004EAFA4 /* LoginViewModel.swift in Sources */,
 				5990CEED2AD83D8700037E1E /* FilterDateCell.swift in Sources */,
