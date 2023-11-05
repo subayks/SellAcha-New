@@ -63,6 +63,7 @@
 		2C13103D4243847FBEACEC99 /* Pods_SellAcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641F33B441ED8E7AC0D7E6D3 /* Pods_SellAcha.framework */; };
 		591CFDE42AF6C7C3000739B3 /* ChatNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591CFDE32AF6C7C3000739B3 /* ChatNowVC.swift */; };
 		591CFDE72AF6C7D7000739B3 /* ChatNowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591CFDE62AF6C7D7000739B3 /* ChatNowVM.swift */; };
+		591CFDEA2AF79FBA000739B3 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591CFDE92AF79FBA000739B3 /* SignupViewModel.swift */; };
 		5987A4E82AE069F600A2AC41 /* GoogleAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987A4E72AE069F600A2AC41 /* GoogleAnalytics.swift */; };
 		5987A4EA2AE06A0E00A2AC41 /* GoogleTapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987A4E92AE06A0E00A2AC41 /* GoogleTapManager.swift */; };
 		5987A4EC2AE06A1D00A2AC41 /* FaceBookApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987A4EB2AE06A1D00A2AC41 /* FaceBookApi.swift */; };
@@ -296,6 +297,7 @@
 		33FED84EA57A581F139BF286 /* Pods_SellAchaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SellAchaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		591CFDE32AF6C7C3000739B3 /* ChatNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNowVC.swift; sourceTree = "<group>"; };
 		591CFDE62AF6C7D7000739B3 /* ChatNowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNowVM.swift; sourceTree = "<group>"; };
+		591CFDE92AF79FBA000739B3 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		5987A4E72AE069F600A2AC41 /* GoogleAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAnalytics.swift; sourceTree = "<group>"; };
 		5987A4E92AE06A0E00A2AC41 /* GoogleTapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTapManager.swift; sourceTree = "<group>"; };
 		5987A4EB2AE06A1D00A2AC41 /* FaceBookApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBookApi.swift; sourceTree = "<group>"; };
@@ -522,6 +524,7 @@
 		189A3C2E2AEA4C02002D9DA0 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				591CFDE82AF79FA9000739B3 /* ViewModel */,
 				189A3C2F2AEA4C18002D9DA0 /* SignUpViewController.swift */,
 				1885B87B2AEAB6FC0022A40E /* UnderlinedTextField.swift */,
 			);
@@ -772,6 +775,14 @@
 			isa = PBXGroup;
 			children = (
 				591CFDE62AF6C7D7000739B3 /* ChatNowVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		591CFDE82AF79FA9000739B3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				591CFDE92AF79FBA000739B3 /* SignupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1698,6 +1709,7 @@
 				598AE8BE2AEAD1B100E7BBD7 /* CreateCategoriesVM.swift in Sources */,
 				59AF166B2AD6E95200CDD975 /* NetworkAdapter.swift in Sources */,
 				5988F1B12AE982BD00C78E1B /* RatingCellVM.swift in Sources */,
+				591CFDEA2AF79FBA000739B3 /* SignupViewModel.swift in Sources */,
 				18DF65592AE6AF60004D15D1 /* AttributeCellVM.swift in Sources */,
 				599503B32AE7F4CD00C503A3 /* BagViewVM.swift in Sources */,
 				59913CE22ADC4E0000EAEF7C /* ProfileTableViewCell.swift in Sources */,

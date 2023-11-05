@@ -64,24 +64,17 @@ class BagTableViewCell: UITableViewCell {
             self.fulfilmentStatus.backgroundColor = .orange
             self.fulfilmentStatus.setTitle("In-Active", for: .normal)
         }
-//        let onlineFileUrl = URL(string: String(self.vm?.model.preview?.media?.url?.dropFirst(2) ?? ""))
-//             //load from project directory
-//                let loaclFileUrl = Bundle.main.url(forResource: "2", withExtension: "webp")
-//            DispatchQueue.main.async {
-//                self.productImage.sd_setImage(with: loaclFileUrl)
-//            }
-        
+        self.productImage.layer.cornerRadius = 5
         let webPCoder = SDImageWebPCoder.shared
         SDImageCodersManager.shared.addCoder(webPCoder)
-        if let webpURL = URL(string: (String(self.vm?.model.preview?.media?.url?.dropFirst(2) ?? "")))  {
+        let urlString = "https://\(String(describing: self.vm?.model.preview?.media?.url?.dropFirst(2) ?? ""))"
+        if let webpURL = URL(string: urlString)  {
             DispatchQueue.main.async {
                 self.productImage.sd_setImage(with: webpURL)
             }
+        } else {
+            self.productImage.image = UIImage(named: "error_placeholder")
         }
-//        SDWebImageManager.shared().loadImage(with: self.vm?.model.preview?.media?.url?.dropFirst(2), options: .highPriority, progress: nil, completed: {(resultSet) in
-//            productImage.image = resultSet.0
-//
-//        })
     }
 
 }

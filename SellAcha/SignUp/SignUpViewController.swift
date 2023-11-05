@@ -162,6 +162,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var whatappNumberTF: UITextField!
     
+    var vm = SignupViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -242,6 +243,50 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         whatappickerView.dataSource = self
         whatsappStatusTF.inputView = whatappickerView
         whatappickerView.tag = 10
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.vm.errorClosure = { [weak self] (error) in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                if error != "" {
+                    let alert = UIAlertController(title: "Alert", message: error, preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+        
+        self.vm.alertClosure = { [weak self] (error) in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                let alert = UIAlertController(title: "Alert", message: error, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        
+        self.vm.showLoadingIndicatorClosure = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.showSpinner(onView: self.view)
+            }
+        }
+        
+        self.vm.hideLoadingIndicatorClosure = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.removeSpinner()
+            }
+        }
+        
+        self.vm.navigationClosure = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func saveBtnAction(_ sender: Any) {
@@ -421,8 +466,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func whatsappRegisterActoin(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController
-        self.navigationController?.popViewController(animated: true)
+        self.vm.makeSignUp(email: self.emailTF.text ?? "", password: self.passwordTF.text ?? "", sertype: self.serviceTF.text ?? "", refrral: "", mob: self.mobileNumberTF.text ?? "", themeColor: self.themeColorTF.text ?? "", pId: "", featured: self.selectFeatureTFProduct.text ?? "", menuStatus: "Yes", price: self.productPrice.text ?? "", astatus: self.GoogleSelectStatusTF.text ?? "", gfile: "", tstatus: self.TabManagerSelectStatusTF.text ?? "", pstatus: self.facebookStatusTF.text ?? "", wstatus: self.whatsappStatusTF.text ?? "", name: self.BusinessNameTF.text ?? "", domain: self.BusinessNameTF.text ?? "", customDomain: self.BusinessNameTF.text ?? "", utype: "product", businessName: self.BusinessNameTF.text ?? "", shopType: self.ProductTypeTF.text ?? "", cname: self.selectCategoryTF.text ?? "", title: self.productTitleTF.text ?? "", specialPriceStart: self.productPricestartsTF.text ?? "", specialPrice: self.productSpecialPrice.text ?? "", priceType: self.productPrice.text ?? "", type: self.ProductTypeTF.text ?? "", specialPriceEnd: self.productPriceEndsTF.text ?? "", gaMeasurementId: self.GoogleMeasurIDTF.text ?? "", analyticsViewId: self.GoogleAnalyticsViewIdTF.text ?? "", tagId: self.TabManagerIDTF.text ?? "", pixelId: self.facebookPixelTF.text ?? "", number: self.whatappNumberTF.text ?? "", shopPagePretext: self.whatsappPurchaseProductTF.text ?? "", otherPagePretext: self.whatsappQueryTF.text ?? "", plnt: "1")
     }
     
     @IBAction func facebookSaveBtnAction(_ sender: Any) {
