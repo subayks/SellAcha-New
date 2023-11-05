@@ -20,9 +20,9 @@ class CreateCategoriesVC: UIViewController {
     
         // declare Array in pickerview.
     
-    let servicesArray = ["Product","Service","Both"]
-    let featuredArray = ["Yes","No","Both"]
-    let assignToMenuArray = ["Yes","No","Both"]
+    let servicesArray = ["services","serviceschedule","category"]
+    let featuredArray = ["Yes","No"]
+    let assignToMenuArray = ["Yes","No"]
     
      // declare pickerviews.
     
@@ -70,26 +70,15 @@ class CreateCategoriesVC: UIViewController {
                 self.assignToField.text = "Yes"
             } else if self.vm.model?.menuStatus ==  0 {
                 self.assignToField.text = "No"
-            } else {
-                self.assignToField.text = "Both"
             }
             
             if self.vm.model?.featured == 1 {
                 self.featuredField.text = "Yes"
             } else if self.vm.model?.featured ==  0 {
                 self.featuredField.text = "No"
-            } else {
-                self.featuredField.text = "Both"
             }
-            
-            if self.vm.model?.type == "Product" {
-                self.serviceField.text = "Product"
-            } else if self.vm.model?.type == "Service" {
-                self.serviceField.text = "Service"
-            } else {
-                self.serviceField.text = "Both"
-            }
-         //   self.vm.selectedImage = UIImage()
+           self.serviceField.text = self.vm.model?.type
+       //    self.vm.selectedImage = UIImage()
         }
     }
     

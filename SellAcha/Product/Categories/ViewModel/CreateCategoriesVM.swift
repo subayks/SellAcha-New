@@ -31,16 +31,12 @@ class CreateCategoriesVM: BaseViewModel {
                 status = 1
             } else if featured == "No" {
                 status = 0
-            } else {
-                status = 2
             }
             var menu = 0
             if menuStatus == "Yes" {
                 menu = 1
             } else if menuStatus == "No" {
                 menu = 0
-            } else {
-                status = 2
             }
              let otherParam = ["name": "\(name)",
                                "type": "\(type)", "featured": "\(status)", "menu_status": "\(menu)"]
@@ -72,23 +68,19 @@ class CreateCategoriesVM: BaseViewModel {
                 status = 1
             } else if featured == "No" {
                 status = 0
-            } else {
-                status = 2
             }
             var menu = 0
             if menuStatus == "Yes" {
                 menu = 1
             } else if menuStatus == "No" {
                 menu = 0
-            } else {
-                status = 2
             }
             let otherParam =   ["name": "\(name)",
                                               "type": "\(type)", "featured": "\(status)", "menu_status": "\(menu)", "id": "\(self.model?.id ?? 0)"
             ]
             self.apiServices?.editCategories(finalURL: "\(Constants.Common.finalURL)/api/edit_category", otherParameters: otherParam, withParameters: imageRequest, completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
                 self.hideLoadingIndicatorClosure?()
-                self.model = nil
+               // self.model = nil
                 DispatchQueue.main.async {
                     if status == true {
                         self.successModel = result as? CreateCustomerModel

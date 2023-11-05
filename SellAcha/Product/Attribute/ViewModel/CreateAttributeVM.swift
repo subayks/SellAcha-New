@@ -69,7 +69,7 @@ class CreateAttributeVM: BaseViewModel {
     
     func getCustomerParam(name: String, featured: String) ->String {
         var status = 0
-        if featured == "Active" {
+        if featured == "Yes" {
             status = 1
         } else {
             status = 0
@@ -87,7 +87,7 @@ class CreateAttributeVM: BaseViewModel {
         } else {
             status = 0
         }
-    let jsonToReturn: NSDictionary = ["title": "\(name)",
+    let jsonToReturn: NSDictionary = ["name": "\(name)",
                                       "featured": "\(status)", "id": "\(self.model?.id ?? 0)"
     ]
     return self.convertDictionaryToJsonString(dict: jsonToReturn)!
