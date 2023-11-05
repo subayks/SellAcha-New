@@ -20,7 +20,7 @@ class CreateShippingVM: BaseViewModel {
         self.apiServices = apiServices
     }
     
-    func createLocation(title: String, price: String, location: [Int]) {
+    func createLocation(title: String, price: String, location: String) {
         if Reachability.isConnectedToNetwork() {
             self.showLoadingIndicatorClosure?()
             let param = self.getCustomerParam(title: title, price: price, location: location)
@@ -43,7 +43,7 @@ class CreateShippingVM: BaseViewModel {
         }
     }
     
-    func editShipping(title: String, price: String, location: [Int]) {
+    func editShipping(title: String, price: String, location: String) {
         if Reachability.isConnectedToNetwork() {
             self.showLoadingIndicatorClosure?()
             let param = self.getEditCustomerParam(title: title, price: price, location: location)
@@ -66,14 +66,14 @@ class CreateShippingVM: BaseViewModel {
         }
     }
     
-    func getCustomerParam(title: String, price: String, location: [Int]) ->String {
-        let jsonToReturn: NSDictionary = ["title": "\(title)", "price": "\(price)", "location": "\(location[0])"
+    func getCustomerParam(title: String, price: String, location: String) ->String {
+        let jsonToReturn: NSDictionary = ["title": "\(title)", "price": "\(price)", "locations": "\(location)"
     ]
     return self.convertDictionaryToJsonString(dict: jsonToReturn)!
     }
     
-    func getEditCustomerParam(title: String, price: String, location: [Int]) ->String {
-    let jsonToReturn: NSDictionary = ["title": "\(title)", "price": "\(price)", "location": "\(location[0])", "id": "\(self.model?.id ?? 0)"
+    func getEditCustomerParam(title: String, price: String, location: String) ->String {
+    let jsonToReturn: NSDictionary = ["title": "\(title)", "price": "\(price)", "locations": "\(location)", "id": "\(self.model?.id ?? 0)"
     ]
     return self.convertDictionaryToJsonString(dict: jsonToReturn)!
     }

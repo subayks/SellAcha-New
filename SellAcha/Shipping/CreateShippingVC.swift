@@ -83,9 +83,9 @@ class CreateShippingVC: UIViewController {
     @IBAction func actionCreate(_ sender: Any) {
         if self.titleTextField.text != "" && self.textFieldPrice.text != "" && textFieldLocation != nil {
             if self.vm.model != nil {
-                self.vm.editShipping(title: titleTextField.text ?? "", price: self.textFieldPrice.text ?? "", location: [0])
+                self.vm.editShipping(title: titleTextField.text ?? "", price: self.textFieldPrice.text ?? "", location: self.textFieldLocation.text ?? "")
             } else {
-                self.vm.createLocation(title: titleTextField.text ?? "", price: self.textFieldPrice.text ?? "", location: [0])
+                self.vm.createLocation(title: titleTextField.text ?? "", price: self.textFieldPrice.text ?? "", location: self.textFieldLocation.text ?? "")
             }
         } else {
             let alert = UIAlertController(title: "Alert", message: "Please fill All the Fields", preferredStyle: UIAlertController.Style.alert)

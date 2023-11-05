@@ -109,6 +109,13 @@ class CreateProductVC: UIViewController {
                 pickerController.allowsEditing = true
                 self.present(pickerController, animated: true)            }
         }
+        
+        self.viewwModel.updateView  = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     
@@ -173,6 +180,8 @@ class CreateProductVC: UIViewController {
     }
     
     @IBAction func saveBtnAction(_ sender: Any) {
+        self.viewwModel.createProduct(title: "\(productTitleTF.text ?? "")", price: "\(priceTF.text ?? "")", specialprice: "\(specialPriceTF.text ?? "")", pricetype: "\(priceTypeTF.text ?? "")", specialpricestart: "\(priceStartsTF.text ?? "")", specialpriceend: "\(priceEndTF.text ?? "")", status: "\(stockStatusTF.text ?? "")")
+        return
         if productTitleTF.text == ""{
             alert(message: "Please Enter Title")
         }else if priceTF.text == ""{

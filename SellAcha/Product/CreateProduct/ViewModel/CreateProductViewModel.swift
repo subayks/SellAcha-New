@@ -18,13 +18,19 @@ class CreateProductViewModel: BaseViewModel {
     
     func createProduct(title: String, price: String, specialprice:String, pricetype:String,specialpricestart:String,specialpriceend:String,status:String) {
         let imageRequest = ImageRequestParam(paramName: "media", name: "media", image: self.selectedImage ?? UIImage())
+        var statusValue = "Yes"
+        if status == "In Stock" {
+            statusValue = "Yes"
+        } else {
+            statusValue = "No"
+        }
         let otherParam = ["title": "\(title)",
                           "price": "\(price)",
                           "special_price": "\(specialprice)","price_type": "\(pricetype)",
-                          "special_price_start": "\(specialpricestart)","special_price_end": "\(specialpriceend)","status":"\(status)"]
+                          "special_price_start": "\(specialpricestart)","special_price_end": "\(specialpriceend)","status":"\(statusValue)"]
         if Reachability.isConnectedToNetwork() {
             self.showLoadingIndicatorClosure?()
-            self.apiServices?.createProduct(finalURL: "\(Constants.Common.finalURL)/api/api/store", withParameters: imageRequest, otherParameters: otherParam, completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
+            self.apiServices?.createProduct(finalURL: "\(Constants.Common.finalURL)/api/store", withParameters: imageRequest, otherParameters: otherParam, completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
                 DispatchQueue.main.async {
                     self.hideLoadingIndicatorClosure?()
                     self.updateView?()
