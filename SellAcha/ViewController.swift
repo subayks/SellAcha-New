@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var hidePasswordImage: UIImageView!
     @IBOutlet weak var forgotPasswordLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var logoImage: UIImageView!
@@ -19,10 +20,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var signupLbl: UILabel!
     
     var viewwModel = LoginViewModel()
+    var iconClick = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        self.textFieldPassword.isSecureTextEntry = true
         
         logoImage.layer.borderWidth = 8
         logoImage.layer.borderColor = UIColor(named: "PrimaryColor")?.cgColor
@@ -39,6 +42,10 @@ class ViewController: UIViewController {
         let tapForgotPassword = UITapGestureRecognizer(target: self, action: #selector(ViewController.forgotPasswordclciked))
         forgotPasswordLabel.isUserInteractionEnabled = true
         forgotPasswordLabel.addGestureRecognizer(tapForgotPassword)
+        
+        let tapEye = UITapGestureRecognizer(target: self, action: #selector(ViewController.iconAction))
+        hidePasswordImage.isUserInteractionEnabled = true
+        hidePasswordImage.addGestureRecognizer(tapEye)
         
     }
     
@@ -100,11 +107,32 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actionLogin(_ sender: Any) {
-        self.viewwModel.makeLogin(email: "storef@gmail.com", password: "12345678")
+     //   self.viewwModel.makeLogin(email: "storef@gmail.com", password: "12345678")
+        if self.textfieldEmail.text != "" && self.textFieldPassword.text != "" {
+            if !self.viewwModel.isValidEmail(self.textfieldEmail.text ?? "") {
+                let alert = UIAlertController(title: "Alert", message: "Please Enter Valid Email Id", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            self.viewwModel.makeLogin(email: self.textfieldEmail.text ?? "", password: self.textFieldPassword.text ?? "")
+        } else {
+            let alert = UIAlertController(title: "Alert", message: "Please fill all Mandatory Fields", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
-    
-    
+    @objc func iconAction(sender:UITapGestureRecognizer) {
+        if iconClick {
+            textFieldPassword.isSecureTextEntry = false
+            self.hidePasswordImage.image = UIImage(named: "changepassword")
+        } else {
+            textFieldPassword.isSecureTextEntry = true
+            self.hidePasswordImage.image = UIImage(named: "icn_hide_password")
+        }
+        iconClick = !iconClick
+    }
 }
 
 

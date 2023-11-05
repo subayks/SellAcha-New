@@ -72,10 +72,10 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hka-bv-yuw" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
                                                 <rect key="frame" x="25" y="330.5" width="343" height="21"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNW-6W-yAc">
-                                                <rect key="frame" x="25" y="421.5" width="343" height="60"/>
+                                                <rect key="frame" x="25" y="413" width="343" height="60"/>
                                                 <color key="backgroundColor" red="0.0039215686274509803" green="0.56862745098039214" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="wvh-H8-PCL"/>
@@ -92,24 +92,33 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXz-pQ-Dd3">
-                                                <rect key="frame" x="129.5" y="511.5" width="134.5" height="23.5"/>
+                                                <rect key="frame" x="129.5" y="503" width="134.5" height="23.5"/>
                                                 <color key="tintColor" name="PrimaryColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" name="PrimaryColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fG-DQ-1eF">
-                                                <rect key="frame" x="135" y="635" width="123" height="18"/>
+                                                <rect key="frame" x="135" y="626.5" width="123" height="18"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Regular" family="Noto Sans" pointSize="13"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xa-bV-hOB">
-                                                <rect key="frame" x="260" y="634" width="56.5" height="20.5"/>
+                                                <rect key="frame" x="260" y="625.5" width="56.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-SemiBold" family="Noto Sans" pointSize="15"/>
                                                 <color key="textColor" name="PrimaryColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_hide_password" translatesAutoresizingMaskIntoConstraints="NO" id="chN-WQ-qbb">
+                                                <rect key="frame" x="338" y="324.5" width="25" height="25"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="Qvt-QW-Jmp"/>
+                                                    <constraint firstAttribute="width" constant="25" id="d31-Sy-Iir"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -121,6 +130,7 @@
                                             <constraint firstAttribute="trailing" secondItem="nHu-tO-bri" secondAttribute="trailing" constant="25" id="8Oy-b8-bdO"/>
                                             <constraint firstItem="pbs-Pd-PRP" firstAttribute="top" secondItem="0M6-Ih-qrQ" secondAttribute="top" constant="90" id="8U3-0e-toz"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1fG-DQ-1eF" secondAttribute="bottom" constant="15" id="8oX-VN-YmE"/>
+                                            <constraint firstItem="PNW-6W-yAc" firstAttribute="top" secondItem="hka-bv-yuw" secondAttribute="bottom" constant="61.5" id="8x6-eh-Q5Q"/>
                                             <constraint firstAttribute="trailing" secondItem="GZW-w6-mPG" secondAttribute="trailing" constant="25" id="9BI-VE-pbZ"/>
                                             <constraint firstItem="3Xa-bV-hOB" firstAttribute="centerY" secondItem="1fG-DQ-1eF" secondAttribute="centerY" id="9Ln-Nm-JMf"/>
                                             <constraint firstItem="nXz-pQ-Dd3" firstAttribute="top" secondItem="PNW-6W-yAc" secondAttribute="bottom" constant="30" id="BPA-lA-KBE"/>
@@ -136,11 +146,12 @@
                                             <constraint firstAttribute="trailing" secondItem="Fzf-co-Cau" secondAttribute="trailing" constant="25" id="WwJ-J2-st5"/>
                                             <constraint firstAttribute="trailing" secondItem="hka-bv-yuw" secondAttribute="trailing" constant="25" id="cGT-o7-5ed"/>
                                             <constraint firstItem="3QG-vD-8jk" firstAttribute="top" secondItem="GZW-w6-mPG" secondAttribute="bottom" constant="8" id="gCE-fu-xfa"/>
-                                            <constraint firstItem="PNW-6W-yAc" firstAttribute="top" secondItem="hka-bv-yuw" secondAttribute="bottom" constant="70" id="guR-e0-ECv"/>
                                             <constraint firstItem="hka-bv-yuw" firstAttribute="top" secondItem="Fzf-co-Cau" secondAttribute="bottom" constant="8" id="mbP-ky-pNI"/>
                                             <constraint firstItem="Fzf-co-Cau" firstAttribute="leading" secondItem="0M6-Ih-qrQ" secondAttribute="leading" constant="25" id="pAR-qu-ZGS"/>
                                             <constraint firstAttribute="trailing" secondItem="3QG-vD-8jk" secondAttribute="trailing" constant="25" id="rzY-wy-HW7"/>
                                             <constraint firstItem="3Xa-bV-hOB" firstAttribute="leading" secondItem="1fG-DQ-1eF" secondAttribute="trailing" constant="2" id="ufw-e7-v4f"/>
+                                            <constraint firstItem="chN-WQ-qbb" firstAttribute="bottom" secondItem="hka-bv-yuw" secondAttribute="bottom" constant="-2" id="usn-Pt-RIs"/>
+                                            <constraint firstAttribute="trailing" secondItem="chN-WQ-qbb" secondAttribute="trailing" constant="30" id="w7S-hM-4gQ"/>
                                             <constraint firstItem="GZW-w6-mPG" firstAttribute="top" secondItem="nHu-tO-bri" secondAttribute="bottom" constant="45" id="xEm-QY-VwY"/>
                                         </constraints>
                                     </view>
@@ -183,6 +194,7 @@
                     <connections>
                         <outlet property="buttonLogin" destination="PNW-6W-yAc" id="EoO-to-9ud"/>
                         <outlet property="forgotPasswordLabel" destination="nXz-pQ-Dd3" id="4yd-HY-rYI"/>
+                        <outlet property="hidePasswordImage" destination="chN-WQ-qbb" id="Lan-uk-mtP"/>
                         <outlet property="logoImage" destination="qzZ-4U-yN4" id="qnT-aW-BXJ"/>
                         <outlet property="overView" destination="0M6-Ih-qrQ" id="KtK-AH-iWO"/>
                         <outlet property="scrollView" destination="mP0-Su-Dqu" id="SGi-qa-HIf"/>
@@ -193,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="-15"/>
+            <point key="canvasLocation" x="900.72463768115949" y="-15.401785714285714"/>
         </scene>
         <!--Circle Bar Controller-->
         <scene sceneID="I3P-86-Tu1">
@@ -3070,15 +3082,15 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-Zn-IPp">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-Zn-IPp">
                                                                     <rect key="frame" x="134" y="13" width="20" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="euU-2b-p4J"/>
                                                                         <constraint firstAttribute="width" constant="20" id="i5D-5k-agB"/>
                                                                     </constraints>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="Button">
                                                                         <attributedString key="attributedTitle">
                                                                             <fragment content="2">
                                                                                 <attributes>
@@ -3087,7 +3099,7 @@
                                                                                 </attributes>
                                                                             </fragment>
                                                                         </attributedString>
-                                                                    </buttonConfiguration>
+                                                                    </state>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" name="PrimaryColor"/>
@@ -3127,15 +3139,15 @@
                                         <rect key="frame" x="15" y="95" width="263.5" height="35"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJz-Re-YNu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJz-Re-YNu">
                                         <rect key="frame" x="293.5" y="145" width="84.5" height="35"/>
                                         <color key="backgroundColor" name="PrimaryColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="giv-5w-aBh"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Submit">
                                                     <attributes>
@@ -3144,7 +3156,7 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                        </buttonConfiguration>
+                                        </state>
                                         <connections>
                                             <action selector="actionSearch:" destination="bvT-L2-tfD" eventType="touchUpInside" id="wPv-rM-wzH"/>
                                         </connections>
@@ -3155,19 +3167,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="GzB-ci-jjn"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Create Order">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="10" name="Helvetica"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Create Order">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="actionCreateOrder:" destination="bvT-L2-tfD" eventType="touchUpInside" id="JN3-zn-mAW"/>
                                         </connections>
@@ -3364,15 +3369,15 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc7-vL-IvQ">
-                                                            <rect key="frame" x="264" y="61" width="79" height="20"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bc7-vL-IvQ">
+                                                            <rect key="frame" x="274.5" y="61" width="68.5" height="20"/>
                                                             <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="qaG-q0-vBc"/>
                                                             </constraints>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain">
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Button">
                                                                 <attributedString key="attributedTitle">
                                                                     <fragment content="PENDING">
                                                                         <attributes>
@@ -3382,17 +3387,17 @@
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
-                                                            </buttonConfiguration>
+                                                            </state>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zv3-x4-d9J">
-                                                            <rect key="frame" x="244" y="115" width="99" height="20"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zv3-x4-d9J">
+                                                            <rect key="frame" x="254.5" y="115" width="88.5" height="20"/>
                                                             <color key="backgroundColor" red="0.29803921568627451" green="0.59999999999999998" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="Ghk-o7-uQk"/>
                                                             </constraints>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain">
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Button">
                                                                 <attributedString key="attributedTitle">
                                                                     <fragment content="COMPLETED">
                                                                         <attributes>
@@ -3401,7 +3406,7 @@
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
-                                                            </buttonConfiguration>
+                                                            </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1433534" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzy-BI-Rk6">
                                                             <rect key="frame" x="10" y="112" width="60.5" height="17"/>
@@ -3469,6 +3474,7 @@
                                                         <constraint firstItem="pME-Zu-h1x" firstAttribute="leading" secondItem="Fm1-dK-vLY" secondAttribute="trailing" constant="3" id="Bsk-Ff-9L4"/>
                                                         <constraint firstItem="bc7-vL-IvQ" firstAttribute="trailing" secondItem="yqH-3X-qgW" secondAttribute="trailing" id="HoS-pT-hlF"/>
                                                         <constraint firstItem="Yl9-Nc-sGe" firstAttribute="top" secondItem="bXB-iX-HXC" secondAttribute="bottom" constant="4.5" id="Ifs-YJ-9EU"/>
+                                                        <constraint firstItem="zv3-x4-d9J" firstAttribute="leading" secondItem="Ws9-d6-7cU" secondAttribute="leading" id="J6S-Ys-26c"/>
                                                         <constraint firstAttribute="bottom" secondItem="ak7-Yg-DoJ" secondAttribute="bottom" constant="4.5" id="JEc-rJ-eMr"/>
                                                         <constraint firstItem="pME-Zu-h1x" firstAttribute="centerY" secondItem="Fm1-dK-vLY" secondAttribute="centerY" id="KR2-FY-5Bf"/>
                                                         <constraint firstItem="m1t-Zh-Cv0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RXx-eq-FGu" secondAttribute="trailing" constant="15" id="NbH-oc-cvn"/>
@@ -3480,6 +3486,7 @@
                                                         <constraint firstItem="wzy-BI-Rk6" firstAttribute="top" secondItem="Dc6-om-Ues" secondAttribute="bottom" constant="5" id="Tlr-Qp-7Oi"/>
                                                         <constraint firstItem="cHs-on-V5Y" firstAttribute="leading" secondItem="lmT-DF-aon" secondAttribute="leading" id="TvF-7E-9GA"/>
                                                         <constraint firstItem="yqH-3X-qgW" firstAttribute="centerY" secondItem="lmT-DF-aon" secondAttribute="centerY" id="XtM-9e-jvK"/>
+                                                        <constraint firstItem="bc7-vL-IvQ" firstAttribute="leading" secondItem="yqH-3X-qgW" secondAttribute="leading" id="YIT-EP-lb6"/>
                                                         <constraint firstItem="OsU-ee-rwS" firstAttribute="top" secondItem="Uu2-eW-hDo" secondAttribute="top" constant="15" id="YcT-Gu-T7B"/>
                                                         <constraint firstItem="Yl9-Nc-sGe" firstAttribute="leading" secondItem="Uu2-eW-hDo" secondAttribute="leading" constant="10" id="ZcE-oE-3aE"/>
                                                         <constraint firstItem="yqH-3X-qgW" firstAttribute="trailing" secondItem="OsU-ee-rwS" secondAttribute="trailing" id="ZfN-7F-WBh"/>
@@ -3906,7 +3913,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6A-dd-fKV">
                                                     <rect key="frame" x="197.5" y="26" width="119.5" height="54.5"/>
                                                     <color key="tintColor" name="PrimaryColor"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                                    <state key="normal" title="Completed">
+                                                        <imageReference key="image" image="chevron.down.circle.fill" catalog="system" symbolScale="small"/>
+                                                    </state>
                                                     <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Completed" imagePadding="10">
                                                         <imageReference key="image" image="chevron.down.circle.fill" catalog="system" symbolScale="small"/>
                                                     </buttonConfiguration>
@@ -4127,14 +4137,14 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEj-nz-Hpd">
                                         <rect key="frame" x="242" y="11" width="45" height="45"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Opf-3b-L2I"/>
                                             <constraint firstAttribute="width" constant="45" id="SKx-wG-lSs"/>
                                         </constraints>
                                         <color key="tintColor" name="PrimaryColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Edit"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
                                         <connections>
                                             <action selector="actionEdit:" destination="zc0-tT-xTo" eventType="touchUpInside" id="2Lf-OU-FPU"/>
                                         </connections>
@@ -4242,7 +4252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3y7-Yi-YFN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3799.2366412213737" y="2223.9436619718313"/>
+            <point key="canvasLocation" x="3798.5507246376815" y="2223.8839285714284"/>
         </scene>
         <!--Location-->
         <scene sceneID="XdK-5I-DYc">
@@ -6962,15 +6972,15 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="200-hH-50q">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="200-hH-50q">
                                                                     <rect key="frame" x="134" y="13" width="20" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="20" id="nlC-i4-gUd"/>
                                                                         <constraint firstAttribute="height" constant="20" id="soo-Po-foS"/>
                                                                     </constraints>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="Button">
                                                                         <attributedString key="attributedTitle">
                                                                             <fragment content="2">
                                                                                 <attributes>
@@ -6979,7 +6989,7 @@
                                                                                 </attributes>
                                                                             </fragment>
                                                                         </attributedString>
-                                                                    </buttonConfiguration>
+                                                                    </state>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" name="PrimaryColor"/>
@@ -7021,32 +7031,25 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="YE3-D0-uST"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Add new">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="12" name="Helvetica"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add new">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="actionCreateProduct:" destination="nIt-Kd-c4L" eventType="touchUpInside" id="cDo-6r-DUJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivg-0Z-9Nf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivg-0Z-9Nf">
                                         <rect key="frame" x="293.5" y="171" width="84.5" height="35"/>
                                         <color key="backgroundColor" name="PrimaryColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="6Ha-AX-9jR"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Submit">
                                                     <attributes>
@@ -7055,7 +7058,7 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                        </buttonConfiguration>
+                                        </state>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cmk-Dn-jEI">
                                         <rect key="frame" x="238" y="177" width="25" height="22.5"/>
@@ -7264,8 +7267,8 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="E27-Yr-0ge"/>
                                                             </constraints>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="Active"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Active"/>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -13394,6 +13397,7 @@
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="error_placeholder" width="512" height="512"/>
         <image name="hand.wave" catalog="system" width="128" height="128"/>
+        <image name="icn_hide_password" width="24" height="24"/>
         <image name="leaf.arrow.circlepath" catalog="system" width="119" height="128"/>
         <image name="lineweight" catalog="system" width="128" height="109"/>
         <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>

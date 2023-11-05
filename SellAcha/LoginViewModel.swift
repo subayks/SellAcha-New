@@ -29,6 +29,8 @@ class LoginViewModel: BaseViewModel {
                         let token = "Bearer " + (self.loginModel?.token ?? "")
                        print(token)
                        UserDefaults.standard.setValue(token, forKey: "AuthToken")
+                        UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
+
                         self.navigationClosure?()
                     }
                     else{

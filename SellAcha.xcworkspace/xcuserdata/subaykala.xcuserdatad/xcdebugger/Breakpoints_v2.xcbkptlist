@@ -18,6 +18,38 @@
             endingLineNumber = "138"
             landmarkName = "actionSelectFulfilment(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "47AF4787-5C79-4237-AD98-1388BE9C377C - 68dcb9b036979a3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagView.actionSelectFulfilment(Any) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/BagView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "47AF4787-5C79-4237-AD98-1388BE9C377C - 68dcb9b036979892"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagView.actionSelectFulfilment(Any) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/BagView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -34,6 +66,38 @@
             endingLineNumber = "183"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1425AC02-0EF4-4E42-B60A-927664A0D235 - 508c3d7add09e442"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagView.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/BagView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "3840">
+               </Location>
+               <Location
+                  uuid = "1425AC02-0EF4-4E42-B60A-927664A0D235 - 508c3d7add09e3e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagView.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/BagView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "3364">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -50,6 +114,38 @@
             endingLineNumber = "184"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D9885ED-74A6-40E5-9C16-FEAB522CC296 - 508c3d7add09e480"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagView.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/BagView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "3916">
+               </Location>
+               <Location
+                  uuid = "7D9885ED-74A6-40E5-9C16-FEAB522CC296 - 508c3d7add09e3ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagView.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/BagView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "3840">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -66,6 +162,149 @@
             endingLineNumber = "182"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B584259-77F7-4EA3-A483-A4839E373BE2 - 508c3d7add09e47d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagView.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/BagView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "3364">
+               </Location>
+               <Location
+                  uuid = "3B584259-77F7-4EA3-A483-A4839E373BE2 - 508c3d7add09e388"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagView.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/BagView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
+                  offsetFromSymbolStart = "2916">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D98B5CA-C90D-493E-AFF2-D83AD729B53B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8D98B5CA-C90D-493E-AFF2-D83AD729B53B - 85dc295f7babc3c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "8D98B5CA-C90D-493E-AFF2-D83AD729B53B - 85dc295f7babc3c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "8D98B5CA-C90D-493E-AFF2-D83AD729B53B - 85dc295f7babc3c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBAF6CD2-E098-4E98-91D0-F9065EE0C789"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EBAF6CD2-E098-4E98-91D0-F9065EE0C789 - 85dc295f7babc3a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "660">
+               </Location>
+               <Location
+                  uuid = "EBAF6CD2-E098-4E98-91D0-F9065EE0C789 - 85dc295f7babc3a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.SceneDelegate.scene(_: __C.UIScene, willConnectTo: __C.UISceneSession, options: __C.UISceneConnectionOptions) -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
