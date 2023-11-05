@@ -34,11 +34,11 @@ class ReportsCell: UITableViewCell {
         self.statusButton.setTitle(self.reportsCellVM?.model.status, for: .normal)
         
         if self.reportsCellVM?.model.status?.lowercased() == "pending" {
-            self.statusButton.backgroundColor = .orange
+            self.statusButton.backgroundColor = UIColor(red: 254/255, green: 192/255, blue: 3/255, alpha: 255/255)
         } else if self.reportsCellVM?.model.status?.lowercased() == "incomplete" {
             self.statusButton.backgroundColor = .red
         } else if self.reportsCellVM?.model.status?.lowercased() == "completed" {
-            self.statusButton.backgroundColor = .green
+            self.statusButton.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
         }
        
         let title = "₹" + "\(String(describing: self.reportsCellVM?.model.total ?? 0))"

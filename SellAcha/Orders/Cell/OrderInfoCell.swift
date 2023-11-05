@@ -51,11 +51,11 @@ class OrderInfoCell: UITableViewCell {
         self.PaymentStatusButton.setTitle(self.orderInfoCellVM?.model.status, for: .normal)
         
         if self.orderInfoCellVM?.model.status?.lowercased() == "pending" {
-            self.PaymentStatusButton.backgroundColor = .orange
+            self.PaymentStatusButton.backgroundColor = UIColor(red: 254/255, green: 192/255, blue: 3/255, alpha: 255/255)
         } else if self.orderInfoCellVM?.model.status?.lowercased() == "incomplete" {
             self.PaymentStatusButton.backgroundColor = .red
         } else if self.orderInfoCellVM?.model.status?.lowercased() == "completed" {
-            self.PaymentStatusButton.backgroundColor = .green
+            self.PaymentStatusButton.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
         }
         
         if self.orderInfoCellVM?.model.isSelected  == true {

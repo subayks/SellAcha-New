@@ -35,7 +35,7 @@ class InventoryCell: UITableViewCell {
         self.skuLbl.text = self.inventoryCellVM?.model.sku
         if self.inventoryCellVM?.model.stockStatus == 1 {
             self.stockManageBtn.text = "Yes"
-            self.stockManageBtn.backgroundColor = UIColor.green
+            self.stockManageBtn.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
         } else {
             self.stockManageBtn.text = "No"
             self.stockManageBtn.backgroundColor = UIColor.red

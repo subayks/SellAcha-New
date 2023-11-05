@@ -35,6 +35,10 @@ class LocationView: UIViewController {
         self.saveButton.layer.cornerRadius = 10
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        self.descriptionTextView.layer.borderWidth = 1
+        self.descriptionTextView.layer.borderColor = UIColor.systemGray5.cgColor
+        self.descriptionTextView.layer.cornerRadius = 4
     }
     
     override func viewWillAppear(_ animated: Bool) {

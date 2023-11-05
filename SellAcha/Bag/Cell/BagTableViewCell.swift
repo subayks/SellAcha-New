@@ -58,7 +58,7 @@ class BagTableViewCell: UITableViewCell {
         }
         
         if self.vm?.model.status == 1 {
-            self.fulfilmentStatus.backgroundColor = .green
+            self.fulfilmentStatus.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
             self.fulfilmentStatus.setTitle("Active", for: .normal)
         } else  {
             self.fulfilmentStatus.backgroundColor = .orange
