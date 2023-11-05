@@ -128,7 +128,9 @@ extension OrderFilterView: UITableViewDelegate, UITableViewDataSource {
                     cell.tableHeightConstraints.constant = 0
                     cell.statusTableView.isHidden = true
                 }
-                self.filterTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+                DispatchQueue.main.async {
+                    self.filterTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+                }
             }
             return cell
         } else {

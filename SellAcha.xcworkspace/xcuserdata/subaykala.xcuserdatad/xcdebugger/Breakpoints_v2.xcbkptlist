@@ -49,6 +49,36 @@
                   endingLineNumber = "78"
                   offsetFromSymbolStart = "136">
                </Location>
+               <Location
+                  uuid = "FC7EC0AA-9D09-4CD0-8B78-4F062996E125 - 57fd63a1f26e85a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagTableViewCell.setupValues() -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/Cell/BagTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "5008">
+               </Location>
+               <Location
+                  uuid = "FC7EC0AA-9D09-4CD0-8B78-4F062996E125 - ad4d19781a3dc3f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in SellAcha.BagTableViewCell.setupValues() -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/Cell/BagTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "136">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -65,6 +95,70 @@
             startingLineNumber = "71"
             endingLineNumber = "71"
             landmarkName = "setupValues()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E7B93356-0C18-4264-9B80-EA597B1CCD88 - 57fd63a1f26e8520"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagTableViewCell.setupValues() -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/Cell/BagTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "3748">
+               </Location>
+               <Location
+                  uuid = "E7B93356-0C18-4264-9B80-EA597B1CCD88 - 57fd63a1f26e847b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SellAcha.BagTableViewCell.setupValues() -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Bag/Cell/BagTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "4928">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9CF9AF69-29C9-4987-AC90-E8C220779033"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/Orders/Cell/FilterPaymentCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75018F5A-B6B4-4225-A091-7001E67AB1B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/Orders/OrderFilterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

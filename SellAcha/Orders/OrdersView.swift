@@ -9,6 +9,7 @@ import UIKit
 
 class OrdersView: UIViewController {
 
+    @IBOutlet weak var selectFulFilmentLabel: UILabel!
     @IBOutlet weak var createorder: UIButton!
     @IBOutlet weak var selectFulFilmentButton: UIButton!
     @IBOutlet weak var selectFilterTableViewCell: UITableView!
@@ -29,6 +30,9 @@ class OrdersView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+
+        self.createorder.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
+        self.buttonSubmit.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -98,6 +102,13 @@ class OrdersView: UIViewController {
             DispatchQueue.main.async {
                 guard let self = self else {return}
                 self.ordersTableView.reloadData()
+            }
+        }
+        
+        self.viewModel.reloadCollectionView = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.overAllFilterCollectionView.reloadData()
             }
         }
     }
@@ -180,67 +191,72 @@ extension OrdersView: UITableViewDelegate, UITableViewDataSource {
             self.ordersTableView.reloadRows(at:  [IndexPath(row: indexPath.row, section: indexPath.section)], with: .automatic)
         } else {
             self.selectFilterTableViewCell.isHidden = true
-           // self.selectFulfilmentLabel.text = self.viewModel.filterList[indexPath.row]
+            self.selectFulFilmentLabel.text = self.viewModel.filterList[indexPath.row]
         }
     }
 }
 
 extension OrdersView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModel.filterList.count
+        return self.viewModel.ordersDataModel?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterCell", for: indexPath) as! FilterCell
-        if indexPath.row == 0 {
-            cell.badgeCount.isHidden = true
+        if self.viewModel.ordersDataModel?[indexPath.row].isSelected == true {
             cell.filtersName.textColor = UIColor.white
             cell.overView.backgroundColor = UIColor(named: "PrimaryColor")
-            cell.BatchWidthConstraint.constant = 0
         } else {
             cell.filtersName.textColor = UIColor.gray
-            cell.overView.backgroundColor = UIColor.lightGray
+            cell.overView.backgroundColor = UIColor.white
             cell.badgeCount.layer.cornerRadius = cell.badgeCount.frame.height/2
             cell.badgeCount.clipsToBounds = true
             cell.badgeCount.backgroundColor = UIColor.gray
-            cell.badgeCount.tintColor = UIColor.lightGray
+            cell.badgeCount.tintColor = UIColor.white
             cell.BatchWidthConstraint.constant = 20
+            cell.overView.layer.borderWidth = 0.5
+            cell.overView.layer.borderColor = UIColor.lightGray.cgColor
         }
-        cell.filtersName.text = self.viewModel.filterList[indexPath.row]
+        
+        if  self.viewModel.ordersDataModel?[indexPath.row].ShowCount == true {
+            cell.badgeCount.isHidden = false
+            cell.BatchWidthConstraint.constant = 20
+        } else {
+            cell.badgeCount.isHidden = true
+            cell.BatchWidthConstraint.constant = 0
+        }
+        cell.filtersName.text = self.viewModel.ordersDataModel?[indexPath.row].title
+        cell.badgeCount.setTitle(self.viewModel.ordersDataModel?[indexPath.row].count, for: .normal)
         cell.overView.layer.cornerRadius = 5
+        cell.badgeCount.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
-        let previousCell = overAllFilterCollectionView.cellForItem(at: IndexPath(row: self.viewModel.previousIndex, section: indexPath.section))! as! FilterCell
-        previousCell.filtersName.textColor = UIColor.gray
-        previousCell.overView.backgroundColor = UIColor.lightGray
-        previousCell.badgeCount.layer.cornerRadius = previousCell.badgeCount.frame.height/2
-        previousCell.badgeCount.clipsToBounds = true
-        previousCell.badgeCount.backgroundColor = UIColor.gray
-        previousCell.badgeCount.tintColor = UIColor.lightGray
-        previousCell.BatchWidthConstraint.constant = 20
-        
-        let cellToDeselect = overAllFilterCollectionView.cellForItem(at: indexPath)! as! FilterCell
-        cellToDeselect.filtersName.textColor = UIColor.white
-        cellToDeselect.overView.backgroundColor = UIColor(named: "PrimaryColor")
-        
+        self.viewModel.ordersDataModel?[self.viewModel.previousIndex].isSelected = false
+        self.viewModel.ordersDataModel?[indexPath.row].isSelected = true
         self.viewModel.previousIndex = indexPath.row
-        if self.viewModel.filterList[indexPath.row] == "Processing" {
-            self.viewModel.getProcessingOrders()
-        } else if self.viewModel.filterList[indexPath.row] == "All" {
+        
+        DispatchQueue.main.async {
+            self.overAllFilterCollectionView.reloadData()
+        }
+        
+        if self.viewModel.ordersDataModel?[indexPath.row].title == "Processing" {
+            self.viewModel.getProcessingOrders(orderType: "processing")
+        } else if self.viewModel.ordersDataModel?[indexPath.row].title  == "All" {
             self.viewModel.getAllOrders()
-        } else if self.viewModel.filterList[indexPath.row] == "Completed" {
-            
-        } else if self.viewModel.filterList[indexPath.row] == "Cancelled" {
-            
-        } else if self.viewModel.filterList[indexPath.row] == "Archieved" {
-            
-        } else if self.viewModel.filterList[indexPath.row] == "Ready For Pickup" {
-            
+        } else if self.viewModel.ordersDataModel?[indexPath.row].title  == "Completed" {
+            self.viewModel.getProcessingOrders(orderType: "completed")
+        } else if self.viewModel.ordersDataModel?[indexPath.row].title  == "Cancelled" {
+            self.viewModel.getProcessingOrders(orderType: "canceled")
+        } else if self.viewModel.ordersDataModel?[indexPath.row].title  == "Archieved" {
+            self.viewModel.getProcessingOrders(orderType: "archived")
+        } else if self.viewModel.ordersDataModel?[indexPath.row].title  == "Ready For Pickup" {
+            self.viewModel.getProcessingOrders(orderType: "pickup")
         }  else if self.viewModel.filterList[indexPath.row] == "Awaiting processing" {
-            self.viewModel.getPendingOrders()
+         //   self.viewModel.getPendingOrders()
+            self.viewModel.getProcessingOrders(orderType: "pending")
         } 
     }
 }
