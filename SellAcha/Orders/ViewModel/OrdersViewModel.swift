@@ -160,4 +160,9 @@ class OrdersViewModel: BaseViewModel {
     func getOrderInfoCellVM(index: Int) ->OrderInfoCellVM {
         OrderInfoCellVM(model: self.model?.orders?.data?[index] ?? OrdersData())
     }
+    
+    func retriveProfile() ->ProfileModel?{
+        let obj = UserDefaults.standard.retrieve(object: ProfileModel.self, fromKey: "Profile")
+        return obj
+    }
 }

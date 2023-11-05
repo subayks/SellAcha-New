@@ -74,7 +74,7 @@ class ChangePasswordVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
+    //    overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
     }
     
     @IBAction func actionBack(_ sender: Any) {

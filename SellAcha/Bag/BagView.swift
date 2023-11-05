@@ -9,14 +9,13 @@ import UIKit
 
 class BagView: UIViewController {
     
+    @IBOutlet weak var selectFulFilmentButton: UIButton!
+    @IBOutlet weak var selectFulfilmentLabel: UILabel!
     @IBOutlet weak var buttonCreateProduct: UIButton!
     @IBOutlet weak var selectFilterTableViewCell: UITableView!
-    @IBOutlet weak var filterOverView: UIView!
     @IBOutlet weak var ordersScrollView: UIScrollView!
     @IBOutlet weak var overView: UIView!
     @IBOutlet weak var overAllFilterCollectionView: UICollectionView!
-    @IBOutlet weak var filterIcon: UIImageView!
-    @IBOutlet weak var selectFulfilmentLabel: UILabel!
     
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var buttonWelcomeBack: UIButton!
@@ -29,8 +28,12 @@ class BagView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.vm.getProducts()
+        self.vm.getProducts(endPoint: "/api/product?type=products")
+        self.buttonCreateProduct.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
+        self.buttonSubmit.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
         
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.height/2
+
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
@@ -39,12 +42,7 @@ class BagView: UIViewController {
         self.overAllFilterCollectionView.collectionViewLayout = layout
         self.buttonSubmit.layer.cornerRadius = 10
         self.buttonCreateProduct.layer.cornerRadius = 10
-        self.filterIcon.layer.cornerRadius = 5
         self.selectFilterTableViewCell.isHidden = true
-        
-        let tapGestureRecognizerForFilter = UITapGestureRecognizer(target: self, action: #selector(filterTapped(tapGestureRecognizer:)))
-        filterIcon.isUserInteractionEnabled = true
-        filterIcon.addGestureRecognizer(tapGestureRecognizerForFilter)
         
         let tapGestureRecognizerForChevron = UITapGestureRecognizer(target: self, action: #selector(chevronTapped(tapGestureRecognizer:)))
            chevronImage.isUserInteractionEnabled = true
@@ -53,6 +51,13 @@ class BagView: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         profileImage.isUserInteractionEnabled = true
         profileImage.addGestureRecognizer(tapGestureRecognizer)
+        
+        selectFulFilmentButton.layer.borderWidth = 1
+        selectFulFilmentButton.layer.borderColor = UIColor.lightGray.cgColor
+        selectFulFilmentButton.layer.cornerRadius = 10
+        
+        selectFilterTableViewCell.layer.cornerRadius = 5
+        selectFilterTableViewCell.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,11 +102,27 @@ class BagView: UIViewController {
                 self.ordersTableView.reloadData()
             }
         }
+        
+        self.vm.reloadCollectionView = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.overAllFilterCollectionView.reloadData()
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
+        DispatchQueue.main.async {
+            let url = URL(string: self.vm.retriveProfile()?.logo ?? "")
+            do {
+                let data = try? Data(contentsOf: url!)
+                self.profileImage.image = UIImage(data: data!)
+            } catch {
+                
+            }
+        }
     }
     
     @IBAction func actionSearch(_ sender: Any) {
@@ -109,14 +130,13 @@ class BagView: UIViewController {
 
     }
     
-    @objc func filterTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OrderFilterView") as! OrderFilterView
-            vc.modalPresentationStyle = .overCurrentContext
-            present(vc, animated: true, completion: nil)
-    }
-    
     @objc func chevronTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         self.selectFilterTableViewCell.isHidden = false
+    }
+    
+    @IBAction func actionSelectFulfilment(_ sender: Any) {
+        self.selectFilterTableViewCell.isHidden = false
+        self.selectFilterTableViewCell.reloadData()
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -138,7 +158,7 @@ extension BagView: UITableViewDelegate, UITableViewDataSource {
         if tableView == ordersTableView {
             return self.vm.model?.posts?.data?.count == 0 ? 1:self.vm.model?.posts?.data?.count ?? 1
         } else {
-            return self.vm.filterList.count
+            return self.vm.ordersDataModel?.count ?? 0
         }
     }
     
@@ -160,7 +180,7 @@ extension BagView: UITableViewDelegate, UITableViewDataSource {
             }
         } else {
             let cell = selectFilterTableViewCell.dequeueReusableCell(withIdentifier: "MonthCell") as! MonthCell
-            cell.textLabel?.text = vm.filterList[indexPath.row]
+            cell.textLabel?.text = vm.ordersDataModel?[indexPath.row].title
             return cell
         }
     }
@@ -175,68 +195,58 @@ extension BagView: UITableViewDelegate, UITableViewDataSource {
             self.ordersTableView.reloadRows(at:  [IndexPath(row: indexPath.row, section: indexPath.section)], with: .automatic)
         } else {
             self.selectFilterTableViewCell.isHidden = true
-            self.selectFulfilmentLabel.text = self.vm.filterList[indexPath.row]
+            self.selectFulfilmentLabel.text = self.vm.ordersDataModel?[indexPath.row].title
         }
     }
 }
 
 extension BagView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.vm.filterList.count
+        return self.vm.ordersDataModel?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterCell", for: indexPath) as! FilterCell
-        if indexPath.row == 0 {
-            cell.badgeCount.isHidden = true
+        if self.vm.ordersDataModel?[indexPath.row].isSelected == true {
             cell.filtersName.textColor = UIColor.white
             cell.overView.backgroundColor = UIColor(named: "PrimaryColor")
-            cell.BatchWidthConstraint.constant = 0
         } else {
             cell.filtersName.textColor = UIColor.gray
-            cell.overView.backgroundColor = UIColor.lightGray
+            cell.overView.backgroundColor = UIColor.white
             cell.badgeCount.layer.cornerRadius = cell.badgeCount.frame.height/2
             cell.badgeCount.clipsToBounds = true
             cell.badgeCount.backgroundColor = UIColor.gray
-            cell.badgeCount.tintColor = UIColor.lightGray
+            cell.badgeCount.tintColor = UIColor.white
             cell.BatchWidthConstraint.constant = 20
+            cell.overView.layer.borderWidth = 0.5
+            cell.overView.layer.borderColor = UIColor.lightGray.cgColor
         }
-        cell.filtersName.text = self.vm.filterList[indexPath.row]
+        cell.filtersName.text = self.vm.ordersDataModel?[indexPath.row].title
+        cell.badgeCount.setTitle(self.vm.ordersDataModel?[indexPath.row].count, for: .normal)
         cell.overView.layer.cornerRadius = 5
+        cell.badgeCount.titleLabel?.font = UIFont(name: "Noto Sans", size: 8)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let previousCell = overAllFilterCollectionView.cellForItem(at: IndexPath(row: self.vm.previousIndex, section: indexPath.section))! as! FilterCell
-        previousCell.filtersName.textColor = UIColor.gray
-        previousCell.overView.backgroundColor = UIColor.lightGray
-        previousCell.badgeCount.layer.cornerRadius = previousCell.badgeCount.frame.height/2
-        previousCell.badgeCount.clipsToBounds = true
-        previousCell.badgeCount.backgroundColor = UIColor.gray
-        previousCell.badgeCount.tintColor = UIColor.lightGray
-        previousCell.BatchWidthConstraint.constant = 20
-        
-        let cellToDeselect = overAllFilterCollectionView.cellForItem(at: indexPath)! as! FilterCell
-        cellToDeselect.filtersName.textColor = UIColor.white
-        cellToDeselect.overView.backgroundColor = UIColor(named: "PrimaryColor")
-        
+        self.vm.ordersDataModel?[self.vm.previousIndex].isSelected = false
+        self.vm.ordersDataModel?[indexPath.row].isSelected = true
         self.vm.previousIndex = indexPath.row
-        if self.vm.filterList[indexPath.row] == "Processing" {
-            // self.vm.getProcessingOrders()
-        } else if self.vm.filterList[indexPath.row] == "All" {
-            self.vm.getProducts()
-        } else if self.vm.filterList[indexPath.row] == "Completed" {
-            
-        } else if self.vm.filterList[indexPath.row] == "Cancelled" {
-            
-        } else if self.vm.filterList[indexPath.row] == "Archieved" {
-            
-        } else if self.vm.filterList[indexPath.row] == "Ready For Pickup" {
-            
-        }  else if self.vm.filterList[indexPath.row] == "Awaiting processing" {
-          //  self.vm.getPendingOrders()
+        
+        DispatchQueue.main.async {
+            self.overAllFilterCollectionView.reloadData()
         }
+        
+        if self.vm.ordersDataModel?[indexPath.row].title == "Publish" {
+            self.vm.getProducts(endPoint: "/api/product?type=products")
+        } else if self.vm.ordersDataModel?[indexPath.row].title == "Draft" {
+            self.vm.getProducts(endPoint: "/api/products/2?type=products")
+        } else if self.vm.ordersDataModel?[indexPath.row].title == "Incomplete" {
+            self.vm.getProducts(endPoint: "/api/products/3?type=products")
+        } else if self.vm.ordersDataModel?[indexPath.row].title == "Trash" {
+            self.vm.getProducts(endPoint: "/api/products/0?type=products")
+        } 
     }
 }
 

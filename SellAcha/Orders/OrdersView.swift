@@ -30,9 +30,8 @@ class OrdersView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
-        self.createorder.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
-        self.buttonSubmit.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
+        
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.height/2
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -116,6 +115,17 @@ class OrdersView: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
+        self.createorder.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
+        self.buttonSubmit.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
+        DispatchQueue.main.async {
+            let url = URL(string: self.viewModel.retriveProfile()?.logo ?? "")
+            do {
+                let data = try? Data(contentsOf: url!)
+                self.profileImage.image = UIImage(data: data!)
+            } catch {
+                
+            }
+        }
     }
     
     @IBAction func actionSearch(_ sender: Any) {

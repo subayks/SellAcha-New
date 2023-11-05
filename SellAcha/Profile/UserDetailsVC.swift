@@ -95,7 +95,7 @@ class UserDetailsVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        oveView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
+   //     oveView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
     }
     
     @IBAction func actionBack(_ sender: Any) {

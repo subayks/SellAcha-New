@@ -47,9 +47,7 @@ class BagTableViewCell: UITableViewCell {
     
     func setupValues() {
         self.csutomerNameLabel.text = self.vm?.model.title
-        //        let url = self.vm?.model.preview?.media?.url?.dropFirst(2)
-        //        self.productImage.loadImageUsingURL("\(String(describing: url ?? ""))")
-        self.lastUpdate.text = self.vm?.model.formateDate
+        self.lastUpdateValue.text = self.vm?.model.formateDate
         
         if self.vm?.model.isSelected  == true {
             self.checkBoxImage.image = UIImage(systemName: "checkmark.circle")
