@@ -5358,28 +5358,28 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InventoryCell" rowHeight="75" id="xEt-KU-UoM" customClass="InventoryCell" customModule="SellAcha" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="93.5" width="384" height="75"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InventoryCell" rowHeight="100" id="xEt-KU-UoM" customClass="InventoryCell" customModule="SellAcha" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="93.5" width="384" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xEt-KU-UoM" id="V8P-EV-lVU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="384" height="75"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="384" height="100"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="eTV-sa-Sas">
-                                                                    <rect key="frame" x="40" y="21" width="304" height="50"/>
+                                                                    <rect key="frame" x="35" y="16" width="314" height="79"/>
                                                                     <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IKU-Tv-KAe">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="50"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IKU-Tv-KAe">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="79"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pa0-Xv-VgX">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="71.5" height="39.5"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="height" constant="30" id="ojV-Bc-3EG"/>
+                                                                                        <constraint firstAttribute="height" constant="39.5" id="TFY-5t-BWK"/>
                                                                                     </constraints>
                                                                                     <imageReference key="image" image="error_placeholder" symbolScale="medium"/>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sktechers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2G-Az-5PQ">
-                                                                                    <rect key="frame" x="0.0" y="38" width="68" height="12"/>
+                                                                                    <rect key="frame" x="0.0" y="39.5" width="71.5" height="39.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                                     <color key="textColor" red="0.002606803551" green="0.56679075960000003" blue="0.70900654789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -5387,13 +5387,13 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SK09999" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWk-9A-gAo">
-                                                                            <rect key="frame" x="118" y="18" width="68" height="14.5"/>
+                                                                            <rect key="frame" x="121.5" y="32.5" width="71" height="14.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                             <color key="textColor" red="0.002606803551" green="0.56679075960000003" blue="0.70900654789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-8T-grX">
-                                                                            <rect key="frame" x="236" y="15" width="68" height="20"/>
+                                                                            <rect key="frame" x="242.5" y="29.5" width="71.5" height="20"/>
                                                                             <color key="backgroundColor" red="0.38469785810000001" green="0.78039215689999997" blue="0.41250231780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
@@ -5409,16 +5409,13 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </label>
                                                                     </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="aUf-De-3hz"/>
-                                                                    </constraints>
                                                                 </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="eTV-sa-Sas" firstAttribute="top" secondItem="V8P-EV-lVU" secondAttribute="topMargin" constant="10" id="Mxg-6S-rj5"/>
-                                                                <constraint firstAttribute="trailingMargin" secondItem="eTV-sa-Sas" secondAttribute="trailing" constant="20" id="dGJ-hu-2cf"/>
-                                                                <constraint firstItem="eTV-sa-Sas" firstAttribute="leading" secondItem="V8P-EV-lVU" secondAttribute="leadingMargin" constant="20" id="vTU-mL-MNU"/>
-                                                                <constraint firstAttribute="bottom" secondItem="eTV-sa-Sas" secondAttribute="bottom" constant="4" id="yPz-2k-RA5"/>
+                                                                <constraint firstItem="eTV-sa-Sas" firstAttribute="top" secondItem="V8P-EV-lVU" secondAttribute="topMargin" constant="5" id="Mxg-6S-rj5"/>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="eTV-sa-Sas" secondAttribute="trailing" constant="15" id="dGJ-hu-2cf"/>
+                                                                <constraint firstAttribute="bottom" secondItem="eTV-sa-Sas" secondAttribute="bottom" constant="5" id="eyg-Mg-EY9"/>
+                                                                <constraint firstItem="eTV-sa-Sas" firstAttribute="leading" secondItem="V8P-EV-lVU" secondAttribute="leadingMargin" constant="15" id="vTU-mL-MNU"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>

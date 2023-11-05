@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImageWebPCoder
 
 class InventoryCell: UITableViewCell {
 
@@ -41,8 +42,17 @@ class InventoryCell: UITableViewCell {
             self.stockManageBtn.backgroundColor = UIColor.red
         }
         self.ProductLbl.text = self.inventoryCellVM?.model.term?.title
-        let url = self.inventoryCellVM?.model.term?.preview?.media?.url?.dropFirst(2)
-        self.inventoryImage.loadImageUsingURL("\(String(describing: url ?? ""))")
+        self.inventoryImage.layer.cornerRadius = 5
+        let webPCoder = SDImageWebPCoder.shared
+        SDImageCodersManager.shared.addCoder(webPCoder)
+        let urlString = "https://\(String(describing: self.inventoryCellVM?.model.term?.preview?.media?.url?.dropFirst(2) ?? ""))"
+        if let webpURL = URL(string: urlString)  {
+            DispatchQueue.main.async {
+                self.inventoryImage.sd_setImage(with: webpURL)
+            }
+        } else {
+            self.inventoryImage.image = UIImage(named: "error_placeholder")
+        }
     }
 
 
