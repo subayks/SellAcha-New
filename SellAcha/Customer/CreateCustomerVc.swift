@@ -14,16 +14,18 @@ class CreateCustomerVc: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var emailIdLabel: UILabel!
     @IBOutlet weak var overView: UIView!
-
     @IBOutlet weak var emailIdField: UITextField!
-    
     @IBOutlet weak var buttonCreate: UIButton!
+    @IBOutlet weak var formScreenScrollView: UIScrollView!
+
     var vm = CustomerVM()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         buttonCreate.layer.cornerRadius = 10
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
@@ -81,6 +83,18 @@ class CreateCustomerVc: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         //overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                formScreenScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        formScreenScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     @IBAction func actionCreate(_ sender: Any) {

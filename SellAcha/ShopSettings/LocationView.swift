@@ -26,12 +26,16 @@ class LocationView: UIViewController {
     @IBOutlet weak var invoiceLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
-    
+    @IBOutlet weak var formScreenScrollView: UIScrollView!
+
     var vm = GeneralViewVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         self.saveButton.layer.cornerRadius = 10
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
@@ -86,6 +90,17 @@ class LocationView: UIViewController {
         }
     }
     
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                formScreenScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        formScreenScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
     
     @IBAction func actionSave(_ sender: Any) {
         if companyTextField.text != "" && self.addressTextField.text != "" && self.cityTextField.text != "" && self.stateTextField.text != "" && self.postalTextField.text != "" && self.emailTextField.text != "" && self.phoneTextField.text != "" && self.descriptionTextView.text != "" {
