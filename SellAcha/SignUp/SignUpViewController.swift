@@ -164,6 +164,10 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var whatappNumberTF: UITextField!
     @IBOutlet weak var userScrollView: UIScrollView!
+    @IBOutlet weak var uploadLogoScrollview: UIScrollView!
+    @IBOutlet weak var colorSchemeScrollview: UIScrollView!
+    @IBOutlet weak var storeRegistrationScrollview: UIScrollView!
+    @IBOutlet weak var whatsappScrollview: UIScrollView!
 
     var logoImageSelected = false
     var logoImageTapped = false
@@ -336,12 +340,20 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
                 userScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+                uploadLogoScrollview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+                colorSchemeScrollview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+                whatsappScrollview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+                storeRegistrationScrollview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
             }
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         userScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        uploadLogoScrollview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        colorSchemeScrollview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        whatsappScrollview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        storeRegistrationScrollview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     @objc func tapFunction(sender:UITapGestureRecognizer) {
