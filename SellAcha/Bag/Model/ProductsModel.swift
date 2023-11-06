@@ -10,7 +10,7 @@ struct ProductsModel: Codable {
 
   var posts      : ProductsPosts?   = ProductsPosts()
   var src        : String?  = nil
-  var type       : Int?     = nil
+ // var type       : Int?     = nil
   var actives    : Int?     = nil
   var drafts     : Int?     = nil
   var incomplete : Int?     = nil
@@ -21,7 +21,7 @@ struct ProductsModel: Codable {
 
     case posts      = "posts"
     case src        = "src"
-    case type       = "type"
+//    case type       = "type"
     case actives    = "actives"
     case drafts     = "drafts"
     case incomplete = "incomplete"
@@ -35,7 +35,7 @@ struct ProductsModel: Codable {
 
     posts      = try values.decodeIfPresent(ProductsPosts.self   , forKey: .posts      )
     src        = try values.decodeIfPresent(String.self  , forKey: .src        )
-    type       = try values.decodeIfPresent(Int.self     , forKey: .type       )
+  //  type       = try values.decodeIfPresent(Int.self     , forKey: .type       )
     actives    = try values.decodeIfPresent(Int.self     , forKey: .actives    )
     drafts     = try values.decodeIfPresent(Int.self     , forKey: .drafts     )
     incomplete = try values.decodeIfPresent(Int.self     , forKey: .incomplete )

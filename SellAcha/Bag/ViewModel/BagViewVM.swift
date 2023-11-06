@@ -11,7 +11,8 @@ class BagViewVM: BaseViewModel {
     var model: ProductsModel?
     var ordersDataModel: [OrdersDataModel]?
     var previousIndex: Int = 0
-
+    var isFilterClicked = false
+    
     init(apiServices: BagServiceProtocol = BagService()) {
         self.apiServices = apiServices
     }
@@ -62,8 +63,10 @@ class BagViewVM: BaseViewModel {
                     if status == true {
                         let array = result as? BaseResponse<ProductsModel>
                         self.model = array?.data
-                        self.createDataStructure()
                         self.reloadTableView?()
+                        if !self.isFilterClicked {
+                            self.createDataStructure()
+                        }
                     }
                     else{
                         self.alertClosure?(errorMessage ?? "Some Technical Problem")

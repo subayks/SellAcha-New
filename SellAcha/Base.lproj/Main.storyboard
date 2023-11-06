@@ -3198,24 +3198,16 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-Zn-IPp">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-Zn-IPp">
                                                                     <rect key="frame" x="134" y="13" width="20" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="euU-2b-p4J"/>
                                                                         <constraint firstAttribute="width" constant="20" id="i5D-5k-agB"/>
                                                                     </constraints>
+                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                    <state key="normal" title="Button">
-                                                                        <attributedString key="attributedTitle">
-                                                                            <fragment content="2">
-                                                                                <attributes>
-                                                                                    <font key="NSFont" size="9" name="Helvetica"/>
-                                                                                    <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                                                </attributes>
-                                                                            </fragment>
-                                                                        </attributedString>
-                                                                    </state>
+                                                                    <state key="normal" title="2"/>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" name="PrimaryColor"/>
@@ -7089,24 +7081,16 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="200-hH-50q">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="200-hH-50q">
                                                                     <rect key="frame" x="134" y="13" width="20" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="20" id="nlC-i4-gUd"/>
                                                                         <constraint firstAttribute="height" constant="20" id="soo-Po-foS"/>
                                                                     </constraints>
+                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="9"/>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                    <state key="normal" title="Button">
-                                                                        <attributedString key="attributedTitle">
-                                                                            <fragment content="2">
-                                                                                <attributes>
-                                                                                    <font key="NSFont" size="9" name="Helvetica"/>
-                                                                                    <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                                                </attributes>
-                                                                            </fragment>
-                                                                        </attributedString>
-                                                                    </state>
+                                                                    <state key="normal" title="2"/>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" name="PrimaryColor"/>

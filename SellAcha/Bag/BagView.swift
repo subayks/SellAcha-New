@@ -229,7 +229,7 @@ extension BagView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        self.vm.isFilterClicked = true
         self.vm.ordersDataModel?[self.vm.previousIndex].isSelected = false
         self.vm.ordersDataModel?[indexPath.row].isSelected = true
         self.vm.previousIndex = indexPath.row
