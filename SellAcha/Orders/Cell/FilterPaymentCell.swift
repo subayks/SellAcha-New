@@ -9,6 +9,7 @@ import UIKit
 
 class FilterPaymentCell: UITableViewCell {
 
+    @IBOutlet weak var picketTextField: UITextField!
     @IBOutlet weak var tableHeightConstraints: NSLayoutConstraint!
     @IBOutlet weak var statusTableView: UITableView!
     @IBOutlet weak var paymentStatusButton: UIButton!
@@ -16,7 +17,9 @@ class FilterPaymentCell: UITableViewCell {
     let viewModel = FilterPaymentCellVM()
     var selectedCell = Int()
     var reloadClosure: ((Int, Bool)->())?
-
+    let paymentPicker = UIPickerView()
+    let fulfilementPicker = UIPickerView()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,8 +29,12 @@ class FilterPaymentCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        picketTextField.inputView = paymentPicker
+        paymentPicker.delegate = self
+        paymentPicker.dataSource = self
+        
+//        fulfilementPicker.delegate = self
+//        fulfilementPicker.dataSource = self
     }
 
     @IBAction func actionPayment(_ sender: UIButton) {
@@ -53,5 +60,46 @@ extension FilterPaymentCell: UITableViewDelegate, UITableViewDataSource {
         self.reloadClosure?(selectedCell, false)
         self.paymentStatusButton.setTitle(viewModel.status[indexPath.row], for: .normal)
         self.paymentStatusButton.setImage(UIImage(systemName: "chevron.down.circle"), for: .normal)
+    }
+}
+extension FilterPaymentCell: UIPickerViewDelegate,UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView( _ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView.tag {
+        case 0:
+            return self.viewModel.status.count
+        case 1:
+            return self.viewModel.status.count
+        default:
+            return 1
+        }
+    }
+
+    func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView.tag {
+        case 0:
+            return self.viewModel.status[row]
+        case 1:
+            return self.viewModel.status[row]
+        default:
+            return "No data found"
+        }
+        
+    }
+
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView.tag {
+        case 0:
+            picketTextField.text = self.viewModel.status[row]
+            picketTextField.resignFirstResponder()
+        case 1:
+            picketTextField.text = self.viewModel.status[row]
+            picketTextField.resignFirstResponder()
+        default:
+            return
+        }
     }
 }

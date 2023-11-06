@@ -120,6 +120,8 @@ extension OrderFilterView: UITableViewDelegate, UITableViewDataSource {
             let cell = filterTableView.dequeueReusableCell(withIdentifier: "FilterPaymentCell") as! FilterPaymentCell
             cell.paymentStatusLabel.text = self.viewModel.dataModel[indexPath.row].title
             cell.paymentStatusButton.tag = indexPath.row
+            cell.picketTextField.tag = indexPath.row
+            cell.paymentPicker.tag = indexPath.row
             cell.reloadClosure = { (index, show)  in
                 if show {
                     cell.tableHeightConstraints.constant = 128
