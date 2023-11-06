@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Photos
 
 class SignUpViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var googleIMageTitle: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var GoogleAnalyticsViewIdTF: UITextField!
     @IBOutlet weak var GoogleMeasurIDTF: UITextField!
@@ -162,6 +164,17 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var whatappNumberTF: UITextField!
     
+    var logoImageSelected = false
+    var logoImageTapped = false
+
+    var faviconSelected = false
+    var faviconTapped = false
+
+    var isThubnailSelected = false
+    var isThubnailTapped = false
+    
+    var isGooleImageTapped = false
+
     var vm = SignupViewModel()
     
     override func viewDidLoad() {
@@ -243,6 +256,23 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         whatappickerView.dataSource = self
         whatsappStatusTF.inputView = whatappickerView
         whatappickerView.tag = 10
+        
+        self.passwordTF.isSecureTextEntry = true
+        self.confirmPasswordTF.isSecureTextEntry = true
+        self.logoSelectLbl.text = "No file Chosen"
+        self.logoSelectLbl.textColor = UIColor.lightGray
+        
+        self.favIconSelectedLbl.text = "No file Chosen"
+        self.favIconSelectedLbl.textColor = UIColor.lightGray
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.tapFunction))
+        logoIconImg.isUserInteractionEnabled = true
+        logoIconImg.addGestureRecognizer(tap)
+        
+        let favIconImgTap = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.tapFaviconFunction))
+        favIconImg.isUserInteractionEnabled = true
+        favIconImg.addGestureRecognizer(favIconImgTap)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -287,9 +317,105 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
                 self.navigationController?.popViewController(animated: true)
             }
         }
+        
+        self.vm.allowToPhotos = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                let pickerController = UIImagePickerController()
+                pickerController.delegate = self
+                pickerController.allowsEditing = true
+                self.present(pickerController, animated: true)            }
+        }
+    }
+    
+    @objc func tapFunction(sender:UITapGestureRecognizer) {
+        self.logoImageTapped = true
+        self.vm.requestPhotoAccess()
+    }
+    
+    @objc func tapFaviconFunction(sender:UITapGestureRecognizer) {
+        self.faviconTapped = true
+        self.vm.requestPhotoAccess()
     }
     
     @IBAction func saveBtnAction(_ sender: Any) {
+        if BusinessNameTF.text == "" || (BusinessNameTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Business Name", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if mobileNumberTF.text == "" || (mobileNumberTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Mobile Number", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if mobileNumberTF.text?.count ?? 0 > 10 || mobileNumberTF.text?.count ?? 0 < 10 {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Valid mobile Number", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if self.ProductTypeTF.text == "" {
+            let alert = UIAlertController(title: "Alert", message: "Please Select Shop Type", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if emailTF.text == "" || (emailTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Email Address", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if !self.vm.isValidEmail(self.emailTF.text ?? "") {
+            let alert = UIAlertController(title: "Alert", message: "Please enter valid Email Address", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if passwordTF.text == "" || (passwordTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Password", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if (passwordTF.text?.count ?? 0) < 8 {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Min 8 character in password field", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if confirmPasswordTF.text == "" || (confirmPasswordTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Confirm Password", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if confirmPasswordTF.text != self.passwordTF.text {
+            let alert = UIAlertController(title: "Alert", message: "Password does not Match", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if self.serviceTF.text == "" {
+            let alert = UIAlertController(title: "Alert", message: "Please Select Service", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         ThemeView.isHidden = false
         StoreInfoView.isHidden = true
         sellbettaLogoView.isHidden = true
@@ -311,9 +437,12 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func chooseFileGalleryAction(_ sender: Any) {
+        self.isThubnailTapped = true
+        self.vm.requestPhotoAccess()
     }
     
     @IBAction func themeSaveAction(_ sender: Any) {
+        
         ThemeView.isHidden = true
         StoreInfoView.isHidden = true
         sellbettaLogoView.isHidden = false
@@ -327,6 +456,20 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     }
    
     @IBAction func sellbettaSavebtnAction(_ sender: Any) {
+        if brandTF.text == "" || (brandTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Brand Name", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if tagLineTF.text == "" || (tagLineTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Tag Line", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         ThemeView.isHidden = true
         StoreInfoView.isHidden = true
         sellbettaLogoView.isHidden = true
@@ -353,6 +496,27 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func colorSaveBtnAction(_ sender: Any) {
+        if themeColorTF.text == "" || (themeColorTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Brand Name", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if !logoImageSelected {
+            let alert = UIAlertController(title: "Alert", message: "Please select Logo Image", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if !faviconSelected {
+            let alert = UIAlertController(title: "Alert", message: "Please select Favicon Image", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         self.ThemeView.isHidden = true
         self.StoreInfoView.isHidden = true
         self.sellbettaLogoView.isHidden = true
@@ -366,6 +530,41 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func cateogrySaveBtnAction(_ sender: Any) {
+        if productTitleTF.text == "" || (productTitleTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Name Field", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if selectCategoryTF.text == "" {
+            let alert = UIAlertController(title: "Alert", message: "Please Select Category", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if selectFeatureTFProduct.text == "" {
+            let alert = UIAlertController(title: "Alert", message: "Please Select Featured", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if selectAssignToTF.text == "" {
+            let alert = UIAlertController(title: "Alert", message: "Please Select AssignTo", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if !isThubnailSelected {
+            let alert = UIAlertController(title: "Alert", message: "Please choose Thumbnail", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         self.ThemeView.isHidden = true
         self.StoreInfoView.isHidden = true
         self.sellbettaLogoView.isHidden = true
@@ -380,6 +579,48 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func productSaveBtnAction(_ sender: Any) {
+        if product.text == "" || (product.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Title", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if productPrice.text == "" || (productPrice.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Price", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if productSpecialPrice.text == "" || (productSpecialPrice.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Special Price", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if selectProductSpecialPriceTF.text == "" || (selectProductSpecialPriceTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please Choose Product Type", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if productPricestartsTF.text == "" || (productPricestartsTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please Choose Start Date", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if productPriceEndsTF.text == "" || (productPriceEndsTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please Choose End Date", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         self.ThemeView.isHidden = true
         self.StoreInfoView.isHidden = true
         self.sellbettaLogoView.isHidden = true
@@ -407,10 +648,34 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func googleChooseFileBtnAction(_ sender: Any) {
+        self.isGooleImageTapped = true
+        self.vm.requestPhotoAccess()
     }
     
     
     @IBAction func gooleSavebtnAction(_ sender: Any) {
+        if GoogleMeasurIDTF.text == "" || (GoogleMeasurIDTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter GA-MEASUREMENT-ID", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if GoogleAnalyticsViewIdTF.text == "" || (GoogleAnalyticsViewIdTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Analytics View Id", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if GoogleSelectStatusTF.text == "" || (GoogleSelectStatusTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please Choose Status", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        
         self.ThemeView.isHidden = true
         self.StoreInfoView.isHidden = true
         self.sellbettaLogoView.isHidden = true
@@ -425,6 +690,20 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func TabManagerSkipBtn(_ sender: Any) {
+        if facebookPixelTF.text == "" || (facebookPixelTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Pixel ID", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if facebookStatusTF.text == "" || (facebookStatusTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please Choose Status", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         self.ThemeView.isHidden = true
         self.StoreInfoView.isHidden = true
         self.sellbettaLogoView.isHidden = true
@@ -440,6 +719,21 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func tabManagerSaveBtnAction(_ sender: Any) {
+        if TabManagerIDTF.text == "" || (TabManagerIDTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Tag Manager ID", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if TabManagerSelectStatusTF.text == "" || (TabManagerSelectStatusTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please Choose Status", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        
         self.ThemeView.isHidden = true
         self.StoreInfoView.isHidden = true
         self.sellbettaLogoView.isHidden = true
@@ -466,7 +760,23 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func whatsappRegisterActoin(_ sender: Any) {
-        self.vm.makeSignUp(email: self.emailTF.text ?? "", password: self.passwordTF.text ?? "", sertype: self.serviceTF.text ?? "", refrral: "", mob: self.mobileNumberTF.text ?? "", themeColor: self.themeColorTF.text ?? "", pId: "", featured: self.selectFeatureTFProduct.text ?? "", menuStatus: "Yes", price: self.productPrice.text ?? "", astatus: self.GoogleSelectStatusTF.text ?? "", gfile: "", tstatus: self.TabManagerSelectStatusTF.text ?? "", pstatus: self.facebookStatusTF.text ?? "", wstatus: self.whatsappStatusTF.text ?? "", name: self.BusinessNameTF.text ?? "", domain: self.BusinessNameTF.text ?? "", customDomain: self.BusinessNameTF.text ?? "", utype: "product", businessName: self.BusinessNameTF.text ?? "", shopType: self.ProductTypeTF.text ?? "", cname: self.selectCategoryTF.text ?? "", title: self.productTitleTF.text ?? "", specialPriceStart: self.productPricestartsTF.text ?? "", specialPrice: self.productSpecialPrice.text ?? "", priceType: self.productPrice.text ?? "", type: self.ProductTypeTF.text ?? "", specialPriceEnd: self.productPriceEndsTF.text ?? "", gaMeasurementId: self.GoogleMeasurIDTF.text ?? "", analyticsViewId: self.GoogleAnalyticsViewIdTF.text ?? "", tagId: self.TabManagerIDTF.text ?? "", pixelId: self.facebookPixelTF.text ?? "", number: self.whatappNumberTF.text ?? "", shopPagePretext: self.whatsappPurchaseProductTF.text ?? "", otherPagePretext: self.whatsappQueryTF.text ?? "", plnt: "1")
+        if whatappNumberTF.text != ""  {
+            if whatappNumberTF.text?.count ?? 0 > 10 || whatappNumberTF.text?.count ?? 0 < 10 {
+                let alert = UIAlertController(title: "Alert", message: "Please enter Valid Mobile Number", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+        }
+
+        if whatsappStatusTF.text == "" || (whatsappStatusTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please Choose Status", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        self.vm.makeSignUp(email: self.emailTF.text ?? "", password: self.passwordTF.text ?? "", sertype: self.serviceTF.text ?? "", refrral: "", mob: self.mobileNumberTF.text ?? "", themeColor: self.themeColorTF.text ?? "", pId: "", featured: self.selectFeatureTFProduct.text ?? "", menuStatus: "Yes", price: self.productPrice.text ?? "", astatus: self.GoogleSelectStatusTF.text ?? "", gfile: "", tstatus: self.TabManagerSelectStatusTF.text ?? "", pstatus: self.facebookStatusTF.text ?? "", wstatus: self.whatsappStatusTF.text ?? "", name: self.BusinessNameTF.text ?? "", domain: self.BusinessNameTF.text ?? "", customDomain: self.BusinessNameTF.text ?? "", utype: "product", businessName: self.BusinessNameTF.text ?? "", shopType: self.ProductTypeTF.text ?? "", cname: self.selectCategoryTF.text ?? "", title: self.product.text ?? "", specialPriceStart: self.productPricestartsTF.text ?? "", specialPrice: self.productSpecialPrice.text ?? "", priceType: self.selectProductSpecialPriceTF.text ?? "", type: self.ProductTypeTF.text ?? "", specialPriceEnd: self.productPriceEndsTF.text ?? "", gaMeasurementId: self.GoogleMeasurIDTF.text ?? "", analyticsViewId: self.GoogleAnalyticsViewIdTF.text ?? "", tagId: self.TabManagerIDTF.text ?? "", pixelId: self.facebookPixelTF.text ?? "", number: self.whatappNumberTF.text ?? "", shopPagePretext: self.whatsappPurchaseProductTF.text ?? "", otherPagePretext: self.whatsappQueryTF.text ?? "", plnt: "1")
     }
     
     @IBAction func facebookSaveBtnAction(_ sender: Any) {
@@ -588,7 +898,49 @@ extension SignUpViewController: UIPickerViewDelegate,UIPickerViewDataSource{
             return
         }
     }
-
-    
-    
+}
+extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var selectedImageFromPicker: UIImage?
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            selectedImageFromPicker = editedImage
+        } else {
+            selectedImageFromPicker = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        }
+        if logoImageTapped {
+            self.logoIconImg.image = selectedImageFromPicker
+            self.logoImageTapped = false
+            self.logoSelectLbl.text = "Logo Selected"
+            self.logoSelectLbl.textColor = UIColor(red: 112/255, green: 167/255, blue: 0/255, alpha: 255/255)
+            self.logoImageSelected = true
+        }
+        
+        if faviconTapped {
+            self.favIconImg.image = selectedImageFromPicker
+            self.faviconTapped = false
+            self.favIconSelectedLbl.text = "Favicon Selected"
+            self.favIconSelectedLbl.textColor = UIColor(red: 112/255, green: 167/255, blue: 0/255, alpha: 255/255)
+            self.faviconSelected = true
+        }
+        
+        if isThubnailTapped {
+            self.isThubnailSelected = true
+            self.isThubnailTapped = false
+            if let asset = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerPHAsset")] as? PHAsset{
+                if let fileName = asset.value(forKey: "filename") as? String{
+                    self.filechoosenLbl.text = fileName
+                }
+            }
+        }
+        
+        if isGooleImageTapped {
+            self.isGooleImageTapped = false
+            if let asset = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerPHAsset")] as? PHAsset{
+                if let fileName = asset.value(forKey: "filename") as? String{
+                    self.googleIMageTitle.text = fileName
+                }
+            }
+        }
+        dismiss(animated: true)
+    }
 }

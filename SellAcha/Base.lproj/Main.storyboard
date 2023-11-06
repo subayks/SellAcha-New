@@ -1494,7 +1494,7 @@
                                                                     <constraint firstAttribute="height" constant="45" id="hOO-9y-RkV"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52B-vd-Fo3">
                                                                 <rect key="frame" x="26" y="259" width="352" height="21"/>
@@ -2133,7 +2133,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="Zwf-yT-yf1"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="I want to purchase this product" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U1n-4c-nYG" customClass="UnderlinedTextField" customModule="SellAcha" customModuleProvider="target">
                                                 <rect key="frame" x="26" y="199" width="352" height="45"/>
@@ -2353,6 +2353,7 @@
                         <outlet property="favIconSelectedLbl" destination="U1p-4N-eFb" id="V6K-Fp-kyq"/>
                         <outlet property="filechoosenLbl" destination="0sS-9W-viz" id="UFn-0X-fky"/>
                         <outlet property="googleAnalyticsVieww" destination="ZZh-ac-qCj" id="eo9-dh-7Ec"/>
+                        <outlet property="googleIMageTitle" destination="nkc-au-sKl" id="QzF-OH-5Ul"/>
                         <outlet property="googleTagmanagerView" destination="p6J-cq-FJs" id="N5r-fv-fli"/>
                         <outlet property="logoIconImg" destination="llu-rT-ReM" id="cxx-EA-6cN"/>
                         <outlet property="logoSelectLbl" destination="4aQ-ge-Z21" id="r74-yo-qcd"/>
