@@ -190,6 +190,10 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
 
     var vm = SignupViewModel()
     
+    // datepicker
+    let StartdatePicker = UIDatePicker()
+    let endDatePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -297,7 +301,46 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         tickImage3.layer.cornerRadius = tickImage3.frame.size.width/2
         tickIMage2.layer.cornerRadius = tickIMage2.frame.size.width/2
         tickImage1.layer.cornerRadius = tickImage1.frame.size.width/2
+        
+        
+        // datepicker
+        StartdatePicker.datePickerMode = .date
+        endDatePicker.datePickerMode = .date
+        
+        // Create a toolbar with a "Done" button to dismiss the date picker
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+        toolbar.setItems([doneButton], animated: true)
+        productPricestartsTF.inputAccessoryView = toolbar
+        productPricestartsTF.inputView = StartdatePicker
+        
+        let Endtoolbar = UIToolbar()
+        Endtoolbar.sizeToFit()
+        let EnddoneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(EnddoneButtonTapped))
+        Endtoolbar.setItems([EnddoneButton], animated: true)
+        productPriceEndsTF.inputAccessoryView = Endtoolbar
+        productPriceEndsTF.inputView = endDatePicker
     }
+    
+    @objc func doneButtonTapped() {
+        // Format the date and update the text field's text
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        productPricestartsTF.text = dateFormatter.string(from: StartdatePicker.date)
+        
+        // Dismiss the date picker
+        productPricestartsTF.resignFirstResponder()
+        }
+    
+    @objc func EnddoneButtonTapped() {
+        // Format the date and update the text field's text
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        productPriceEndsTF.text = dateFormatter.string(from: endDatePicker.date)
+        // Dismiss the date picker
+        productPriceEndsTF.resignFirstResponder()
+        }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
