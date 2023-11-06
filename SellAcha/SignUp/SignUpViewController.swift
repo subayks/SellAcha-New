@@ -10,6 +10,14 @@ import Photos
 
 class SignUpViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var tickImage4: UIImageView!
+    @IBOutlet weak var tickImage3: UIImageView!
+    @IBOutlet weak var tickIMage2: UIImageView!
+    @IBOutlet weak var tickImage1: UIImageView!
+    @IBOutlet weak var loadView4: UIView!
+    @IBOutlet weak var loadView3: UIView!
+    @IBOutlet weak var loadView2: UIView!
+    @IBOutlet weak var loadView1: UIView!
     @IBOutlet weak var googleIMageTitle: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var GoogleAnalyticsViewIdTF: UITextField!
@@ -280,7 +288,15 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         favIconImg.isUserInteractionEnabled = true
         favIconImg.addGestureRecognizer(favIconImgTap)
         
+        self.tickImage1.isHidden = true
+        self.tickIMage2.isHidden = true
+        self.tickImage3.isHidden = true
+        self.tickImage4.isHidden = true
         
+        tickImage4.layer.cornerRadius = tickImage4.frame.size.width/2
+        tickImage3.layer.cornerRadius = tickImage3.frame.size.width/2
+        tickIMage2.layer.cornerRadius = tickIMage2.frame.size.width/2
+        tickImage1.layer.cornerRadius = tickImage1.frame.size.width/2
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -454,6 +470,11 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         self.googleTagmanagerView.isHidden = true
         self.facebookPixelView.isHidden = true
         self.whatsappVieww.isHidden = true
+        
+        self.tickImage1.isHidden = false
+        self.buttonOne.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
+        self.buttonTwo.backgroundColor = UIColor(red: 0/255, green: 67/255, blue: 129/255, alpha: 255/255)
+        self.loadView1.backgroundColor =  UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
     }
     
     @IBAction func installRadioBtnAction(_ sender: Any) {
@@ -525,7 +546,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func colorSaveBtnAction(_ sender: Any) {
         if themeColorTF.text == "" || (themeColorTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
-            let alert = UIAlertController(title: "Alert", message: "Please enter Brand Name", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Alert", message: "Please enter Theme Color", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
@@ -555,6 +576,11 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         self.googleTagmanagerView.isHidden = true
         self.facebookPixelView.isHidden = true
         self.whatsappVieww.isHidden = true
+        
+        self.tickIMage2.isHidden = false
+        self.buttonTwo.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
+        self.buttonThree.backgroundColor = UIColor(red: 0/255, green: 67/255, blue: 129/255, alpha: 255/255)
+        self.loadView2.backgroundColor =  UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
     }
     
     @IBAction func cateogrySaveBtnAction(_ sender: Any) {
@@ -659,6 +685,11 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         self.googleTagmanagerView.isHidden = true
         self.facebookPixelView.isHidden = true
         self.whatsappVieww.isHidden = true
+        
+        self.tickImage3.isHidden = false
+        self.buttonThree.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
+        self.buttonFour.backgroundColor = UIColor(red: 0/255, green: 67/255, blue: 129/255, alpha: 255/255)
+        self.loadView3.backgroundColor =  UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
     }
     
     @IBAction func googleSkipBtnAction(_ sender: Any) {
@@ -667,10 +698,10 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         self.sellbettaLogoView.isHidden = true
         self.colorThemeView.isHidden = true
         self.addCategoryView.isHidden = true
-        self.AddProductView.isHidden = false
+        self.AddProductView.isHidden = true
         self.googleAnalyticsVieww.isHidden = true
         self.googleTagmanagerView.isHidden = true
-        self.facebookPixelView.isHidden = true
+        self.facebookPixelView.isHidden = false
         self.whatsappVieww.isHidden = true
     }
     
@@ -718,20 +749,6 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func TabManagerSkipBtn(_ sender: Any) {
-        if facebookPixelTF.text == "" || (facebookPixelTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
-            let alert = UIAlertController(title: "Alert", message: "Please enter Pixel ID", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
-
-        if facebookStatusTF.text == "" || (facebookStatusTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
-            let alert = UIAlertController(title: "Alert", message: "Please Choose Status", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
-        
         self.ThemeView.isHidden = true
         self.StoreInfoView.isHidden = true
         self.sellbettaLogoView.isHidden = true
@@ -783,7 +800,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         self.addCategoryView.isHidden = true
         self.AddProductView.isHidden = true
         self.googleAnalyticsVieww.isHidden = true
-        self.googleTagmanagerView.isHidden = false
+        self.googleTagmanagerView.isHidden = true
         self.whatsappVieww.isHidden = false
     }
     
@@ -805,9 +822,28 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         }
         
         self.vm.makeSignUp(email: self.emailTF.text ?? "", password: self.passwordTF.text ?? "", sertype: self.serviceTF.text ?? "", refrral: "", mob: self.mobileNumberTF.text ?? "", themeColor: self.themeColorTF.text ?? "", pId: "", featured: self.selectFeatureTFProduct.text ?? "", menuStatus: "Yes", price: self.productPrice.text ?? "", astatus: self.GoogleSelectStatusTF.text ?? "", gfile: "", tstatus: self.TabManagerSelectStatusTF.text ?? "", pstatus: self.facebookStatusTF.text ?? "", wstatus: self.whatsappStatusTF.text ?? "", name: self.BusinessNameTF.text ?? "", domain: self.BusinessNameTF.text ?? "", customDomain: self.BusinessNameTF.text ?? "", utype: "product", businessName: self.BusinessNameTF.text ?? "", shopType: self.ProductTypeTF.text ?? "", cname: self.selectCategoryTF.text ?? "", title: self.product.text ?? "", specialPriceStart: self.productPricestartsTF.text ?? "", specialPrice: self.productSpecialPrice.text ?? "", priceType: self.selectProductSpecialPriceTF.text ?? "", type: self.ProductTypeTF.text ?? "", specialPriceEnd: self.productPriceEndsTF.text ?? "", gaMeasurementId: self.GoogleMeasurIDTF.text ?? "", analyticsViewId: self.GoogleAnalyticsViewIdTF.text ?? "", tagId: self.TabManagerIDTF.text ?? "", pixelId: self.facebookPixelTF.text ?? "", number: self.whatappNumberTF.text ?? "", shopPagePretext: self.whatsappPurchaseProductTF.text ?? "", otherPagePretext: self.whatsappQueryTF.text ?? "", plnt: "1")
+        
+        self.tickImage4.isHidden = false
+        self.buttonFour.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
+        self.loadView4.backgroundColor =  UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
     }
     
     @IBAction func facebookSaveBtnAction(_ sender: Any) {
+        
+        if facebookPixelTF.text == "" || (facebookPixelTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please enter Pixel ID", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        if facebookStatusTF.text == "" || (facebookStatusTF.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true) {
+            let alert = UIAlertController(title: "Alert", message: "Please Choose Status", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         self.ThemeView.isHidden = true
         self.StoreInfoView.isHidden = true
         self.sellbettaLogoView.isHidden = true
