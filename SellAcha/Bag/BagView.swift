@@ -118,9 +118,13 @@ class BagView: UIViewController {
             let url = URL(string: self.vm.retriveProfile()?.logo ?? "")
             do {
                 let data = try? Data(contentsOf: url!)
-                self.profileImage.image = UIImage(data: data!)
+                if data == nil {
+                    self.profileImage.image = UIImage(named: "profile")
+                } else {
+                    self.profileImage.image = UIImage(data: data ?? Data())
+                }
             } catch {
-                
+
             }
         }
     }

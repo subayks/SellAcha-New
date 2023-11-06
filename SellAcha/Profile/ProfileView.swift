@@ -33,9 +33,12 @@ class ProfileView: UIViewController {
             do {
                 let url = URL(string: self.vm.retriveProfile()?.logo ?? "")
                 let data = try? Data(contentsOf: url!)
-                self.profileImageView.image = UIImage(data: data!)
+                if data == nil {
+                    self.profileImageView.image = UIImage(named: "profile")
+                } else {
+                    self.profileImageView.image = UIImage(data: data ?? Data())
+                }
             } catch {
-                
             }
         }
         self.emailIdView.text = self.vm.retriveUserDetails()?.email

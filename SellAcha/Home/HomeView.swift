@@ -96,10 +96,13 @@ class HomeView: UIViewController, ChartViewDelegate {
                 do {
                     DispatchQueue.main.async {
                         let data = try? Data(contentsOf: url!)
-                        self.profileView.image = UIImage(data: data!)
+                        if data == nil {
+                            self.profileView.image = UIImage(named: "profile")
+                        } else {
+                            self.profileView.image = UIImage(data: data ?? Data())
+                        }
                     }
                 } catch {
-                    
                 }
             }
         }
