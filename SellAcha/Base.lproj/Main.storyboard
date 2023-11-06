@@ -2377,6 +2377,7 @@
                         <outlet property="themeColorTF" destination="z7G-MF-LDU" id="g3w-3o-ZrO"/>
                         <outlet property="urlCountLbl" destination="IOf-9a-qa0" id="Ep5-yR-0fW"/>
                         <outlet property="urlVieww" destination="dDj-wg-Ze6" id="LP8-tP-Hlw"/>
+                        <outlet property="userScrollView" destination="JAg-xv-uOQ" id="x1h-ts-tyT"/>
                         <outlet property="whatappNumberTF" destination="BoJ-5C-dxR" id="On0-No-LWN"/>
                         <outlet property="whatsappPurchaseProductTF" destination="U1n-4c-nYG" id="Okr-CP-KfL"/>
                         <outlet property="whatsappQueryTF" destination="AJF-tn-KcR" id="vEv-h6-g5r"/>

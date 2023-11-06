@@ -26,6 +26,10 @@ class UserDetailsVC: UIViewController {
         self.nameTextField.text = self.vm.model?.name ?? ""
         self.mobileNumberTextField.text = self.vm.model?.mob ?? ""
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
         if self.vm.isFromSettings {
             self.buttonSave.isHidden = false
             self.navigationController?.title = "Profile Settings"
@@ -91,6 +95,18 @@ class UserDetailsVC: UIViewController {
             }
         }
         
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                userScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        userScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     override func viewDidLayoutSubviews() {
