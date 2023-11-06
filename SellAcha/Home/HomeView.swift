@@ -92,14 +92,14 @@ class HomeView: UIViewController, ChartViewDelegate {
         self.viewwModel.updateProfileImage = { [weak self] in
             DispatchQueue.main.async {
                 guard let self = self else {return}
-                DispatchQueue.main.async {
-                    let url = URL(string: self.viewwModel.profileModel?.logo ?? "")
-                    do {
+                let url = URL(string: self.viewwModel.profileModel?.logo ?? "")
+                do {
+                    DispatchQueue.main.async {
                         let data = try? Data(contentsOf: url!)
                         self.profileView.image = UIImage(data: data!)
-                    } catch {
-                        
                     }
+                } catch {
+                    
                 }
             }
         }

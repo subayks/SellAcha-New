@@ -19,7 +19,8 @@ class FilterPaymentCell: UITableViewCell {
     var reloadClosure: ((Int, Bool)->())?
     let paymentPicker = UIPickerView()
     let fulfilementPicker = UIPickerView()
-    
+    var selectedPicker: ((Int, String)->())?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,9 +33,6 @@ class FilterPaymentCell: UITableViewCell {
         picketTextField.inputView = paymentPicker
         paymentPicker.delegate = self
         paymentPicker.dataSource = self
-        
-//        fulfilementPicker.delegate = self
-//        fulfilementPicker.dataSource = self
     }
 
     @IBAction func actionPayment(_ sender: UIButton) {
@@ -94,9 +92,11 @@ extension FilterPaymentCell: UIPickerViewDelegate,UIPickerViewDataSource{
         switch pickerView.tag {
         case 0:
             picketTextField.text = self.viewModel.status[row]
+            self.selectedPicker?(pickerView.tag, self.viewModel.status[row])
             picketTextField.resignFirstResponder()
         case 1:
             picketTextField.text = self.viewModel.status[row]
+            self.selectedPicker?(pickerView.tag, self.viewModel.status[row])
             picketTextField.resignFirstResponder()
         default:
             return

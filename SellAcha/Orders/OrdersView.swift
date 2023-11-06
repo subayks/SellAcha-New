@@ -8,7 +8,7 @@
 import UIKit
 
 class OrdersView: UIViewController {
-
+    
     @IBOutlet weak var selectFulFilmentLabel: UILabel!
     @IBOutlet weak var createorder: UIButton!
     @IBOutlet weak var selectFulFilmentButton: UIButton!
@@ -30,11 +30,11 @@ class OrdersView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
+        
         self.createorder.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
         self.buttonSubmit.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
         self.profileImage.layer.cornerRadius = self.profileImage.frame.height/2
-
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
@@ -64,7 +64,7 @@ class OrdersView: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.viewModel.getAllOrders()
-
+        
         self.viewModel.errorClosure = { [weak self] (error) in
             DispatchQueue.main.async {
                 guard let self = self else {return}
@@ -117,20 +117,20 @@ class OrdersView: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
-      
-        DispatchQueue.main.async {
+        
             let url = URL(string: self.viewModel.retriveProfile()?.logo ?? "")
             do {
-                let data = try? Data(contentsOf: url!)
-                self.profileImage.image = UIImage(data: data!)
+                DispatchQueue.main.async {
+                    let data = try? Data(contentsOf: url!)
+                    self.profileImage.image = UIImage(data: data!)
+                }
             } catch {
                 
             }
-        }
     }
     
     @IBAction func actionSearch(_ sender: Any) {
-            }
+    }
     
     @IBAction func actionCreateOrder(_ sender: Any) {
         let CreateOrderVC = self.storyboard?.instantiateViewController(withIdentifier: "CreateOrderVC") as! CreateOrderVC
@@ -139,13 +139,17 @@ class OrdersView: UIViewController {
     
     @IBAction func actionFulfilment(_ sender: Any) {
         self.selectFilterTableViewCell.isHidden = false
-
+        
     }
     
     @objc func filterTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.viewModel.modelData = self.viewModel.originalModelData
         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OrderFilterView") as! OrderFilterView
-            vc.modalPresentationStyle = .overCurrentContext
-            present(vc, animated: true, completion: nil)
+        vc.selectedPicker = { (pending, fulfilment, startDate, endDate)  in
+            self.viewModel.filterData(payment: pending, fulfilment: fulfilment, startDate: startDate, endDate: endDate)
+        }
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
     }
     
     @objc func chevronTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -163,7 +167,7 @@ class OrdersView: UIViewController {
 extension OrdersView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == ordersTableView {
-            return self.viewModel.model?.orders?.data?.count == 0 ? 1:self.viewModel.model?.orders?.data?.count ?? 1
+            return self.viewModel.modelData?.count == 0 ? 1:self.viewModel.modelData?.count ?? 1
         } else {
             return self.viewModel.filterList.count
         }
@@ -171,7 +175,7 @@ extension OrdersView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == ordersTableView {
-            if self.viewModel.model?.orders?.data?.count == 0 || self.viewModel.model?.orders?.data?.count == nil {
+            if self.viewModel.modelData?.count == 0 || self.viewModel.modelData?.count == nil {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MonthCell") as! MonthCell
                 cell.textLabel?.text = "No Records Found"
                 return cell
@@ -194,10 +198,10 @@ extension OrdersView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == ordersTableView {
-            if self.viewModel.model?.orders?.data?[indexPath.row].isSelected == true {
-                self.viewModel.model?.orders?.data?[indexPath.row].isSelected = false
+            if self.viewModel.modelData?[indexPath.row].isSelected == true {
+                self.viewModel.modelData?[indexPath.row].isSelected = false
             } else {
-                self.viewModel.model?.orders?.data?[indexPath.row].isSelected = true
+                self.viewModel.modelData?[indexPath.row].isSelected = true
             }
             self.ordersTableView.reloadRows(at:  [IndexPath(row: indexPath.row, section: indexPath.section)], with: .automatic)
         } else {
@@ -244,7 +248,7 @@ extension OrdersView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        
         self.viewModel.ordersDataModel?[self.viewModel.previousIndex].isSelected = false
         self.viewModel.ordersDataModel?[indexPath.row].isSelected = true
         self.viewModel.previousIndex = indexPath.row
@@ -266,8 +270,8 @@ extension OrdersView: UICollectionViewDelegate, UICollectionViewDataSource {
         } else if self.viewModel.ordersDataModel?[indexPath.row].title  == "Ready For Pickup" {
             self.viewModel.getProcessingOrders(orderType: "pickup")
         }  else if self.viewModel.filterList[indexPath.row] == "Awaiting processing" {
-         //   self.viewModel.getPendingOrders()
+            //   self.viewModel.getPendingOrders()
             self.viewModel.getProcessingOrders(orderType: "pending")
-        } 
+        }
     }
 }

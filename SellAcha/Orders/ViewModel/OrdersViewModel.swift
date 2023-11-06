@@ -20,6 +20,10 @@ class OrdersViewModel: BaseViewModel {
     var apiServices: OrdersServiceProtocol?
     var model: OrdersModel?
     var originalModel: OrdersModel?
+
+    var modelData: [OrdersData]?
+    var originalModelData: [OrdersData]?
+
     var previousIndex: Int = 0
     init(apiServices: OrdersServiceProtocol = OrdersService()) {
         self.apiServices = apiServices
@@ -93,6 +97,8 @@ class OrdersViewModel: BaseViewModel {
                         let array = result as? BaseResponse<OrdersModel>
                         self.model = array?.data
                         self.originalModel = array?.data
+                        self.modelData = self.model?.orders?.data
+                        self.originalModelData = self.model?.orders?.data
                         self.createDataStructure()
                         self.reloadTableView?()
                     }
@@ -121,6 +127,9 @@ class OrdersViewModel: BaseViewModel {
                     if status == true {
                         let array = result as? BaseResponse<OrdersModel>
                         self.model = array?.data
+                        self.originalModel = array?.data
+                        self.modelData = self.model?.orders?.data
+                        self.originalModelData = self.model?.orders?.data
                         self.reloadTableView?()
                     }
                     else{
@@ -144,6 +153,9 @@ class OrdersViewModel: BaseViewModel {
                     if status == true {
                         let array = result as? BaseResponse<OrdersModel>
                         self.model = array?.data
+                        self.originalModel = array?.data
+                        self.modelData = self.model?.orders?.data
+                        self.originalModelData = self.model?.orders?.data
                         self.reloadTableView?()
                     }
                     else{
@@ -158,11 +170,17 @@ class OrdersViewModel: BaseViewModel {
     }
     
     func getOrderInfoCellVM(index: Int) ->OrderInfoCellVM {
-        OrderInfoCellVM(model: self.model?.orders?.data?[index] ?? OrdersData())
+        OrderInfoCellVM(model: self.modelData?[index] ?? OrdersData())
     }
     
     func retriveProfile() ->ProfileModel?{
         let obj = UserDefaults.standard.retrieve(object: ProfileModel.self, fromKey: "Profile")
         return obj
+    }
+    
+    func filterData(payment: String, fulfilment: String, startDate: String, endDate: String) {
+        let modelDatas = self.originalModelData?.filter{$0.status?.lowercased() == payment.lowercased()}
+        self.modelData = modelDatas
+        self.reloadTableView?()
     }
 }

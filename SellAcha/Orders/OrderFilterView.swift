@@ -16,7 +16,8 @@ class OrderFilterView: UIViewController {
     let viewModel = OrderFilterViewModel()
     var isStartDateClicked: Bool = false
     var isEndDateClicked: Bool = false
-    
+    var selectedPicker: ((String, String, String, String)->())?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.isOpaque = false
@@ -77,6 +78,7 @@ class OrderFilterView: UIViewController {
     }
     
     @IBAction func actionFilter(_ sender: Any) {
+        self.selectedPicker?(self.viewModel.dataModel[0].value ?? "", self.viewModel.dataModel[1].value ?? "", self.viewModel.dataModel[2].value ?? "", self.viewModel.dataModel[3].value ?? "")
         self.dismiss(animated: true)
     }
     
@@ -133,6 +135,9 @@ extension OrderFilterView: UITableViewDelegate, UITableViewDataSource {
                 DispatchQueue.main.async {
                     self.filterTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
                 }
+            }
+            cell.selectedPicker = { (index, name)  in
+                self.viewModel.dataModel[index].value = name
             }
             return cell
         } else {
