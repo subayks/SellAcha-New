@@ -227,6 +227,7 @@ struct OrdersData: Codable {
         customerId     = try values.decodeIfPresent(Int.self    , forKey: .customerId)
         userId  = try values.decodeIfPresent(Int.self , forKey: .userId  )
         orderType  = try values.decodeIfPresent(Int.self , forKey: .orderType  )
+        paymentStatus = try values.decodeIfPresent(Int.self , forKey: .paymentStatus  )
         status     = try values.decodeIfPresent(String.self , forKey: .status     )
         tax  = try values.decodeIfPresent(Double.self , forKey: .tax     )
         shipping = try values.decodeIfPresent(Int.self , forKey: .shipping     )

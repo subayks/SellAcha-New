@@ -31,10 +31,10 @@ class ReportsCell: UITableViewCell {
 
     func setupValues() {
         self.orderIdLabel.text = self.reportsCellVM?.model.orderNo
-        self.statusButton.setTitle(self.reportsCellVM?.model.status, for: .normal)
+        self.statusButton.setTitle(self.reportsCellVM?.model.status?.uppercased(), for: .normal)
         
         if self.reportsCellVM?.model.status?.lowercased() == "pending" {
-            self.statusButton.backgroundColor = UIColor(red: 254/255, green: 192/255, blue: 3/255, alpha: 255/255)
+            self.statusButton.backgroundColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 255/255)
         } else if self.reportsCellVM?.model.status?.lowercased() == "incomplete" {
             self.statusButton.backgroundColor = .red
         } else if self.reportsCellVM?.model.status?.lowercased() == "completed" {

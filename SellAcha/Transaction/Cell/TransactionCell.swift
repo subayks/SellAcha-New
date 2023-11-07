@@ -39,14 +39,14 @@ class TransactionCell: UITableViewCell {
     func setupValues() {
         self.orderNumberLabel.text = self.transactionCellVM?.model.orderNo
         self.transactionValueLabel.text = self.transactionCellVM?.model.transactionId
-        self.pendingButton.setTitle(self.transactionCellVM?.model.status, for: .normal)
+        self.pendingButton.setTitle(self.transactionCellVM?.model.status?.uppercased(), for: .normal)
         
         if self.transactionCellVM?.model.status?.lowercased() == "pending" {
-            self.pendingButton.backgroundColor = .orange
+            self.pendingButton.backgroundColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 255/255)
         } else if self.transactionCellVM?.model.status?.lowercased() == "incomplete" {
             self.pendingButton.backgroundColor = .red
         } else if self.transactionCellVM?.model.status?.lowercased() == "completed" {
-            self.pendingButton.backgroundColor = .green
+            self.pendingButton.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
         }
        
         self.codLabel.text = self.transactionCellVM?.model.getway?.name

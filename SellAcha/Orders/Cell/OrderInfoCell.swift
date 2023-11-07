@@ -48,16 +48,26 @@ class OrderInfoCell: UITableViewCell {
     
     func setupValues() {
         self.orderNo.text = self.orderInfoCellVM?.model.orderNo
-        self.PaymentStatusButton.setTitle(self.orderInfoCellVM?.model.status, for: .normal)
-        
-        if self.orderInfoCellVM?.model.status?.lowercased() == "pending" {
-            self.PaymentStatusButton.backgroundColor = UIColor(red: 254/255, green: 192/255, blue: 3/255, alpha: 255/255)
-        } else if self.orderInfoCellVM?.model.status?.lowercased() == "incomplete" {
-            self.PaymentStatusButton.backgroundColor = .red
-        } else if self.orderInfoCellVM?.model.status?.lowercased() == "completed" {
+       
+        if self.orderInfoCellVM?.model.paymentStatus == 1 {
             self.PaymentStatusButton.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
+            self.PaymentStatusButton.setTitle("COMPLETED", for: .normal)
+        } else if self.orderInfoCellVM?.model.paymentStatus == 2 {
+            self.PaymentStatusButton.backgroundColor =  UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 255/255)
+            self.PaymentStatusButton.setTitle("PENDING", for: .normal)
         }
         
+        self.fulfilmentStatusButton.setTitle(self.orderInfoCellVM?.model.status?.uppercased(), for: .normal)
+        if self.orderInfoCellVM?.model.status?.lowercased() == "pending" {
+            self.fulfilmentStatusButton.backgroundColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 255/255)
+        } else if self.orderInfoCellVM?.model.status?.lowercased() == "canceled" {
+            self.fulfilmentStatusButton.backgroundColor = .red
+        } else if self.orderInfoCellVM?.model.status?.lowercased() == "completed" {
+            self.fulfilmentStatusButton.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
+        } else {
+            self.fulfilmentStatusButton.backgroundColor = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 255/255)
+        }
+//
         if self.orderInfoCellVM?.model.isSelected  == true {
             self.checkBoxImage.image = UIImage(systemName: "checkmark.circle")
         } else {

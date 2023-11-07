@@ -17,7 +17,7 @@ class SubscriptionVC: UIViewController {
         super.viewDidLoad()
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        
+        self.vm.getSubscriptionPlan()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +63,13 @@ class SubscriptionVC: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }
         }
+        
+        self.vm.reloadTableView = { [weak self] in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                self.subscriptionTableView.reloadData()
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -74,14 +81,12 @@ class SubscriptionVC: UIViewController {
 
 extension SubscriptionVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.vm.model?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = subscriptionTableView.dequeueReusableCell(withIdentifier: "OrderInfoCell") as! OrderInfoCell
-    //    cell.orderInfoCellVM = self.viewModel.getOrderInfoCellVM(index: indexPath.row)
+        let cell = subscriptionTableView.dequeueReusableCell(withIdentifier: "SubscriptionCell") as! SubscriptionCell
+        cell.vm = self.vm.getSubscriptionCellVM(index: indexPath.row)
         return cell
     }
-    
-    
 }

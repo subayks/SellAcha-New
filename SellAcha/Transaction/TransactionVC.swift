@@ -91,7 +91,7 @@ extension TransactionVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell") as! TransactionCell
-            cell.pendingButton.layer.cornerRadius = 10
+            cell.pendingButton.layer.cornerRadius = 5
             cell.transactionCellVM = self.vm.getTransactionCellVM(index: indexPath.row)
             return cell
         }

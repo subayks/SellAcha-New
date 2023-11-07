@@ -209,6 +209,12 @@
 		59AF16692AD6E94C00CDD975 /* HTTPClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF16682AD6E94C00CDD975 /* HTTPClass.swift */; };
 		59AF166B2AD6E95200CDD975 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF166A2AD6E95200CDD975 /* NetworkAdapter.swift */; };
 		59AF16702AD70CE800CDD975 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF166F2AD70CE800CDD975 /* HomeView.swift */; };
+		59AFAA762AFA1A73003798E8 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFAA752AFA1A73003798E8 /* SettingsService.swift */; };
+		59AFAA782AFA1C25003798E8 /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFAA772AFA1C25003798E8 /* SubscriptionModel.swift */; };
+		59AFAA7A2AFA4B49003798E8 /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFAA792AFA4B49003798E8 /* SubscriptionCell.swift */; };
+		59AFAA7C2AFA4B56003798E8 /* SubscriptionCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFAA7B2AFA4B56003798E8 /* SubscriptionCellVM.swift */; };
+		59AFAA7E2AFA5A8D003798E8 /* CreateOrderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFAA7D2AFA5A8D003798E8 /* CreateOrderVM.swift */; };
+		59AFAA802AFA5BC1003798E8 /* CreateShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFAA7F2AFA5BC1003798E8 /* CreateShowModel.swift */; };
 		59BC14D12ADE4D4E0032BC7C /* MoreViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BC14D02ADE4D4E0032BC7C /* MoreViewCell.swift */; };
 		59BC14D32ADE4F280032BC7C /* MoreViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BC14D22ADE4F280032BC7C /* MoreViewCellVM.swift */; };
 		59D2EFD82AEC38CF00E1315B /* ProfileServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2EFD72AEC38CF00E1315B /* ProfileServices.swift */; };
@@ -447,6 +453,12 @@
 		59AF16682AD6E94C00CDD975 /* HTTPClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClass.swift; sourceTree = "<group>"; };
 		59AF166A2AD6E95200CDD975 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		59AF166F2AD70CE800CDD975 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		59AFAA752AFA1A73003798E8 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		59AFAA772AFA1C25003798E8 /* SubscriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModel.swift; sourceTree = "<group>"; };
+		59AFAA792AFA4B49003798E8 /* SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
+		59AFAA7B2AFA4B56003798E8 /* SubscriptionCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCellVM.swift; sourceTree = "<group>"; };
+		59AFAA7D2AFA5A8D003798E8 /* CreateOrderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderVM.swift; sourceTree = "<group>"; };
+		59AFAA7F2AFA5BC1003798E8 /* CreateShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShowModel.swift; sourceTree = "<group>"; };
 		59BC14D02ADE4D4E0032BC7C /* MoreViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewCell.swift; sourceTree = "<group>"; };
 		59BC14D22ADE4F280032BC7C /* MoreViewCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewCellVM.swift; sourceTree = "<group>"; };
 		59D2EFD72AEC38CF00E1315B /* ProfileServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServices.swift; sourceTree = "<group>"; };
@@ -875,10 +887,11 @@
 		598AE8C12AEAF2E600E7BBD7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				598AE8C32AEAF30600E7BBD7 /* Model */,
+				59AFAA742AFA1A45003798E8 /* Model */,
 				598AE8C22AEAF2F000E7BBD7 /* ViewModel */,
 				598AE8C42AEAF33B00E7BBD7 /* DomainVC.swift */,
 				598AE8C82AEAF89900E7BBD7 /* SubscriptionVC.swift */,
+				59AFAA792AFA4B49003798E8 /* SubscriptionCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -888,15 +901,9 @@
 			children = (
 				598AE8C62AEAF41200E7BBD7 /* DomainVM.swift */,
 				598AE8CA2AEAF91600E7BBD7 /* SubscriptionVM.swift */,
+				59AFAA7B2AFA4B56003798E8 /* SubscriptionCellVM.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		598AE8C32AEAF30600E7BBD7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5990CEF42AD8532400037E1E /* Bag */ = {
@@ -1022,6 +1029,7 @@
 				5990CEF22AD8413500037E1E /* FilterPaymentCellVM.swift */,
 				59A413CA2AE643A900603DA5 /* OrderInfoCellVM.swift */,
 				599347F52AEEB92E00BA77E2 /* CreateBillingVM.swift */,
+				59AFAA7D2AFA5A8D003798E8 /* CreateOrderVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1100,6 +1108,7 @@
 			isa = PBXGroup;
 			children = (
 				59A413C62AE6415200603DA5 /* OrdersModel.swift */,
+				59AFAA7F2AFA5BC1003798E8 /* CreateShowModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1214,6 +1223,7 @@
 				59D2EFD72AEC38CF00E1315B /* ProfileServices.swift */,
 				1848784D2AEE9140002BCDF3 /* CreateProductApiService.swift */,
 				59A193802AF559CA00401F7E /* ShopSettingsService.swift */,
+				59AFAA752AFA1A73003798E8 /* SettingsService.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -1344,6 +1354,14 @@
 				59AF166F2AD70CE800CDD975 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		59AFAA742AFA1A45003798E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59AFAA772AFA1C25003798E8 /* SubscriptionModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		59BC14CF2ADE4D250032BC7C /* MoreCell */ = {
@@ -1716,6 +1734,7 @@
 				599A20082AED8A1E0058F0A6 /* ResetPasswordVC.swift in Sources */,
 				5990CEF12AD83E7800037E1E /* OrderFilterViewModel.swift in Sources */,
 				591CFDE72AF6C7D7000739B3 /* ChatNowVM.swift in Sources */,
+				59AFAA7C2AFA4B56003798E8 /* SubscriptionCellVM.swift in Sources */,
 				59DAB5B72AE445DD0046F7C7 /* RatingVc.swift in Sources */,
 				59AC1F3B2AE2D7B8004EAFA4 /* Extension + UIViewcontroller.swift in Sources */,
 				5988F1C42AE9927C00C78E1B /* ShippingVM.swift in Sources */,
@@ -1770,6 +1789,7 @@
 				599503BE2AE834E300C503A3 /* CreateCouponsVM.swift in Sources */,
 				598AE8C72AEAF41200E7BBD7 /* DomainVM.swift in Sources */,
 				18DF655B2AE6AFE0004D15D1 /* BrandsModel.swift in Sources */,
+				59AFAA762AFA1A73003798E8 /* SettingsService.swift in Sources */,
 				599A200A2AED8A310058F0A6 /* ResetPasswordVM.swift in Sources */,
 				59D2EFD82AEC38CF00E1315B /* ProfileServices.swift in Sources */,
 				59DAB5AB2AE430370046F7C7 /* CreateCustomerVc.swift in Sources */,
@@ -1781,7 +1801,9 @@
 				59DAB5A62AE424530046F7C7 /* CustomerVc.swift in Sources */,
 				1885B8802AEBB0390022A40E /* CreateProductVC.swift in Sources */,
 				18DF65182AE6772C004D15D1 /* CreateBrandsVC.swift in Sources */,
+				59AFAA802AFA5BC1003798E8 /* CreateShowModel.swift in Sources */,
 				5988F1E12AE9A0F300C78E1B /* BumperAdCell.swift in Sources */,
+				59AFAA7E2AFA5A8D003798E8 /* CreateOrderVM.swift in Sources */,
 				599503C22AE8499000C503A3 /* Extension Date.swift in Sources */,
 				5988F1D92AE99D6800C78E1B /* CreateBannerAdsVM.swift in Sources */,
 				1848784E2AEE9140002BCDF3 /* CreateProductApiService.swift in Sources */,
@@ -1808,6 +1830,7 @@
 				5988F1D52AE99D3B00C78E1B /* CreateBumperAdsVM.swift in Sources */,
 				5988F1DB2AE99DB300C78E1B /* BumpAdModel.swift in Sources */,
 				59AC1F3D2AE2DB8C004EAFA4 /* LoginApiService.swift in Sources */,
+				59AFAA782AFA1C25003798E8 /* SubscriptionModel.swift in Sources */,
 				18DF65452AE6A997004D15D1 /* InventoryCellVM.swift in Sources */,
 				59A9E52F2AE5A14100171FC3 /* TransactionService.swift in Sources */,
 				1885B87C2AEAB6FC0022A40E /* UnderlinedTextField.swift in Sources */,
@@ -1816,6 +1839,7 @@
 				18DF651D2AE67D9F004D15D1 /* LocationVC.swift in Sources */,
 				59A9E53E2AE5C90000171FC3 /* ReportsCell.swift in Sources */,
 				185D6AA12AE0018600476478 /* AttributeVC.swift in Sources */,
+				59AFAA7A2AFA4B49003798E8 /* SubscriptionCell.swift in Sources */,
 				59AC1F412AE2DD3D004EAFA4 /* LoginModel.swift in Sources */,
 				5988F1D32AE99D2100C78E1B /* BumperAdsVM.swift in Sources */,
 				59A9E5312AE5A1EA00171FC3 /* TransactionModel.swift in Sources */,

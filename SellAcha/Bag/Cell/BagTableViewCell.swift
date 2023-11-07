@@ -59,7 +59,7 @@ class BagTableViewCell: UITableViewCell {
             self.fulfilmentStatus.backgroundColor = UIColor(red: 73/255, green: 194/255, blue: 96/255, alpha: 255/255)
             self.fulfilmentStatus.setTitle("Active", for: .normal)
         } else  {
-            self.fulfilmentStatus.backgroundColor = .orange
+            self.fulfilmentStatus.backgroundColor =  UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 255/255)
             self.fulfilmentStatus.setTitle("In-Active", for: .normal)
         }
         self.productImage.layer.cornerRadius = 5
