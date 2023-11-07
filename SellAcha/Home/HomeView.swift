@@ -92,17 +92,13 @@ class HomeView: UIViewController, ChartViewDelegate {
         self.viewwModel.updateProfileImage = { [weak self] in
             DispatchQueue.main.async {
                 guard let self = self else {return}
-                let url = URL(string: self.viewwModel.profileModel?.logo ?? "")
-                do {
+                let urlString = self.viewwModel.profileModel?.logo ?? ""
+                if let webpURL = URL(string: urlString)  {
                     DispatchQueue.main.async {
-                        let data = try? Data(contentsOf: url!)
-                        if data == nil {
-                            self.profileView.image = UIImage(named: "profile")
-                        } else {
-                            self.profileView.image = UIImage(data: data ?? Data())
-                        }
+                        self.profileView.sd_setImage(with: webpURL)
                     }
-                } catch {
+                } else {
+                    self.profileView.image = UIImage(named: "error_placeholder")
                 }
             }
         }

@@ -117,20 +117,16 @@ class OrdersView: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
-        
-            let url = URL(string: self.viewModel.retriveProfile()?.logo ?? "")
-            do {
+        DispatchQueue.main.async {
+            let urlString = self.viewModel.retriveProfile()?.logo ?? ""
+            if let webpURL = URL(string: urlString)  {
                 DispatchQueue.main.async {
-                    let data = try? Data(contentsOf: url!)
-                    if data == nil {
-                        self.profileImage.image = UIImage(named: "profile")
-                    } else {
-                        self.profileImage.image = UIImage(data: data ?? Data())
-                    }
+                    self.profileImage.sd_setImage(with: webpURL)
                 }
-            } catch {
-
+            } else {
+                self.profileImage.image = UIImage(named: "error_placeholder")
             }
+        }
     }
     
     @IBAction func actionSearch(_ sender: Any) {

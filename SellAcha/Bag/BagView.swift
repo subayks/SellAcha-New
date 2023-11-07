@@ -115,16 +115,13 @@ class BagView: UIViewController {
         super.viewDidLayoutSubviews()
         overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
         DispatchQueue.main.async {
-            let url = URL(string: self.vm.retriveProfile()?.logo ?? "")
-            do {
-                let data = try? Data(contentsOf: url!)
-                if data == nil {
-                    self.profileImage.image = UIImage(named: "profile")
-                } else {
-                    self.profileImage.image = UIImage(data: data ?? Data())
+            let urlString = self.vm.retriveProfile()?.logo ?? ""
+            if let webpURL = URL(string: urlString)  {
+                DispatchQueue.main.async {
+                    self.profileImage.sd_setImage(with: webpURL)
                 }
-            } catch {
-
+            } else {
+                self.profileImage.image = UIImage(named: "error_placeholder")
             }
         }
     }
