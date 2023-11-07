@@ -192,5 +192,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7606EC78-0403-4822-8F7E-D051BBAED0FA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/Profile/ProfileView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "viewDidLayoutSubviews()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7606EC78-0403-4822-8F7E-D051BBAED0FA - 15f510312aef42fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in SellAcha.ProfileView.viewDidLayoutSubviews() -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "7606EC78-0403-4822-8F7E-D051BBAED0FA - cb6cbd9fd8810196"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in SellAcha.ProfileView.viewDidLayoutSubviews() -&gt; ()"
+                  moduleName = "SellAcha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subaykala/Desktop/Sellacha-New-Repo/SellAcha-New/SellAcha/Profile/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "592">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3249C7CB-A263-4579-A604-A7087A8A3834"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellAcha/Profile/ProfileView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "viewDidLayoutSubviews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

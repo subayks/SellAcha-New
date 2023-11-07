@@ -29,18 +29,7 @@ class ProfileView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DispatchQueue.main.async {
-            do {
-                let url = URL(string: self.vm.retriveProfile()?.logo ?? "")
-                let data = try? Data(contentsOf: url!)
-                if data == nil {
-                    self.profileImageView.image = UIImage(named: "profile")
-                } else {
-                    self.profileImageView.image = UIImage(data: data ?? Data())
-                }
-            } catch {
-            }
-        }
+       
         self.emailIdView.text = self.vm.retriveUserDetails()?.email
         self.nameLabel.text = self.vm.retriveUserDetails()?.name
         
@@ -109,6 +98,18 @@ class ProfileView: UIViewController {
                 guard let self = self else {return}
                 self.emailIdView.text = self.vm.retriveUserDetails()?.email
                 self.nameLabel.text = self.vm.retriveUserDetails()?.name
+            }
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        DispatchQueue.main.async {
+            let urlString = self.vm.retriveProfile()?.logo ?? ""
+            if let webpURL = URL(string: urlString)  {
+                self.profileImageView.sd_setImage(with: webpURL)
+            } else {
+                self.profileImageView.image = UIImage(named: "error_placeholder")
             }
         }
     }

@@ -94,9 +94,7 @@ class HomeView: UIViewController, ChartViewDelegate {
                 guard let self = self else {return}
                 let urlString = self.viewwModel.profileModel?.logo ?? ""
                 if let webpURL = URL(string: urlString)  {
-                    DispatchQueue.main.async {
-                        self.profileView.sd_setImage(with: webpURL)
-                    }
+                    self.profileView.sd_setImage(with: webpURL)
                 } else {
                     self.profileView.image = UIImage(named: "error_placeholder")
                 }

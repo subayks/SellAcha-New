@@ -120,9 +120,7 @@ class OrdersView: UIViewController {
         DispatchQueue.main.async {
             let urlString = self.viewModel.retriveProfile()?.logo ?? ""
             if let webpURL = URL(string: urlString)  {
-                DispatchQueue.main.async {
                     self.profileImage.sd_setImage(with: webpURL)
-                }
             } else {
                 self.profileImage.image = UIImage(named: "error_placeholder")
             }
