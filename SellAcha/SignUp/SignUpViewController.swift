@@ -10,6 +10,7 @@ import Photos
 
 class SignUpViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var logoMakerIMage: UIImageView!
     @IBOutlet weak var tickImage4: UIImageView!
     @IBOutlet weak var tickImage3: UIImageView!
     @IBOutlet weak var tickIMage2: UIImageView!
@@ -321,6 +322,23 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         Endtoolbar.setItems([EnddoneButton], animated: true)
         productPriceEndsTF.inputAccessoryView = Endtoolbar
         productPriceEndsTF.inputView = endDatePicker
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        logoMakerIMage.isUserInteractionEnabled = true
+        logoMakerIMage.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "Alert", message: "You are leaving application, are you sure?", preferredStyle: UIAlertController.Style.alert)
+        // add the actions (buttons)
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { action in
+            if let url = URL(string: "https://sellacha.com/logo.html"), UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func doneButtonTapped() {

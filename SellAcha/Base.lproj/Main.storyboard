@@ -1691,7 +1691,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoImage" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-kl-axD">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_maker" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-kl-axD">
                                                                 <rect key="frame" x="81" y="102" width="242" height="100"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="100" id="XCw-oh-jG3"/>
@@ -2463,6 +2463,7 @@
                         <outlet property="loadView3" destination="AZi-bN-3KD" id="LXd-JW-8wd"/>
                         <outlet property="loadView4" destination="jcg-ww-A8O" id="DGp-6w-oZJ"/>
                         <outlet property="logoIconImg" destination="llu-rT-ReM" id="cxx-EA-6cN"/>
+                        <outlet property="logoMakerIMage" destination="wL3-kl-axD" id="jEw-WC-QYR"/>
                         <outlet property="logoSelectLbl" destination="4aQ-ge-Z21" id="r74-yo-qcd"/>
                         <outlet property="mobileNumberTF" destination="xId-4x-Acr" id="Wvo-CX-LrG"/>
                         <outlet property="passwordTF" destination="JJJ-fx-iX6" id="BqY-IR-9XG"/>
@@ -13472,6 +13473,7 @@
         <image name="lineweight" catalog="system" width="128" height="109"/>
         <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
         <image name="logoImage" width="32" height="32"/>
+        <image name="logo_maker" width="461" height="425"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="more" width="16" height="16"/>
