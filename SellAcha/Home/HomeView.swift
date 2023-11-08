@@ -41,16 +41,17 @@ class HomeView: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.viewwModel.getStaticData()
         self.setupView()
-        self.viewwModel.getProfileImage()
+
         self.performanceImage.layer.cornerRadius = 10
         self.StatisticsImage.layer.cornerRadius = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.viewwModel.getStaticData()
+        self.viewwModel.getProfileImage()
+        
         self.viewwModel.errorClosure = { [weak self] (error) in
             DispatchQueue.main.async {
                 guard let self = self else {return}

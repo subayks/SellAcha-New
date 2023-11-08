@@ -28,7 +28,6 @@ class BagView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.vm.getProducts(endPoint: "/api/product?type=products")
         self.buttonCreateProduct.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
         self.buttonSubmit.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
         
@@ -62,6 +61,8 @@ class BagView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.vm.getProducts(endPoint: "/api/product?type=products")
+
         self.vm.errorClosure = { [weak self] (error) in
             DispatchQueue.main.async {
                 guard let self = self else {return}
