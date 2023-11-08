@@ -21,40 +21,6 @@ class InventoryVC: UIViewController {
         
         inventoryTB.delegate = self
         inventoryTB.dataSource = self
-        // inventoryTB.frame = view.bounds
-        // view.addSubview(inventoryTB)
-        
-        
-        let containerView = UIView()
-        containerView.frame = CGRect(x: 20, y: 100, width: view.bounds.width - 40, height: 40)
-        containerView.backgroundColor = UIColor.systemGray5
-        view.addSubview(containerView)
-        
-        // Create the "Product" label
-        let productLabel = UILabel()
-        productLabel.text = "Product"
-        productLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-        productLabel.sizeToFit()
-        productLabel.frame.origin = CGPoint(x: 20, y: 5)
-        containerView.addSubview(productLabel)
-        
-        // Create the "SKU" label
-        let skuLabel = UILabel()
-        skuLabel.text = "SKU"
-        skuLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-        skuLabel.sizeToFit()
-        skuLabel.frame.origin = CGPoint(x: productLabel.frame.maxX + 60, y: 5)
-        containerView.addSubview(skuLabel)
-        
-        // Create the "Stock Manage" label
-        let stockManageLabel = UILabel()
-        stockManageLabel.text = "Stock Manage"
-        stockManageLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-        stockManageLabel.sizeToFit()
-        stockManageLabel.frame.origin = CGPoint(x: skuLabel.frame.maxX + 60, y: 5)
-        containerView.addSubview(stockManageLabel)
-        
-        inventoryTB.tableHeaderView = containerView
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,6 +79,12 @@ extension InventoryVC: UITableViewDelegate,UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in your table view
         return  self.vm.model?.count == 0 ? 1: self.vm.model?.count ?? 1
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerHeaderCell") as! CustomerHeaderCell
+        cell.backgroundColor = UIColor.systemGray6
+        return cell
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

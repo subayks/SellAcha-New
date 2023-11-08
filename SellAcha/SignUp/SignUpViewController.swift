@@ -761,8 +761,8 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         self.addCategoryView.isHidden = true
         self.AddProductView.isHidden = true
         self.googleAnalyticsVieww.isHidden = true
-        self.googleTagmanagerView.isHidden = true
-        self.facebookPixelView.isHidden = false
+        self.googleTagmanagerView.isHidden = false
+        self.facebookPixelView.isHidden = true
         self.whatsappVieww.isHidden = true
     }
     
@@ -862,6 +862,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         self.AddProductView.isHidden = true
         self.googleAnalyticsVieww.isHidden = true
         self.googleTagmanagerView.isHidden = true
+        self.facebookPixelView.isHidden = true
         self.whatsappVieww.isHidden = false
     }
     

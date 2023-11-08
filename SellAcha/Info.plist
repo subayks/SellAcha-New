@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSans-Black.ttf</string>
+		<string>NotoSans-Bold.ttf</string>
+		<string>NotoSans-Regular.ttf</string>
+		<string>NotoSans-SemiBold.ttf</string>
+		<string>NotoSans-Thin.ttf</string>
+		<string>NotoSans-Light.ttf</string>
+	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We would like to access your pictures or videos to set up a customised profile picture to stay unique among our users</string>
 	<key>NSAppTransportSecurity</key>

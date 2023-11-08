@@ -85,7 +85,7 @@ struct Earnings: Codable {
 
   var year  : Int?    = nil
   var month : String? = nil
-  var total : Int?    = nil
+  var total : Double?    = nil
 
   enum CodingKeys: String, CodingKey {
 
@@ -100,7 +100,7 @@ struct Earnings: Codable {
 
     year  = try values.decodeIfPresent(Int.self    , forKey: .year  )
     month = try values.decodeIfPresent(String.self , forKey: .month )
-    total = try values.decodeIfPresent(Int.self    , forKey: .total )
+    total = try values.decodeIfPresent(Double.self    , forKey: .total )
  
   }
 
