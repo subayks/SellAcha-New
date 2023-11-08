@@ -87,7 +87,7 @@ class OrdersViewModel: BaseViewModel {
     
     func getAllOrders() {
         if Reachability.isConnectedToNetwork() {
-            self.showLoadingIndicatorClosure?()
+          //  self.showLoadingIndicatorClosure?()
             
             self.apiServices?.getAllOrders(finalURL: "\(Constants.Common.finalURL)/api/orders/all", httpHeaders: [String:String](), withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
                 self.hideLoadingIndicatorClosure?()

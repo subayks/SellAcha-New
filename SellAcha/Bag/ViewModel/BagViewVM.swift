@@ -54,7 +54,7 @@ class BagViewVM: BaseViewModel {
     
     func getProducts(endPoint: String) {
         if Reachability.isConnectedToNetwork() {
-            self.showLoadingIndicatorClosure?()
+          //  self.showLoadingIndicatorClosure?()
             
             self.apiServices?.getProducts(finalURL: "\(Constants.Common.finalURL)\(endPoint)", httpHeaders: [String:String](), withParameters: "", completion: { (status: Bool? , errorCode: String?,result: AnyObject?, errorMessage: String?) -> Void in
                 self.hideLoadingIndicatorClosure?()
