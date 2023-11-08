@@ -49,7 +49,7 @@ class RatingVM: BaseViewModel {
             var postArray = [ReviewData]()
             if let posts = self.originalModel {
                 for item in posts {
-                    if item.name!.lowercased().contains(keyword.lowercased()) {
+                    if (item.name ?? "").lowercased().contains(keyword.lowercased()) {
                         postArray.append(item)
                     }
                 }

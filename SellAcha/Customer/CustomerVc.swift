@@ -15,6 +15,8 @@ class CustomerVc: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+
         categoriesTB.delegate = self
         categoriesTB.dataSource = self
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]

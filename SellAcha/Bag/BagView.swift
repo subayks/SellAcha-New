@@ -28,6 +28,8 @@ class BagView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+
         self.buttonCreateProduct.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
         self.buttonSubmit.titleLabel?.font = UIFont(name: "Noto Sans", size: 10)
         

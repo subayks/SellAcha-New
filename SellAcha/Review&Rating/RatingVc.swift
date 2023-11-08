@@ -22,6 +22,8 @@ class RatingVc: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.hideKeyboardWhenTappedAround()
+
         self.vm.errorClosure = { [weak self] (error) in
             DispatchQueue.main.async {
                 guard let self = self else {return}

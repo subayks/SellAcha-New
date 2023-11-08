@@ -51,7 +51,7 @@ class InventoryVM: BaseViewModel{
             var postArray = [InventoryData]()
             if let posts = self.originalModel {
                 for item in posts {
-                    if item.sku!.lowercased().contains(keyword.lowercased()) {
+                    if (item.sku ?? "").lowercased().contains(keyword.lowercased()) {
                         postArray.append(item)
                     }
                 }
