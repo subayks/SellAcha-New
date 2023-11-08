@@ -10,6 +10,12 @@ import Charts
 
 class HomeView: UIViewController, ChartViewDelegate {
     
+    @IBOutlet weak var statisticsCount: UILabel!
+    @IBOutlet weak var statisticsLabel: UILabel!
+    @IBOutlet weak var StatisticsImage: UIImageView!
+    @IBOutlet weak var performaceCount: UILabel!
+    @IBOutlet weak var performanceTitle: UILabel!
+    @IBOutlet weak var performanceImage: UIImageView!
     @IBOutlet weak var processingCountLabel: UILabel!
     @IBOutlet weak var completedCountLabel: UILabel!
     @IBOutlet weak var pendingCountLabel: UILabel!
@@ -39,6 +45,8 @@ class HomeView: UIViewController, ChartViewDelegate {
         self.viewwModel.getStaticData()
         self.setupView()
         self.viewwModel.getProfileImage()
+        self.performanceImage.layer.cornerRadius = 10
+        self.StatisticsImage.layer.cornerRadius = 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +90,9 @@ class HomeView: UIViewController, ChartViewDelegate {
                 guard let self = self else {return}
                 self.setChart(dataPoints: self.viewwModel.month, values: self.viewwModel.unitsSold)
                 self.setChart2(dataPoints2: self.viewwModel.month2, values2: self.viewwModel.unitsSold2)
+                
+                self.performaceCount.text = String(self.viewwModel.performanceData?.data?[0].total ?? 0)
+                self.statisticsCount.text = "2"
                 self.setupPieChartData()
                 self.pendingCountLabel.text = self.viewwModel.orderStaticsData?.totalPending ?? ""
                 self.completedCountLabel.text = self.viewwModel.orderStaticsData?.totalCompleted ?? ""
@@ -191,7 +202,6 @@ class HomeView: UIViewController, ChartViewDelegate {
         lineChartDataSet.drawCircleHoleEnabled = true
         lineChartDataSet.circleHoleRadius = 2.3
         
-        
         var dataSets = [LineChartDataSet]()
         dataSets.append(lineChartDataSet)
         
@@ -203,6 +213,9 @@ class HomeView: UIViewController, ChartViewDelegate {
         earning1View.xAxis.labelPosition = .bottom
         earning1View.xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints)
         earning1View.legend.enabled = true
+        earning1View.gridBackgroundColor = UIColor.systemGray5
+        earning1View.drawGridBackgroundEnabled = true
+
     }
     
     
@@ -224,7 +237,6 @@ class HomeView: UIViewController, ChartViewDelegate {
         lineChartDataSet.drawCircleHoleEnabled = true
         lineChartDataSet.circleHoleRadius = 2.3
         
-        
         var dataSets = [LineChartDataSet]()
         dataSets.append(lineChartDataSet)
         
@@ -236,6 +248,8 @@ class HomeView: UIViewController, ChartViewDelegate {
         earning2View.xAxis.labelPosition = .bottom
         earning2View.xAxis.valueFormatter = IndexAxisValueFormatter(values: dataPoints2)
         earning2View.legend.enabled = true
+        earning2View.gridBackgroundColor = UIColor.systemGray5
+        earning2View.drawGridBackgroundEnabled = true
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
