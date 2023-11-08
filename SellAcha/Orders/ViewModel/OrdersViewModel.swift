@@ -35,8 +35,8 @@ class OrdersViewModel: BaseViewModel {
         var dataModel = OrdersDataModel()
         dataModel.title = "All"
         dataModel.isSelected = true
-        dataModel.count = "0"
-        dataModel.ShowCount = false
+        dataModel.count = String(self.model?.orders?.data?.count ?? 0)
+        dataModel.ShowCount = true
         dataModelArray.append(dataModel)
         
         var dataModelAwaiting = OrdersDataModel()

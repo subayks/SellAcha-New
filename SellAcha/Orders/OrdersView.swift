@@ -222,14 +222,15 @@ extension OrdersView: UICollectionViewDelegate, UICollectionViewDataSource {
         } else {
             cell.filtersName.textColor = UIColor.gray
             cell.overView.backgroundColor = UIColor.white
-            cell.badgeCount.layer.cornerRadius = cell.badgeCount.frame.height/2
-            cell.badgeCount.clipsToBounds = true
-            cell.badgeCount.backgroundColor = UIColor.gray
-            cell.badgeCount.tintColor = UIColor.white
             cell.BatchWidthConstraint.constant = 20
             cell.overView.layer.borderWidth = 0.5
             cell.overView.layer.borderColor = UIColor.lightGray.cgColor
         }
+        
+        cell.badgeCount.layer.cornerRadius = cell.badgeCount.frame.height/2
+        cell.badgeCount.clipsToBounds = true
+        cell.badgeCount.backgroundColor = UIColor.gray
+        cell.badgeCount.tintColor = UIColor.white
         
         if  self.viewModel.ordersDataModel?[indexPath.row].ShowCount == true {
             cell.badgeCount.isHidden = false

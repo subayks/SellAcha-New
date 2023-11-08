@@ -3317,6 +3317,7 @@
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-Zn-IPp">
                                                                     <rect key="frame" x="134" y="13" width="20" height="20"/>
+                                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="euU-2b-p4J"/>
                                                                         <constraint firstAttribute="width" constant="20" id="i5D-5k-agB"/>
@@ -7475,6 +7476,7 @@
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="200-hH-50q">
                                                                     <rect key="frame" x="134" y="13" width="20" height="20"/>
+                                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="20" id="nlC-i4-gUd"/>
                                                                         <constraint firstAttribute="height" constant="20" id="soo-Po-foS"/>
