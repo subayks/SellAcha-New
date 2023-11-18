@@ -25,7 +25,7 @@ class GoogleTapManager: UIViewController {
         
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        self.googleTagField.addBottomBorder()
+     //   self.googleTagField.addBottomBorder()
     }
     
     override func viewWillAppear(_ animated: Bool) {

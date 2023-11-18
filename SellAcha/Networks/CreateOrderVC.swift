@@ -100,8 +100,8 @@ class CreateOrderVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
-        cellOverView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
+     //   overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
+     //   cellOverView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
     }
     
     

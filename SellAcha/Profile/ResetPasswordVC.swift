@@ -22,7 +22,6 @@ class ResetPasswordVC: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         self.hideKeyboardWhenTappedAround()
-        self.emailField.underlined(color: UIColor.lightGray)
         self.buttonSubmit.layer.cornerRadius = 10
     }
     
@@ -73,7 +72,7 @@ class ResetPasswordVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
+   //     overView.roundCorners(corners: [.topLeft , .topRight], radius: 30)
     }
     
     @IBAction func actionReset(_ sender: Any) {

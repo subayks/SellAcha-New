@@ -97,8 +97,18 @@ class ViewController: UIViewController {
     
     @objc func tapFunction(sender:UITapGestureRecognizer) {
         print("tap working")
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
+//        self.navigationController?.pushViewController(vc!, animated: true)
+            let alert = UIAlertController(title: "Alert", message: "You are leaving application, are you sure?", preferredStyle: UIAlertController.Style.alert)
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { action in
+                if let url = URL(string: "https://sellacha.com"), UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
     }
     
     @objc func forgotPasswordclciked(sender:UITapGestureRecognizer) {

@@ -26,9 +26,9 @@ class WhatsAppApi: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
-        self.NumberField.addBottomBorder()
-        self.pageNameField.addBottomBorder()
-        self.productNameField.addBottomBorder()
+//        self.NumberField.addBottomBorder()
+//        self.pageNameField.addBottomBorder()
+//        self.productNameField.addBottomBorder()
 
     }
     

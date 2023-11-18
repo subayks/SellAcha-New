@@ -22,9 +22,9 @@ class CreateShippingVC: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         // Do any additional setup after loading the view.
         
-        self.titleTextField.underlined(color: UIColor.lightGray)
-        self.textFieldLocation.underlined(color: UIColor.lightGray)
-        self.textFieldPrice.underlined(color: UIColor.lightGray)
+//        self.titleTextField.underlined(color: UIColor.lightGray)
+//        self.textFieldLocation.underlined(color: UIColor.lightGray)
+//        self.textFieldPrice.underlined(color: UIColor.lightGray)
         if self.vm.model != nil {
             self.titleTextField.text = self.vm.model?.name
         }

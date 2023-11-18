@@ -21,7 +21,7 @@ class FaceBookApi: UIViewController {
         self.hideKeyboardWhenTappedAround()
 
         self.buttonSave.layer.cornerRadius = 10
-        self.pixalIdField.addBottomBorder()
+      //  self.pixalIdField.addBottomBorder()
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
